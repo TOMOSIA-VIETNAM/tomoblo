@@ -26,6 +26,9 @@ jobs:
         node-version: '12.x'
 
     - run: yarn
+    - run: |
+        git config --global user.email 'anh.nguyen1@tomosia.com'
+        git config --global user.name "Nguyen Anh"
 
     - run: yarn deploy
       env:
