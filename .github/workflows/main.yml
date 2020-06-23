@@ -27,8 +27,7 @@ jobs:
 
     - run: yarn
 
-    - name: Build
-        run: yarn deploy
-        env:
-          PA_TOKEN: ${{ secrets.PA_TOKEN }}
-          CI: true
+    - run: yarn deploy
+      env:
+        PA_TOKEN: ${{ secrets.PA_TOKEN }}
+        CI: true
