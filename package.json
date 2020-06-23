@@ -55,7 +55,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r \"https://anhnguyen1tomosia:$PA_TOKEN@github.com/TOMOSIA-VIETNAM/tomoblo.git\""
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master -r \"https://anhnguyen1tomosia:$PA_TOKEN@github.com/TOMOSIA-VIETNAM/tomoblo.git\""
   },
   "repository": {
     "type": "git",
