@@ -1,0 +1,1 @@
+module.exports = require("/Users/admin/Project/tomoblo/src/utils/typography")
