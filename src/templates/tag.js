@@ -51,14 +51,14 @@ const Tag = ({ pageContext, data }) => {
                                 >
                                     <h2 className="heading">{post.node.frontmatter.title}</h2>
                                 </Link>
-                                <small className="d-block text-info">Posted on {post.node.frontmatter.date}
+                                <small className="d-block text-info">Được đăng vào {post.node.frontmatter.date}
                                 </small>
                                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
                                 <Link
                                     to={post.node.fields.slug}
                                     className="text-primary"
                                 >
-                                    <small className="d-inline-block ml-3"> Read full post</small>
+                                    <small className="d-inline-block ml-3"> Đọc cả bài</small>
                                 </Link>
                                 <div className="d-block">
                                     {getTechTags(tags)}
@@ -96,17 +96,17 @@ export const pageQuery = graphql`
   query($tag: String) {
     site {
         siteMetadata {
-            title 
+            title
             author
             labels {
                 tag
-                tech 
-                name 
-                size 
+                tech
+                name
+                size
                 color
-            } 
+            }
         }
-    } 
+    }
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -120,7 +120,7 @@ export const pageQuery = graphql`
             id
             frontmatter {
                 title
-                date(formatString: "MMMM, YYYY")
+                date(formatString: "DD-MM-YYYY")
                 tags
             }
              fields {

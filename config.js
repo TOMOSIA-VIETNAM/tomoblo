@@ -4,7 +4,7 @@ module.exports = {
   url: "https://developer-diary.netlify.com",
   title: "TOMOSIA VIETNAM",
   tagline: "お客様と共に新たな価値を生み出し、幸せの明かりを灯す会社。",
-  copyright: "© 2019 willjw3, All rights reserved",
+  copyright: "© 2019 TOMOSIA, All rights reserved",
   author: {
     name: "「共に」「幸せ」「灯す」",
     bio: "Self-taught web developer and whisky aficionado",

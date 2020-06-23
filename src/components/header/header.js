@@ -4,9 +4,7 @@ import PropTypes from "prop-types"
 
 
 import MobileSocialLinks from "./MobileSocialLinks"
-import MobilePageLinks from "./MobilePageLinks"
 import SocialLinks from "./SocialLinks"
-import MobileBio from "./MobileBio"
 import "./header.css"
 
 import logo from "../../images/logo.png"
@@ -18,7 +16,8 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
       className="head-main"
       style={{
         background: `white`,
-        borderBottom: `1px solid #f0f0f2`
+        borderBottom: `1px solid #f0f0f2`,
+        padding: `0 3.45rem`
       }}
     >
       <div className="head-elements"

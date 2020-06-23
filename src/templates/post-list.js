@@ -48,14 +48,14 @@ const PostList = (props) => {
                                 >
                                     <h2 className="title">{post.node.frontmatter.title}</h2>
                                 </Link>
-                                <small className="d-block text-info"><i>Posted on {post.node.frontmatter.date}</i>
+                                <small className="d-block text-info"><i>Được đăng vào {post.node.frontmatter.date}</i>
                                 </small>
                                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
                                 <Link
                                     to={post.node.fields.slug}
                                     className="text-primary"
                                 >
-                                    <small className="d-inline-block ml-3"> Read full post</small>
+                                    <small className="d-inline-block ml-3"> Đọc cả bài</small>
                                 </Link>
                                 <div className="d-block">
                                     {getTechTags(tags)}
@@ -66,12 +66,12 @@ const PostList = (props) => {
                     <div className="text-center mt-4">
                         {!isFirst && (
                             <Link to={prevPage} rel="prev" style={{ textDecoration: `none` }}>
-                                <span className="text-dark">← Previous Page</span>
+                                <span className="text-dark">← Trang sau</span>
                             </Link>
                         )}
                         {!isLast && (
                             <Link to={nextPage} rel="next" style={{ textDecoration: `none` }}>
-                                <span className="text-dark ml-5">Next Page →</span>
+                                <span className="text-dark ml-5">Trang tiếp theo →</span>
                             </Link>
                         )}
                     </div>
@@ -85,15 +85,15 @@ export const listQuery = graphql`
          query paginateQuery($skip: Int!, $limit: Int!) {
            site {
              siteMetadata {
-               title 
+               title
                author
                labels {
                  tag
-                 tech 
-                 name 
-                 size 
+                 tech
+                 name
+                 size
                  color
-               } 
+               }
              }
            }
            allMarkdownRemark(
@@ -110,7 +110,7 @@ export const listQuery = graphql`
                  id
                  frontmatter {
                    title
-                   date(formatString: "MMMM DD, YYYY")
+                   date(formatString: "DD-MM-YYYY")
                    tags
                  }
                  fields {
