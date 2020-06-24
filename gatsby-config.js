@@ -97,5 +97,18 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-gitalk`,
+      options: {
+        config: {
+          clientID: '16eec399a80bc87946a9',
+          clientSecret: 'dcff9fc1dfd7cbb5350fe0fedf9e460bd8eabc4e',
+          repo: 'tomoblo',
+          owner: 'TOMOSIA-VIETNAM',
+          admin: ['TOMOSIA-VIETNAM'],
+          distractionFreeMode: false
+        }
+      }
+    },
   ],
 }

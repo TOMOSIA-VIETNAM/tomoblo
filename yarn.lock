@@ -1879,6 +1879,21 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
+"@suziwen/gitalk@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@suziwen/gitalk/-/gitalk-2.0.1.tgz#0af576ccfc9cecc749a76be8802b1a78402fd27e"
+  integrity sha512-UD3CiG8tZgyB/1XYOKWFFIS6t3AUr6ShezhthoYw2Hrth0/l1eQt6FWWvC8I1ZS24azNdHquvVkXAD41I71L6w==
+  dependencies:
+    autosize "3.0.21"
+    axios "0.19.2"
+    date-fns "1.28.5"
+    es6-promise "4.1.1"
+    github-markdown-css "2.8.0"
+    node-polyglot "2.2.2"
+    preact "8.1.0"
+    preact-compat "3.16.0"
+    react-flip-move "2.9.14"
+
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
@@ -7191,6 +7206,13 @@ gatsby-plugin-emotion@^4.0.7:
   dependencies:
     "@babel/runtime" "^7.10.2"
     "@emotion/babel-preset-css-prop" "^10.0.27"
+
+gatsby-plugin-gitalk@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gitalk/-/gatsby-plugin-gitalk-1.2.1.tgz#a989b51ae10f5cd7e35661f3510d97361c9f06db"
+  integrity sha512-c+FxcmykPOBP7FoCquqnHllwF4dYDfXEtOtS6dvYBNAXPMJkga9gQI+H7M3DJFEPlJi7DMW1S0Xv8Ro3/CID1A==
+  dependencies:
+    "@suziwen/gitalk" "^2.0.1"
 
 gatsby-plugin-google-fonts@^1.0.0:
   version "1.0.1"

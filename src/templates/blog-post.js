@@ -6,6 +6,7 @@ import "./blog-post.css";
 
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
+import Gitalk from 'gatsby-plugin-gitalk';
 
 const BlogPost = props => {
   const post = props.data.markdownRemark;
@@ -35,6 +36,12 @@ const BlogPost = props => {
     });
     return techTags;
   };
+
+  let gitalkConfig = {
+    id: props.data.site.siteMetadata.url,
+    title: props.data.site.siteMetadata.title,
+  };
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
@@ -54,6 +61,7 @@ const BlogPost = props => {
               siteName={siteName}
               url={url}
             />
+            <Gitalk options={gitalkConfig}/>
           </div>
         </div>
       </div>
