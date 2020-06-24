@@ -57,7 +57,7 @@ const BlogPost = props => {
               url={url}
             />
             <GitalkComponent options={{
-              repo: "tomosia-vietnam.github.io/tomoblo/",
+              repo: "tomoblo",
               admin: ["TOMOSIA-VIETNAM"],
               owner: "TOMOSIA-VIETNAM",
               clientID: "16eec399a80bc87946a9",
