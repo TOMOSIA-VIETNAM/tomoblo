@@ -56,6 +56,7 @@ tags:
 + Sử dụng một editor online [stackedit.io](https://stackedit.io/app)
 `stackedit.io` hỗ trợ viết markdown cho toán học  [katex](https://katex.org/) và [UML diagrams](https://mermaidjs.github.io/) nên mình suggest ae nên sử dụng `stackedit.io`
 
+Sau khi viết bài xong truy cập vào http://localhost:8000/huong-dan-tao-bai-viet-moi để xem kết quả.
 #### III. Đăng bài.
 Khi đã hoàn thành viết bài hãy `push` bài viết lên repository.
 ```bash
@@ -65,4 +66,4 @@ $ git push origin master
 ```
 Tạo `Pull Request` vào repository `TOMOSIA-VIETNAM/tomoblo`.
 
-Sau khi pull request được merge vào `TOMOSIA-VIETNAM/tomoblo` thì bài viết sẽ được hiển thị lên [http://blog.tomosia.com/](http://blog.tomosia.com/).
+Sau khi pull request được merge vào `TOMOSIA-VIETNAM/tomoblo` chờ một vài phút thì bài viết sẽ được hiển thị lên [http://blog.tomosia.com/](http://blog.tomosia.com/).
