@@ -7,7 +7,7 @@ import "./blog-post.css";
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
 import Gitalk from 'gatsby-plugin-gitalk';
-
+import 'gitalk/dist/gitalk.css';
 const BlogPost = props => {
   const post = props.data.markdownRemark;
   const labels = props.data.site.siteMetadata.labels;

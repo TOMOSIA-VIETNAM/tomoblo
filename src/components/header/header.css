@@ -39,12 +39,12 @@
   display: none;
 }
 .head-logo {
-  font-family: "Raleway";
+  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.75rem;
 }
 
 small {
-    font-family: "Raleway";
+    font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .mobile-bio-main {

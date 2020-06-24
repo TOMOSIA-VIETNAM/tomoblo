@@ -1,12 +1,12 @@
 
 p, .title {
-  font-family: "Raleway";
+  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .index-main {
     display: grid;
     grid-template-columns: 1fr 2fr;
-} 
+}
 
 .sidebar {
     width: 90%;
