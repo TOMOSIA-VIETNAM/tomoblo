@@ -6,11 +6,13 @@ Trước tiên cài đặt gatsby CLI package
 ```bash
 $ yarn global add gatsby-cli
 ```
-Sau khi cài đặt thành công `gatsby-cli` thì clone repository [TOMOSIA BLOG](https://github.com/TOMOSIA-VIETNAM/tomoblo)
 
-Trờ thành contributor cho `tomoblo`.
-Fork [https://github.com/TOMOSIA-VIETNAM/tomoblo](https://github.com/TOMOSIA-VIETNAM/tomoblo) về tài khoảng github của bạn
+Trờ thành contributor cho `TOMOSIA BLOG`.
+
+Fork [https://github.com/TOMOSIA-VIETNAM/tomoblo](https://github.com/TOMOSIA-VIETNAM/tomoblo) về tài khoảng github
+
 Clone repository sau khi `fork`, `Nguyenanh/tomoblo` là repository sau khi mình fork về
+
 ```bash
 $ git clone git@github.com:Nguyenanh/tomoblo.git
 ```
@@ -29,7 +31,7 @@ $ gatsby develop
 ```
 Mở trình duyệt và truy cập http://localhost:8000/
 
-### Bước 2:  Viết bài và đăng bài.
+### Bước 2: Viết bài và đăng bài.
 
 #### I. Tạo bài post.
 
@@ -52,6 +54,7 @@ tags:
 ```
 #### II. Viết bài.
 Để viết bài chúng ta sẽ thêm nội dung vào phía dưới `---`, có 2 cách để viết content.
+
 + Sử dụng editor và setup thêm  một số package. ví dụ mình đang sử dụng `atom` và cài đặt thêm  [markdown-preview](https://atom.io/packages/markdown-preview) package.
 + Sử dụng một editor online [stackedit.io](https://stackedit.io/app)
 `stackedit.io` hỗ trợ viết markdown cho toán học  [katex](https://katex.org/) và [UML diagrams](https://mermaidjs.github.io/) nên mình suggest ae nên sử dụng `stackedit.io`
