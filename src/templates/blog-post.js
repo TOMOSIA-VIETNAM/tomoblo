@@ -6,6 +6,8 @@ import "./blog-post.css";
 
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
+import 'gitalk/dist/gitalk.css';
+import GitalkComponent from "gitalk/dist/gitalk-component";
 
 const BlogPost = props => {
   const post = props.data.markdownRemark;
@@ -35,7 +37,6 @@ const BlogPost = props => {
     });
     return techTags;
   };
-
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
@@ -55,6 +56,17 @@ const BlogPost = props => {
               siteName={siteName}
               url={url}
             />
+            <GitalkComponent options={{
+              repo: "tomosia-vietnam.github.io/tomoblo/",
+              admin: ["TOMOSIA-VIETNAM"],
+              owner: "TOMOSIA-VIETNAM",
+              clientID: "16eec399a80bc87946a9",
+              clientSecret: "dcff9fc1dfd7cbb5350fe0fedf9e460bd8eabc4e",
+              pagerDirection: "first",
+              distractionFreeMode: true,
+              id: props.data.site.siteMetadata.url,
+              title: props.data.site.siteMetadata.title
+            }} />
           </div>
         </div>
       </div>
