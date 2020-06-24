@@ -42,7 +42,10 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-typography": "^0.16.19",
-    "typography": "^0.16.19"
+    "typography": "^0.16.19",
+    "eslint": "^6.8.0",
+    "fs-extra": "^8.1.0",
+    "signale": "^1.4.0"
   },
   "devDependencies": {
     "prettier": "^1.17.1"
@@ -58,7 +61,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r \"https://anhnguyen1tomosia:$PA_TOKEN@github.com/TOMOSIA-VIETNAM/tomoblo.git\""
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r \"https://anhnguyen1tomosia:$PA_TOKEN@github.com/TOMOSIA-VIETNAM/tomoblo.git\"",
+    "post": "./bin/create-post.js"
   },
   "repository": {
     "type": "git",

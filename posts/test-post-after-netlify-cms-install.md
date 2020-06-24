@@ -4,9 +4,8 @@ tags:
   - gatsby
 published: true
 date: 2020-01-05T13:54:07.809Z
-title: Test Post After Netlify CMS Install
+title: Hướng dẫn viết bài cho TOMOSIA BLOG
 ---
 *Crossing Fingers...*
 
-Looks like we've gotten the cms working, folks. Give it a try!
-
+Sau khi cài đặt thành công `gatsby-cli` thì clone repository [TOMOSIA BLOG](https://github.com/TOMOSIA-VIETNAM/tomoblo)
