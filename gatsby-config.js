@@ -19,11 +19,13 @@ module.exports = {
       facebook: siteConfig.author.contacts.facebook
     },
     labels: siteConfig.labels,
+    siteUrl: 'http://blog.tomosia.com/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-cname`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
