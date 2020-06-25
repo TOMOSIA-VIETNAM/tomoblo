@@ -103,12 +103,12 @@ module.exports = {
       resolve: `gatsby-plugin-gitalk`,
       options: {
         config: {
-          clientID: '16eec399a80bc87946a9',
-          clientSecret: 'dcff9fc1dfd7cbb5350fe0fedf9e460bd8eabc4e',
+          clientID: '69beba26a588a29737d6',
+          clientSecret: 'c96383537bf4c5ffd7a37b01b84739a6cd16473c',
           repo: 'tomoblo',
           owner: 'TOMOSIA-VIETNAM',
-          admin: ['TOMOSIA-VIETNAM'],
-          distractionFreeMode: false
+          admin: ['anhnguyen1tomosia'],
+          distractionFreeMode: true
         }
       }
     },
