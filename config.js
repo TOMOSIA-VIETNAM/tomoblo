@@ -1,7 +1,7 @@
 "use strict"
 
 module.exports = {
-  url: "https://developer-diary.netlify.com",
+  url: "https://tomosia-vietnam.github.io/tomoblo",
   title: "TOMOSIA VIETNAM",
   tagline: "お客様と共に新たな価値を生み出し、幸せの明かりを灯す会社。",
   copyright: "© 2019 TOMOSIA, All rights reserved",
