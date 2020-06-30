@@ -10,7 +10,9 @@ tags:
 
 
 
-# Vấn đề
+<br />
+
+# Vấn đề đặt ra
 - Thứ nhất: Làm thế nào để _hiển thị 100 tấm ảnh / 1 trang_ một cách nhanh nhất? Đảm bảo tối ưu tốc độ load ảnh, nâng cao hiệu quả SEO Google và trải nghiệm người dùng tốt hơn.
 
 - Thứ hai: Để người dùng upload ảnh lên server với dung lượng trên 500MB. Nếu để web server xử lý quá trình nhận dữ liệu từ user upload lên, sau đó convert đối với file có dung lượng lớn thì không hề ổn chút nào. Vậy để giảm tải cho web server thì ta sẽ sử dụng serverless trong tình huống này. [(Vì sao sử dụng serverless?)](https://aws.amazon.com/vi/serverless/)
@@ -31,6 +33,7 @@ Nguồn từ:
 <a href="https://bitsofco.de/why-and-how-to-use-webp-images-today/" target="_blank">https://bitsofco.de/why-and-how-to-use-webp-images-today/</a>
 </i>
 </center>
+<br />
 
 Tuy nhiên với định dạng Webp thì không phải tất cả các trình duyệt đều hỗ trợ. Hiện tại, WebP thực sự được hỗ trợ trong các phiên bản mới nhất của Google Chrome, Firefox, Edge, trình duyệt Opera, Trình duyệt Android và Samsung internet.
 
@@ -43,6 +46,7 @@ Nguồn từ:
 <a href="https://caniuse.com/#feat=webp" target="_blank">https://caniuse.com/#feat=webp</a>
 </i>
 </center>
+<br />
 
 # Triển khai ý tưởng
 Ở browser, khi người dùng upload ảnh thì web server sẽ có nhiệm vụ gián tiếp nhận hình ảnh, xác thực và đẩy ảnh lên S3 để lưu trữ. Khi S3 nhận thấy rằng có ảnh mới được đẩy lên sẽ gọi (trigger) đến lambda để tiến hành convert sang dạng webp. Sau khi convert ảnh thì sẽ được lưu tại thư mục mới mà ta chỉ định (dĩ nhiên ta sẽ không override lại ảnh gốc mà user đẩy lên, mà là tạo ra 1 file ảnh thumb với định dạng webp). Trong quá trình  Lambda xử lý ta có thể dùng cloudWatch để debug.
@@ -52,6 +56,7 @@ Nguồn từ:
 Vậy để chuyển đổi ảnh sang định dạng Webp thì chúng ta có thể dùng [imageMagick](https://imagemagick.org/index.php) hoặc [cwebp](https://developers.google.com/speed/webp/docs/cwebp).
 
 <center><img src="https://miro.medium.com/max/500/1*_TeG6-eUitTR_l3SKpJ5Ow.jpeg" alt="LEGENDARY"/></center>
+<br />
 
 # Thực hiện
 
@@ -331,4 +336,4 @@ Dùng để tạo 1 bucket đích. Để sau khi xử lý convert xong thì ta u
 
 # Lời kết
 
-Trong bài này mình đã hướng dẫn và giải thích chi tiết, hi vọng khi thực hiện sẽ không phát sinh lỗi. Nếu có thì chịu khó đọc log trong Cloudwatch để fix dần thôi. Chúc các bạn thành công.
+Trong bài này mình đã hướng dẫn và giải thích chi tiết, hi vọng khi thực hiện sẽ không phát sinh lỗi. Nếu có thì chúng ta có thể xem log trong Cloudwatch để fix dần thôi. Chúc các bạn thành công.
