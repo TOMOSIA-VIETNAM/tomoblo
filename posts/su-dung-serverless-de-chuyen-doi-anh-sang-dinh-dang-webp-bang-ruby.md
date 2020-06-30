@@ -4,8 +4,6 @@ date: "2020-06-29"
 published: true
 tags:
   - ruby
-  - serverless
-  - aws
 ---
 
 
