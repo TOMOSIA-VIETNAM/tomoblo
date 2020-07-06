@@ -32,8 +32,17 @@ Với công thức trên, ý tưởng để tạo chuyển động sóng là:
 import UIKit
 
 class WaveView: UIView {
-    var waveHeight: CGFloat = 10
-    var waveSpeed: CGFloat = 1.5
+    var waveHeight: CGFloat = 10 {
+        didSet {
+            A = waveHeight
+        }
+    }
+
+    var waveSpeed: CGFloat = 1.5 {
+        didSet {
+            v = waveSpeed
+        }
+    }
 
     private var A: CGFloat = 0
     private var v: CGFloat = 0
