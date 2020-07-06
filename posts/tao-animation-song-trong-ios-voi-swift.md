@@ -3,7 +3,7 @@ title: "Làm sao để tạo một chuyển động sóng đơn giản trong iOS
 date: "2020-07-04"
 published: true
 tags:
-  - change_me
+  - Swift and iOS
 ---
 
 ##Vấn đề đặt ra
@@ -30,7 +30,7 @@ Với công thức trên, ý tưởng để tạo chuyển động sóng là:
   
 ```swift
 import UIKit
-@IBDesignable
+
 class WaveView: UIView {
     var waveHeight: CGFloat = 10
     var waveSpeed: CGFloat = 1.5
