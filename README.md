@@ -70,3 +70,52 @@ $ git push origin master
 Tạo `Pull Request` vào repository `TOMOSIA-VIETNAM/tomoblo`.
 
 Sau khi pull request được merge vào `TOMOSIA-VIETNAM/tomoblo` chờ một vài phút thì bài viết sẽ được hiển thị lên [http://blog.tomosia.com/](http://blog.tomosia.com/).
+
+
+#### IV. Syncing a fork
+
+1. Add upstream đến repo đã clone ("origin")
+
+```
+git remote add upstream git@github.com:TOMOSIA-VIETNAM/tomoblo.git
+> remote: Enumerating objects: 49, done.
+> remote: Counting objects: 100% (49/49), done.
+> remote: Compressing objects: 100% (27/27), done.
+> remote: Total 49 (delta 29), reused 37 (delta 21), pack-reused 0
+> Unpacking objects: 100% (49/49), done.
+> From github.com:TOMOSIA-VIETNAM/tomoblo
+>  * branch            master     -> FETCH_HEAD
+>  * [new branch]      master     -> upstream/master
+```
+
+2. Fetch các commit và branch từ upstream
+
+```
+$ git fetch upstream
+> remote: Counting objects: 75, done.
+> remote: Compressing objects: 100% (53/53), done.
+> remote: Total 62 (delta 27), reused 44 (delta 9)
+> Unpacking objects: 100% (62/62), done.
+> From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
+>  * [new branch]      master     -> upstream/master
+```
+
+3. Checkout về nhánh master trong project đã fork
+
+```
+$ git checkout master
+> Switched to branch 'master'
+```
+
+4. Merge nhánh thay đổi từ `upstream/master` vào nhánh `master`
+
+```
+$ git merge upstream/master
+> Updating a422352..5fdff0f
+> Fast-forward
+>  README                    |    9 -------
+>  README.md                 |    7 ++++++
+>  2 files changed, 7 insertions(+), 9 deletions(-)
+>  delete mode 100644 README
+>  create mode 100644 README.md
+```
