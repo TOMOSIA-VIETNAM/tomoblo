@@ -24,9 +24,9 @@
 
 @media only screen and (max-width: 850px) {
  .sidebar{display: none;}
- .post-page-main{
+ /* .post-page-main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-  }
+  } */
 }
