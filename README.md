@@ -74,6 +74,8 @@ Sau khi pull request được merge vào `TOMOSIA-VIETNAM/tomoblo` chờ một v
 
 #### IV. Syncing a fork
 
+[Tham khảo](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+
 1. Add upstream đến repo đã clone ("origin")
 
 ```
