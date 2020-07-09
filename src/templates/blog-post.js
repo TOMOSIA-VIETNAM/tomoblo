@@ -38,7 +38,7 @@ const BlogPost = props => {
   };
 
   let gitalkConfig = {
-    id: '123aabb',
+    id: props.pageContext.slug,
     title: props.data.site.siteMetadata.title,
   };
 
