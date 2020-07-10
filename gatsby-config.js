@@ -82,10 +82,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          'Lato',
-          'Helvetica Neue',
-          'Helvetica',
-          'sans-serif'
+          'Quicksand\:500,700',
+          'Barlow Semi Condensed:\:600',
         ]
       }
     },

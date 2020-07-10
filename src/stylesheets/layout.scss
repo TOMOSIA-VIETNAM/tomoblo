@@ -1,10 +1,12 @@
 .index-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
-.sidebar {
-    width: 90%;
+.post-page-main {
+  grid-template-columns: 1fr 2fr;
+  max-width: 700px;
+  margin: 2em auto;
 }
 
 .post-list-main {
