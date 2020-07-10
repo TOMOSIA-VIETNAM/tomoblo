@@ -16,7 +16,7 @@ const Tag = ({ pageContext, data }) => {
   const { totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`;
+    } tagged with "${tag}"`;
 
   const getTechTags = tags => {
     const techTags = [];
@@ -72,9 +72,6 @@ const Tag = ({ pageContext, data }) => {
                   Được đăng vào {post.node.frontmatter.date}
                 </small>
                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
-                <Link to={post.node.fields.slug} className="text-primary">
-                  <small className="d-inline-block ml-3"> Đọc cả bài</small>
-                </Link>
                 <div className="d-block">{getTechTags(tags)}</div>
               </div>
             );

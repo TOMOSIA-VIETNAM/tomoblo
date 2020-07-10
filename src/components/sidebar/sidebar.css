@@ -11,13 +11,7 @@
 .page-links {
     margin-top: 3rem;
     padding-top: 4rem;
-    font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-
-small, h3, p {
-    font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-
+    font-family: "Barlow Semi Condensed", Helvetica, sans-serif;
 }
 
 .author-bio {
