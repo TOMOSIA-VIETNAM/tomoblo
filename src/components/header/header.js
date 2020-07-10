@@ -37,7 +37,8 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
         </Link>
         <SocialLinks contacts={contacts} />
       </div>
-      <MobileSocialLinks />
+
+      {/* <MobileSocialLinks /> */}
     </header>
   )
 }
