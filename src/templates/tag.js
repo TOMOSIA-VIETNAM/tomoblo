@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
-import "../pages/index.css";
+import "./stylesheets/application.scss";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -16,7 +15,7 @@ const Tag = ({ pageContext, data }) => {
   const { totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`;
+    } tagged with "${tag}"`;
 
   const getTechTags = tags => {
     const techTags = [];

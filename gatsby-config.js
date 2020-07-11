@@ -27,6 +27,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-cname`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: `${__dirname}/stylesheets`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/posts`,

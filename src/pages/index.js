@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
-import "./index.css";
+import "./stylesheets/application.scss";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -62,13 +61,11 @@ const IndexPage = ({ data }) => {
                 <Link to={post.node.fields.slug} className="text-dark">
                   <h2 className="title">{post.node.frontmatter.title}</h2>
                 </Link>
-                <small className="d-block text-info">
-                  <i>Được đăng vào {post.node.frontmatter.date}</i>
-                </small>
                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
-                <Link to={post.node.fields.slug} className="text-primary">
-                  <small className="d-inline-block ml-3"> Đọc cả bài</small>
-                </Link>
+
+                <small className="d-block text-muted">
+                  {post.node.frontmatter.date} {post.node.fields.readingTime.text}
+                </small>
                 <div className="d-block">{getTechTags(tags)}</div>
               </div>
             );
@@ -119,6 +116,9 @@ export const pageQuery = graphql`
           }
           fields {
             slug
+            readingTime {
+              text
+            }
           }
         }
       }

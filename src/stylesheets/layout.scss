@@ -1,18 +1,11 @@
-
-p, .title {
-  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-}
-
 .index-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .sidebar {
-    width: 90%;
+  width: 90%;
 }
-
-
 
 @media only screen and (max-width: 850px) {
   .sidebar{display: none;}
