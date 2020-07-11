@@ -1,3 +1,11 @@
-.title {
+.title, .heading {
+  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.dot {
+  color: rgba(117, 117, 117, 1);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
   font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
 }

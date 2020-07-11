@@ -1,0 +1,27 @@
+.sidebar {
+  width: 90%;
+  padding: .5rem 1.5rem;
+
+  &-inner {
+    width: 100%;
+    height: 100vh;
+  }
+
+  &-social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    float: left;
+    margin: 1rem 0;
+    margin-left: -10px;
+  }
+
+  .author-bio {
+    font-size: 1.5vw;
+    margin-left: -10px;
+  }
+
+  .page-links {
+    margin-top: 3rem;
+    padding-top: 4rem;
+  }
+}

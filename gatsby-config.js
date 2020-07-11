@@ -29,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: `${__dirname}/stylesheets`,
+        includePaths: ['stylesheets'],
       },
     },
     {

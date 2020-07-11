@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import "./stylesheets/application.scss";
+import "../stylesheets/application.scss";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
         ]}
       />
       <div className="index-main">
-        <div className="sidebar px-4 py-2">
+        <div className="sidebar">
           <Sidebar />
         </div>
         <div className="post-list-main">

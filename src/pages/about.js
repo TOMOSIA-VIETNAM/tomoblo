@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { FaCheckCircle } from "react-icons/fa";
-import "./stylesheets/application.scss";
+import "../stylesheets/application.scss";
 
 import Sidebar from "../components/sidebar/Sidebar";
 import TechTag from "../components/tags/TechTag";
