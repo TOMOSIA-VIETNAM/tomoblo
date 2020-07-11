@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import "./blog-post.css";
+import "../stylesheets/application.scss";
 
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
@@ -61,7 +61,7 @@ const BlogPost = props => {
               siteName={siteName}
               url={url}
             />
-            <Gitalk options={gitalkConfig}/>
+            <Gitalk options={gitalkConfig} />
           </div>
         </div>
       </div>

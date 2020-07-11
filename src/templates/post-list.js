@@ -63,8 +63,10 @@ const PostList = props => {
                 <Link to={post.node.fields.slug} className="text-dark">
                   <h2 className="title">{post.node.frontmatter.title}</h2>
                 </Link>
-                <small className="d-block text-info">
-                  <i>Được đăng vào {post.node.frontmatter.date}</i>
+                <small className="reading-time">
+                  {post.node.frontmatter.date}
+                  <span className="dot">·</span>
+                  {post.node.fields.readingTime.text}
                 </small>
                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
                 <div className="d-block">{getTechTags(tags)}</div>
@@ -123,6 +125,9 @@ export const listQuery = graphql`
           }
           fields {
             slug
+            readingTime {
+              text
+            }
           }
         }
       }

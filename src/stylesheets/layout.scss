@@ -19,6 +19,11 @@
   }
 }
 
+.index-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
 @media only screen and (max-width: 850px) {
   .sidebar{display: none;}
   .index-main{
