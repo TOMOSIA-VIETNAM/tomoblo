@@ -9,21 +9,6 @@
   margin: 2em auto;
 }
 
-.post-list-main {
-  .excerpt {
-    padding: 5px 0;
-  }
-  .tech-tags {
-    display: block;
-    margin-left: -3px;
-  }
-}
-
-.index-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
 @media only screen and (max-width: 850px) {
   .sidebar{display: none;}
   .index-main{

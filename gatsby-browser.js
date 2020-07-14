@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-require("prismjs/plugins/line-numbers/prism-line-numbers.css")
-require("./src/templates/codeblock.css")
+require('prismjs/plugins/line-numbers/prism-line-numbers.css')
+require('./src/templates/codeblock.css')
 require('katex/dist/katex.min.css')
-require("bootstrap/dist/css/bootstrap.css")
+require('bootstrap/dist/css/bootstrap.min.css');
