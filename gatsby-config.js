@@ -89,7 +89,6 @@ module.exports = {
       options: {
         fonts: [
           'Quicksand\:500,700',
-          'Barlow Semi Condensed:\:600',
         ]
       }
     },

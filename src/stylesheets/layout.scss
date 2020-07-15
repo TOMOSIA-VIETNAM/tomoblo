@@ -9,6 +9,16 @@
   margin: 2em auto;
 }
 
+.post-list-main {
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .list-tags {
+    margin-left: -2px;
+    margin-top: 7px;
+  }
+}
 @media only screen and (max-width: 850px) {
   .sidebar{display: none;}
   .index-main{
