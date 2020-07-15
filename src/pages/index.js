@@ -61,11 +61,11 @@ const IndexPage = ({ data }) => {
                 <Link to={post.node.fields.slug} className="text-dark">
                   <h2 className="title">{post.node.frontmatter.title}</h2>
                 </Link>
-                <p className="mt-3 d-inline">{post.node.excerpt}</p>
-
                 <small className="d-block text-muted">
                   {post.node.frontmatter.date} {post.node.fields.readingTime.text}
                 </small>
+                <p className="mt-3 d-inline">{post.node.excerpt}</p>
+
                 <div className="d-block">{getTechTags(tags)}</div>
               </div>
             );
