@@ -49,7 +49,7 @@ const BlogPost = props => {
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
           <div className="mt-3">
-            <h2 className="heading">{post.frontmatter.title}</h2>
+            <h2 className="title">{post.frontmatter.title}</h2>
             <div className="d-block">{getTechTags(tags)}</div>
             <br />
             <small>{post.frontmatter.date}</small>

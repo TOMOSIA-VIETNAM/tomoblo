@@ -50,7 +50,7 @@ const ArchivePage = ({ data }) => {
           <Sidebar />
         </div>
         <div className="post-list-main">
-          <h2 className="heading mt-3">All Posts</h2>
+          <h2 className="title mt-3">All Posts</h2>
           {posts.map(post => {
             const tags = post.node.frontmatter.tags;
             return (

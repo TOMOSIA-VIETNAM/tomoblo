@@ -31,7 +31,7 @@ const AboutPage = props => {
         <div className="post-main">
           <SEO title="About" />
           <div className="mt-3">
-            <h2 className="heading">About</h2>
+            <h2 className="title">About</h2>
             <p>
               <i>
                 Developer Diary is a Gatsby Starter blog template created with

@@ -1,5 +1,42 @@
-.title, .heading {
-  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+body {
+  font-family: Quicksand, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  color: hsla(0, 0%, 0%, 0.8);
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 1.62671rem;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 1.38316rem;
+  line-height: 1.1;
+}
+h4 {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+h5 {
+  font-size: 0.85028rem;
+  line-height: 1.1;
+}
+h6 {
+  font-size: 0.78405rem;
+  line-height: 1.1;
+}
+
+.title {
+  font-family: "Quicksand", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .dot {
@@ -7,5 +44,5 @@
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0px;
-  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Quicksand", "Helvetica Neue", Helvetica, sans-serif;
 }
