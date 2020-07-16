@@ -88,7 +88,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          'Quicksand\:500,700',
+          'Quicksand\:500,600,700',
         ]
       }
     },

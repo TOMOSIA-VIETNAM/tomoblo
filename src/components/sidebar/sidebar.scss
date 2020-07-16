@@ -18,6 +18,13 @@
   .author-bio {
     font-size: 1.5vw;
     margin-left: -10px;
+
+    &+small {
+      font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+    }
+
   }
 
   .page-links {
