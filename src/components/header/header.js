@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-
-import MobileSocialLinks from "./MobileSocialLinks"
 import SocialLinks from "./SocialLinks"
 import "./header.css"
 
@@ -37,8 +35,6 @@ const Header = ({ siteTitle, tagline, author, contacts }) => {
         </Link>
         <SocialLinks contacts={contacts} />
       </div>
-
-      {/* <MobileSocialLinks /> */}
     </header>
   )
 }

@@ -27,6 +27,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-cname`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['stylesheets'],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/posts`,
@@ -82,10 +88,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          'Lato',
-          'Helvetica Neue',
-          'Helvetica',
-          'sans-serif'
+          'Quicksand\:500,600,700',
         ]
       }
     },

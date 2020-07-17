@@ -45,7 +45,7 @@ table code:after {
 code,
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: #f7f7f7;
+  background: rgba(242, 242, 242, 1);
 }
 
 :not(pre) > code[class*='language-'] {
@@ -96,7 +96,7 @@ pre[class*='language-'] {
  */
 
 .gatsby-highlight {
-  background-color: #f7f7f7;
+  background-color: rgba(242, 242, 242, 1);;
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 0 1em;

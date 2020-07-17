@@ -6,59 +6,49 @@ tags:
   - ruby
 ---
 
-
-
-<br />
-
-# Vấn đề đặt ra
-- Thứ nhất: Làm thế nào để _hiển thị 100 tấm ảnh / 1 trang_ một cách nhanh nhất? Đảm bảo tối ưu tốc độ load ảnh, nâng cao hiệu quả SEO Google và trải nghiệm người dùng tốt hơn.
+## Vấn đề đặt ra
+- Thứ nhất: Làm thế nào để hiển thị 100 tấm ảnh/1 trang một cách nhanh nhất? Đảm bảo tối ưu tốc độ load ảnh, nâng cao hiệu quả SEO Google và trải nghiệm người dùng tốt hơn.
 
 - Thứ hai: Để người dùng upload ảnh lên server với dung lượng trên 500MB. Nếu để web server xử lý quá trình nhận dữ liệu từ user upload lên, sau đó convert đối với file có dung lượng lớn thì không hề ổn chút nào. Vậy để giảm tải cho web server thì ta sẽ sử dụng serverless trong tình huống này. [(Vì sao sử dụng serverless?)](https://aws.amazon.com/vi/serverless/)
 
-# Sự trổi dậy của Webp
+## Sự trổi dậy của Webp
 
 ![Compare](https://miro.medium.com/max/1698/1*fRLZo9RWFkC2rkHXJzrdQA.png)
 
 Định dạng WebP đã trở nên ngày càng phổ biến kể từ khi Google giới thiệu nó vào năm 2010. Điểm mạnh lớn nhất của nó nằm ở khả năng tạo kích thước tệp nhỏ hơn nhiều trong khi vẫn duy trì chất lượng hình ảnh tương tự.
 
 Định dạng Webp sẽ giúp bạn giảm 26%  dung lượng so với PNG. và  25 – 34% so với định dạng JPEG, mà vẫn vẫn giữ được chất lượng hiển thị. Điều này giúp web giảm thời gian tải ảnh, tăng tốc độ trải nghiệm người dùng.
-<center>
-<img src="https://user-images.githubusercontent.com/59222278/85985771-616f8700-ba15-11ea-9f7c-0b2161fa86f9.png" alt="webp compress" />
-</center>
-<center>
-<i>
-Nguồn từ:
-<a href="https://bitsofco.de/why-and-how-to-use-webp-images-today/" target="_blank">https://bitsofco.de/why-and-how-to-use-webp-images-today/</a>
-</i>
-</center>
-<br />
+
+<figure class="paragraph-image">
+  <img src="https://user-images.githubusercontent.com/59222278/85985771-616f8700-ba15-11ea-9f7c-0b2161fa86f9.png" alt="web compress">
+  <figcaption>Nguồn từ: https://bitsofco.de/why-and-how-to-use-webp-images-today/</figcaption>
+</figure>
 
 Tuy nhiên với định dạng Webp thì không phải tất cả các trình duyệt đều hỗ trợ. Hiện tại, WebP thực sự được hỗ trợ trong các phiên bản mới nhất của Google Chrome, Firefox, Edge, trình duyệt Opera, Trình duyệt Android và Samsung internet.
 
-<center>
-<img src="https://user-images.githubusercontent.com/59222278/85986227-19049900-ba16-11ea-8707-5e09c467ba4f.png" alt="WebP support table" />
-</center>
-<center>
-<i>
-Nguồn từ:
-<a href="https://caniuse.com/#feat=webp" target="_blank">https://caniuse.com/#feat=webp</a>
-</i>
-</center>
-<br />
+<figure class="paragraph-image">
+  <img src="https://user-images.githubusercontent.com/59222278/85986227-19049900-ba16-11ea-8707-5e09c467ba4f.png" alt="WebP support table">
+  <figcaption><a href="https://bitsofco.de/why-and-how-to-use-webp-images-today" target="_blank">WebP support table</a></figcaption>
+</figure>
 
-# Triển khai ý tưởng
+## Triển khai ý tưởng
 Ở browser, khi người dùng upload ảnh thì web server sẽ có nhiệm vụ gián tiếp nhận hình ảnh, xác thực và đẩy ảnh lên S3 để lưu trữ. Khi S3 nhận thấy rằng có ảnh mới được đẩy lên sẽ gọi (trigger) đến lambda để tiến hành convert sang dạng webp. Sau khi convert ảnh thì sẽ được lưu tại thư mục mới mà ta chỉ định (dĩ nhiên ta sẽ không override lại ảnh gốc mà user đẩy lên, mà là tạo ra 1 file ảnh thumb với định dạng webp). Trong quá trình  Lambda xử lý ta có thể dùng cloudWatch để debug.
 
-<center><img src="https://user-images.githubusercontent.com/59222278/85989062-30458580-ba1a-11ea-9a22-4dad722102d8.png" alt="diagram s3-lambda"/></center
+<figure class="paragraph-image">
+  <img src="https://user-images.githubusercontent.com/59222278/85989062-30458580-ba1a-11ea-9a22-4dad722102d8.png" alt="diagram s3-lambda">
+  <figcaption>Diagram S3 Lambda</figcaption>
+</figure>
 
 Vậy để chuyển đổi ảnh sang định dạng Webp thì chúng ta có thể dùng [imageMagick](https://imagemagick.org/index.php) hoặc [cwebp](https://developers.google.com/speed/webp/docs/cwebp).
 
-<center><img src="https://miro.medium.com/max/500/1*_TeG6-eUitTR_l3SKpJ5Ow.jpeg" alt="LEGENDARY"/></center>
-<br />
+<figure class="paragraph-image">
+  <img src="https://miro.medium.com/max/500/1*_TeG6-eUitTR_l3SKpJ5Ow.jpeg" alt="LEGENDARY">
+</figure>
 
-# Thực hiện
 
-### Ở màn hình console Cloud AWS
+## Thực hiện
+
+### 1. Ở màn hình console Cloud AWS
 
 Truy cập IAM, chọn roles và tạo full quyền S3 và CloudWatch để Lambda có thể lấy dữ liệu từ S3 và ghi log vào cloudWatch. Ở đây ta đặt tên là `full-s3-logs`
 
@@ -70,16 +60,17 @@ Truy cập vào trang  [https://serverlessrepo.aws.amazon.com/applications](http
 
 ![](https://i.imgur.com/9d8kx1C.png)
 
-### Ở môi trường Local
+### 2. Ở môi trường Local
 
 Cài đặt  [serverless framework](https://www.serverless.com/)  bằng npm:  `npm i serverless`
 
 Chạy lệnh:  `serverless create -t aws-ruby -p image-resizer<:Tên Project>`  để tạo project serverless viết bằng ngôn ngữ ruby
 
-Chạy lệnh:  `bundle init`  để tạo ra Gemfile. Muốn dùng gem nào thì cài gem đó. Ở đây ta dùng 2 gem `aws-sdk` và `minimagick`
+Chạy lệnh:  `bundle init`  để tạo ra Gemfile. Ở đây ta dùng 2 gem `aws-sdk` và `minimagick`
 
-_Gemfile_
+
 ```yaml
+# Gemfile
 source 'https://rubygems.org'
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
@@ -231,7 +222,7 @@ Cuối cùng thì chạy lệnh  `serverless deploy`. Framework sẽ tiến hàn
 
 Trong này chỉ có file serverless.yml là cần để giải thích từng đoạn code, còn file ruby thì chúng ta đọc củng có thể nắm được nội dung rồi.
 
-#### Đoạn 1:
+**Đoạn 1**
 
 ```yaml
 custom:
@@ -242,7 +233,7 @@ custom:
 
 Dùng để tạo biến tham chiếu cho bên dưới sử dụng. Ở đây ta có 2 tham chiếu là source và dest. Cách gọi thì syntax: `${self.custom.bucket.source}` và  `${self:custom.bucket.dest}`
 
-#### Đoạn 2:
+**Đoạn 2**
 
 ```yaml
 provider:
@@ -260,7 +251,7 @@ provider:
 
 **role:**  Do trước đó ta đã tạo role rồi, nên ở đây ta chỉ cần link đến là được. Còn không thì ta vẫn có thể tạo ở trong này. Có thể tham khảo thêm tại trang chủ serverless.
 
-#### Đoạn 3:
+**Đoạn 3**
 
 ```yaml
 functions:
@@ -295,7 +286,7 @@ Layer thứ 2 là 1 đường link arn:aws. Do bước trên ta có sử dụng 
 
 **events:**  Ở đây ta muốn hướng đến là S3 với bucket là  your-images. Sự kiện khi có 1 object được tạo thì sẽ trigger đến lambda.
 
-#### Đoạn 4:
+**Đoạn 4**
 
 ```yaml
 package:
@@ -307,7 +298,7 @@ package:
 
 Mục đích là ta không muốn đẩy các file bên dưới lên serverless.
 
-#### Đoạn 5:
+**Đoạn 5**
 
 ```yaml
 layers:
@@ -318,7 +309,7 @@ layers:
 
 Ở dưới local khi ta bundle thì sẽ tạo ra thư mục vendor. Vậy ta sẽ dùng vendor này để làm 1 lớp Layer. Ở đây mình đặt tên layer là  `gems`  Cho nên khi reference thì ta phải viết cho đúng syntax mà framework yêu cầu, tức là viết dạng camelCase với suffix là  `LambdaLayer`. Cho nên dở đoạn 3 ta mới ghi là `{Ref: GemsLambdaLayer}`
 
-#### Đoạn 6:
+**Đoạn 6**
 
 ```yaml
 resources:
@@ -332,6 +323,6 @@ resources:
 
 Dùng để tạo 1 bucket đích. Để sau khi xử lý convert xong thì ta upload vào bucket này
 
-# Lời kết
+## Lời kết
 
 Trong bài này mình đã hướng dẫn và giải thích chi tiết, hi vọng khi thực hiện sẽ không phát sinh lỗi. Nếu có thì chúng ta có thể xem log trong Cloudwatch để fix dần thôi. Chúc các bạn thành công.

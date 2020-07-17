@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Bio from "./Bio"
-import "./sidebar.css"
+import "./sidebar.scss"
 
 import SocialLinks from "./SocialLinks"
 import TechTags from "./TechTags"
@@ -51,7 +51,7 @@ const Sidebar = () => {
             `}
             render={data => (
                 <>
-                    <div className="sidebar-main border-right">
+                    <div className="sidebar-inner border-right">
                         <Bio author={data.site.siteMetadata.author} tagline={data.site.siteMetadata.tagline} />
                         <SocialLinks contacts={data.site.siteMetadata.contacts} />
                         <div className="page-links">

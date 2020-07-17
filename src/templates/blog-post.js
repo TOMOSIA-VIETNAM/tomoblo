@@ -2,12 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import "./blog-post.css";
+import "../stylesheets/application.scss";
 
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
 import Gitalk from 'gatsby-plugin-gitalk';
 import 'gitalk/dist/gitalk.css';
+
 const BlogPost = props => {
   const post = props.data.markdownRemark;
   const labels = props.data.site.siteMetadata.labels;
@@ -49,19 +50,23 @@ const BlogPost = props => {
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
           <div className="mt-3">
-            <h2 className="heading">{post.frontmatter.title}</h2>
-            <div className="d-block">{getTechTags(tags)}</div>
-            <br />
-            <small>{post.frontmatter.date}</small>
-            <small className="dot"> · </small>
-            <small>{post.fields.readingTime.text}</small>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <h2 className="title">{post.frontmatter.title}</h2>
+
+            <small className="d-block text-muted reading-time">
+              {post.frontmatter.date} <span className="dot">●</span> {post.fields.readingTime.text}
+            </small>
+
+            <div className="list-tags">
+              <div className="d-block">{getTechTags(tags)}</div>
+            </div>
+
+            <div dangerouslySetInnerHTML={{ __html: post.html }} className="main-content" />
             <CustomShareBlock
               title={post.frontmatter.title}
               siteName={siteName}
               url={url}
             />
-            <Gitalk options={gitalkConfig}/>
+            <Gitalk options={gitalkConfig} />
           </div>
         </div>
       </div>

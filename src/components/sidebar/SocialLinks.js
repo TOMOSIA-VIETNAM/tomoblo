@@ -3,12 +3,12 @@ import {
     FaGithubSquare,
     FaFacebookSquare
 } from "react-icons/fa"
-import "./sidebar.css"
+import "./sidebar.scss"
 
 
 const SocialLinks = ({ contacts }) => {
     return (
-        <div className="side-social-links float-left mt-3 mb-3">
+        <div className="sidebar-social-links">
             <a className="text-secondary p-2"
                 href={contacts.facebook}>
                 <span title="Facebook">

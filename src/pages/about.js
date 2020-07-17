@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { FaCheckCircle } from "react-icons/fa";
-import "./index.css";
+import "../stylesheets/application.scss";
 
 import Sidebar from "../components/sidebar/Sidebar";
 import TechTag from "../components/tags/TechTag";
@@ -31,7 +31,7 @@ const AboutPage = props => {
         <div className="post-main">
           <SEO title="About" />
           <div className="mt-3">
-            <h2 className="heading">About</h2>
+            <h2 className="title">About</h2>
             <p>
               <i>
                 Developer Diary is a Gatsby Starter blog template created with

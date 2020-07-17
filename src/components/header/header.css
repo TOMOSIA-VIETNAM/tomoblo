@@ -38,21 +38,15 @@
   background: white;
   display: none;
 }
-.head-logo {
-  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.75rem;
-}
 
-small {
-    font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+.head-logo {
+  font-size: 1.75rem;
 }
 
 .mobile-bio-main {
   background: white;
   display: none;
 }
-
-
 
 @media only screen and (max-width: 850px) {
   .bottom-bar{display: flex;}
