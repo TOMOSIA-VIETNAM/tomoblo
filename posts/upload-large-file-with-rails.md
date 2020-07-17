@@ -30,7 +30,7 @@ Về cơ bản, chúng ta tạo 1 form upload đơn giản để người dùng 
 </div>
 ```
 
-Đây là đoạn code để tạo form upload và progress bar. Sau đó sẽ là code javascript để chia tệp thành nhiều phần nhỏ hơn và sẵn sàng cho việc upload. Lưu ý tùy chọn  `maxChunkSize`, nếu không có nó tệp sẽ được tải lên 1 cách bình thường. Trong callback chúng ta lặp lại với từng file đã chọn(trong trường hợp việc upload nhiều file được kích hoạt) và tạo 1 post request để tạo ra 1 Upload record mới và trả về id cùng với uploaded_size như 1 JSON object.
+Trên đây là đoạn code để tạo form upload và progress bar. Sau đó sẽ là code javascript để chia tệp thành nhiều phần nhỏ hơn và sẵn sàng cho việc upload. Lưu ý tùy chọn  `maxChunkSize`, nếu không có nó, tệp sẽ được tải lên 1 cách bình thường. Trong callback chúng ta lặp lại với từng file đã chọn(trong trường hợp việc upload nhiều file được kích hoạt) và tạo 1 post request để tạo ra 1 Upload record mới và trả về id cùng với `uploaded_size` như 1 JSON object.
 
 ```js
 var files = [];
@@ -83,7 +83,7 @@ $('#fileupload').on('submit', function(e) {
 });
 ```
 
-Ok, chúng ta đã xong phía client, giờ là xử lý phía server. Chúng ta sẽ làm 2 bước, đầu tiên là tạo 1 upload record trong create action để generate 1 uniqe uuid, thứ được sử dụng như 1 filename để tạo path column cho upload record. Nếu thành công chúng ta nối thêm nội dung đọc từ file chunk vào file với đường dẫn từ path column của upload record, nếu không thì báo lỗi.
+Ok, chúng ta đã xong phía client, giờ là xử lý phía server. Chúng ta sẽ làm 2 bước, đầu tiên là tạo 1 upload record trong create action để generate 1 unique uuid, thứ được sử dụng như 1 filename để tạo path column cho upload record. Nếu thành công chúng ta nối thêm nội dung đọc từ file chunk vào file với đường dẫn từ path column của upload record, nếu không thì báo lỗi.
 
 ```ruby
 class UploadsController < ApplicationController
@@ -120,6 +120,6 @@ class UploadsController < ApplicationController
   end
 end
 ```
-Vậy là xong, trên đây là hướng dẫn về cách upload file có kích thước lớn với , nếu bài viết có gì khó hiểu hoặc sai mong các bạn góp ý cho mình, cảm ơn tất cả các bạn
+Vậy là xong, trên đây là hướng dẫn về cách upload file có kích thước lớn với , nếu bài viết có gì khó hiểu hoặc sai mong các bạn góp ý cho mình, cảm ơn tất cả các bạn!
 
 *by Ngô Thái Minh - Tomosia Việt Nam*
