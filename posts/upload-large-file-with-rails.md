@@ -30,7 +30,7 @@ Về cơ bản, chúng ta tạo 1 form upload đơn giản để người dùng 
 </div>
 ```
 
-Trên đây là đoạn code để tạo form upload và progress bar. Sau đó sẽ là code javascript để chia tệp thành nhiều phần nhỏ hơn và sẵn sàng cho việc upload. Lưu ý tùy chọn  `maxChunkSize`, nếu không có nó, tệp sẽ được tải lên 1 cách bình thường. Trong callback chúng ta lặp lại với từng file đã chọn(trong trường hợp việc upload nhiều file được kích hoạt) và tạo 1 post request để tạo ra 1 Upload record mới và trả về id cùng với `uploaded_size` như 1 JSON object.
+Trên đây là đoạn code để tạo form upload và progress bar. Sau đó sẽ là code javascript để chia tệp thành nhiều phần nhỏ hơn và sẵn sàng cho việc upload. Lưu ý tùy chọn  `maxChunkSize`, nếu không có nó, tệp sẽ được tải lên 1 cách bình thường. Trong callback chúng ta lặp lại với từng file đã chọn(trong trường hợp việc upload nhiều file được kích hoạt) và tạo 1 post request để tạo ra 1 Upload record mới và trả về `id` cùng với `uploaded_size` như 1 JSON object.
 
 ```js
 var files = [];
