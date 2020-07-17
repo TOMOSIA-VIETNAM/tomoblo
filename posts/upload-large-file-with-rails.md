@@ -7,7 +7,7 @@ tags:
 ---
 **Problem**rails
 
-Chắc hẳn ai từng động đến việc upload video đều phải đối mặt với vấn đề khi dung lượng video quá lớn, rất có thể chúng ta sẽ không thể upload mà nhận về 1 lỗi 413(request entity is too large) hoặc request time out. Cách phù hợp nhất mình tìm hiểu được để giải quyết vấn đề này là chia nhỏ các file và ghép chúng lại khi quá trình tải hoàn tất. Javascript có FileReader API có thể giúp chúng ta đọc và chia nhỏ file. Tuy nhiên nó không hỗ trợ thực sự tốt cho các trình duyệt. Rất may là Jquerry có 1 file upload plugin có thể xử lý vấn đề này khá tốt
+Chắc hẳn ai từng động đến việc upload video đều phải đối mặt với vấn đề khi dung lượng video quá lớn, rất có thể chúng ta sẽ không thể upload mà nhận về 1 lỗi 413(request entity is too large) hoặc request time out. Cách phù hợp nhất mình tìm hiểu được để giải quyết vấn đề này là chia nhỏ các file và ghép chúng lại khi quá trình tải hoàn tất. Javascript có `FileReader API` có thể giúp chúng ta đọc và chia nhỏ file. Tuy nhiên nó không hỗ trợ thực sự tốt cho các trình duyệt. Rất may là Jquery có 1 file upload plugin có thể xử lý vấn đề này khá tốt
 
 **Introducing jQuery File Upload Plugin**
 
