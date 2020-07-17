@@ -6,6 +6,7 @@ const SocialLinks = ({ contacts }) => {
         <div className="social-links float-right mr-4">
             <a className="text-primary ml-4"
                 href='https://stackedit.io/app#'
+                rel='noreferrer'
                 target='_blank'>
                 <span className="text-dark d-block py-1">Viết bài</span>
             </a>
