@@ -53,3 +53,5 @@ Xu hướng “Màu nổi” có cơ hội thể hiện mình khi những chiế
 Vẫn đang thống trị trong xu hướng thiết kế mobile trong vài năm trở lại đây. Chúng ta đều nhận thấy sự phát triển cực kỳ mạnh mẽ của việc sử dụng các hình ảnh minh họa trong thiết kế, các hình ảnh thu hút sự chú ý và khiến sản phẩm trở nên đặc biệt hơn.
 
 ![image-7.jpg](/image-7.jpg)
+
+######                    *<div style="text-align: right"> Quoc Le </div>*
