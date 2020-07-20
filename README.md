@@ -53,10 +53,10 @@ tags:
 
 ```
 
-Tech List có thể sử dụng trong blog :
+Tech Tags có thể sử dụng trong blog :
 
 ```js
----
+
 tags:
   - react
   - nodejs
@@ -66,7 +66,6 @@ tags:
   - php
   - swift
   - ios
----
 
 ```
 
