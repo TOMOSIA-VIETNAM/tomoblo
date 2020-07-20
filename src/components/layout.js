@@ -8,9 +8,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
+import "../stylesheets/application.scss";
 import Header from "./header/header";
-import "./layout.css";
 
 const Layout = ({ children }) => {
   return (
@@ -53,13 +52,7 @@ const Layout = ({ children }) => {
               <hr />
               <p className="d-inline">
                 © {new Date().getFullYear()}{" "}
-                <a
-                  className="text-info"
-                  href="http://www.tomosia.com/index.html"
-                >
-                  TOMOSIA
-                </a>
-                , All Rights Reserved.
+                <a className="text-info" href="http://www.tomosia.com/index.html" > TOMOSIA </a> , All Rights Reserved.
               </p>
             </footer>
           </div>

@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
-import "../pages/index.css";
+import "../stylesheets/application.scss";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,12 +11,11 @@ import TechTag from "../components/tags/TechTag";
 const Tag = ({ pageContext, data }) => {
   const posts = data.allMarkdownRemark.edges;
   const labels = data.site.siteMetadata.labels;
-  console.log(pageContext.tag);
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`;
+    } tagged with "${tag}"`;
 
   const getTechTags = tags => {
     const techTags = [];
@@ -54,28 +52,25 @@ const Tag = ({ pageContext, data }) => {
         ]}
       />
       <div className="index-main">
-        <div className="sidebar px-4 py-2">
+        <div className="sidebar">
           <Sidebar />
         </div>
 
         <div className="post-list-main">
           <i>
-            <h2 className="heading">{tagHeader}</h2>
+            <h2 className="title">{tagHeader}</h2>
           </i>
           {posts.map(post => {
             const tags = post.node.frontmatter.tags;
             return (
               <div key={post.node.id} className="container mt-5">
                 <Link to={post.node.fields.slug} className="text-dark">
-                  <h2 className="heading">{post.node.frontmatter.title}</h2>
+                  <h2 className="title">{post.node.frontmatter.title}</h2>
                 </Link>
                 <small className="d-block text-info">
                   Được đăng vào {post.node.frontmatter.date}
                 </small>
                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
-                <Link to={post.node.fields.slug} className="text-primary">
-                  <small className="d-inline-block ml-3"> Đọc cả bài</small>
-                </Link>
                 <div className="d-block">{getTechTags(tags)}</div>
               </div>
             );

@@ -27,6 +27,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-cname`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['stylesheets'],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/posts`,
@@ -72,7 +78,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 200,
+              maxWidth: 700,
             },
           },
         ],
@@ -82,10 +88,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          'Lato',
-          'Helvetica Neue',
-          'Helvetica',
-          'sans-serif'
+          'Quicksand\:500,600,700',
         ]
       }
     },

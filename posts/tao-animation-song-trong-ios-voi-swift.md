@@ -3,7 +3,8 @@ title: "Làm sao để tạo một chuyển động sóng đơn giản trong iOS
 date: "2020-07-04"
 published: true
 tags:
-  - Swift and iOS
+  - swift
+  - ios
 ---
 
 ##Vấn đề đặt ra
@@ -27,7 +28,7 @@ Với công thức trên, ý tưởng để tạo chuyển động sóng là:
 
 ##Triển khai ý tưởng
 * Đầu tiên ta khởi tạo class **WaveView** với các thuộc tính và phương thức khởi tạo. Việc tạo ra một class riêng giúp ta có thể tái sử dụng ở nhiều ViewController khác nhau.
-  
+
 ```swift
 import UIKit
 
