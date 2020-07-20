@@ -52,6 +52,24 @@ tags:
 ---
 
 ```
+
+Tech List có thể sử dụng trong blog :
+
+```js
+---
+tags:
+  - react
+  - nodejs
+  - git
+  - javascript
+  - ruby
+  - php
+  - swift
+  - ios
+---
+
+```
+
 #### II. Viết bài.
 Để viết bài chúng ta sẽ thêm nội dung vào phía dưới `---`, có 2 cách để viết content.
 
