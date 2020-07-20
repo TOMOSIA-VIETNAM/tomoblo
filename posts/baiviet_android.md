@@ -3,7 +3,8 @@ title: "Hướng dẫn tạo Custom View [Android]"
 date: "2020-07-20"
 published: true
 tags:
-  - Kotlin and Android
+  - Kotlin
+  - Android
 ---
 
 # Hướng dẫn tạo custom View Android
