@@ -108,8 +108,8 @@ module.exports = {
       resolve: `gatsby-plugin-gitalk`,
       options: {
         config: {
-          clientID: '69beba26a588a29737d6',
-          clientSecret: 'c96383537bf4c5ffd7a37b01b84739a6cd16473c',
+          clientID: siteConfig.gitalk.clientID,
+          clientSecret: siteConfig.gitalk.clientSecret,
           repo: 'tomoblo',
           owner: 'TOMOSIA-VIETNAM',
           admin: ['anhnguyen1tomosia'],

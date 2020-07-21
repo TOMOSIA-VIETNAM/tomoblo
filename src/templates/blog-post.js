@@ -4,12 +4,11 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "../stylesheets/application.scss";
 
+import ApplauseAside from "../components/applause/ApplauseAside";
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
 import Gitalk from 'gatsby-plugin-gitalk';
 import 'gitalk/dist/gitalk.css';
-import 'applause-button';
-import 'applause-button/dist/applause-button.css';
 
 const BlogPost = props => {
   const post = props.data.markdownRemark;
@@ -48,7 +47,7 @@ const BlogPost = props => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-
+      <ApplauseAside />
       <div className="post-page-main">
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
@@ -60,11 +59,13 @@ const BlogPost = props => {
             </small>
 
             <div className="list-tags">
-              <applause-button style={{ width: "58px", "height": "58px" }} />
               <div className="d-block">{getTechTags(tags)}</div>
             </div>
 
+            <hr class="delimiter" />
+
             <div dangerouslySetInnerHTML={{ __html: post.html }} className="main-content" />
+            <ApplauseAside onMobile="true" />
             <CustomShareBlock
               title={post.frontmatter.title}
               siteName={siteName}
