@@ -8,6 +8,8 @@ import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
 import Gitalk from 'gatsby-plugin-gitalk';
 import 'gitalk/dist/gitalk.css';
+import 'applause-button';
+import 'applause-button/dist/applause-button.css';
 
 const BlogPost = props => {
   const post = props.data.markdownRemark;
@@ -46,6 +48,7 @@ const BlogPost = props => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
+
       <div className="post-page-main">
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
@@ -57,6 +60,7 @@ const BlogPost = props => {
             </small>
 
             <div className="list-tags">
+              <applause-button style={{ width: "58px", "height": "58px" }} />
               <div className="d-block">{getTechTags(tags)}</div>
             </div>
 
