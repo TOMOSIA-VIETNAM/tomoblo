@@ -5,6 +5,10 @@ module.exports = {
   title: "TOMOSIA VIETNAM",
   tagline: "お客様と共に新たな価値を生み出し、幸せの明かりを灯す会社。",
   copyright: "© 2019 TOMOSIA, All rights reserved",
+  gitalk: {
+    clientID: '69beba26a588a29737d6',
+    clientSecret: 'c96383537bf4c5ffd7a37b01b84739a6cd16473c'
+  },
   author: {
     name: "「共に」「幸せ」「灯す」",
     bio: "Self-taught web developer and whisky aficionado",

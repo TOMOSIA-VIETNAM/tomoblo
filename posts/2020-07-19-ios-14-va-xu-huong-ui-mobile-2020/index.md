@@ -5,7 +5,7 @@ published: true
 tags:
   - ios
 ---
----
+
 
 ## 1. Những cải tiến trong iOS 14
 * ###Ứng dụng Translate mới:
@@ -54,4 +54,4 @@ Vẫn đang thống trị trong xu hướng thiết kế mobile trong vài năm 
 
 ![image-7.jpg](/image-7.jpg)
 
-######                    *<div style="text-align: right"> Quoc Le </div>*
+######                    *<div style="text-align: right"> - by Quoc Le </div>*

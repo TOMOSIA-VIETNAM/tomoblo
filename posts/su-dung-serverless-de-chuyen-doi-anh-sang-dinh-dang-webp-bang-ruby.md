@@ -326,3 +326,5 @@ Dùng để tạo 1 bucket đích. Để sau khi xử lý convert xong thì ta u
 ## Lời kết
 
 Trong bài này mình đã hướng dẫn và giải thích chi tiết, hi vọng khi thực hiện sẽ không phát sinh lỗi. Nếu có thì chúng ta có thể xem log trong Cloudwatch để fix dần thôi. Chúc các bạn thành công.
+
+######                    *<div style="text-align: right"> - by Minh Tăng </div>*

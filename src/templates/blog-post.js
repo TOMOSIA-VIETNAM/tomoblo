@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "../stylesheets/application.scss";
 
+import ApplauseAside from "../components/applause/ApplauseAside";
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
 import Gitalk from 'gatsby-plugin-gitalk';
@@ -46,6 +47,7 @@ const BlogPost = props => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
+      <ApplauseAside />
       <div className="post-page-main">
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
@@ -60,7 +62,10 @@ const BlogPost = props => {
               <div className="d-block">{getTechTags(tags)}</div>
             </div>
 
+            <hr class="delimiter" />
+
             <div dangerouslySetInnerHTML={{ __html: post.html }} className="main-content" />
+            <ApplauseAside onMobile="true" />
             <CustomShareBlock
               title={post.frontmatter.title}
               siteName={siteName}
