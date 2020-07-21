@@ -38,6 +38,7 @@ li {
   text-align: center;
   margin: 0 auto;
 }
+
 .text-main {
   color: #31afaf;
 }
@@ -48,4 +49,10 @@ a.text-main:hover {
 
 .delimiter {
   margin-top: 2rem;
+}
+
+blockquote {
+  color: rgba(0,0,0,.5);
+  padding-left: 1.5em;
+  border-left: 5px solid rgba(0,0,0,.1);
 }
