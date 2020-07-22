@@ -10,14 +10,27 @@ const ApplauseAside = ({ width, height, onMobile }) => {
   const disabledClap = 'disabled-clap'
   const gitToken = localStorage.getItem('GT_ACCESS_TOKEN')
 
+  const pathUrl = () => {
+    if (typeof window !== `undefined`) {
+      return window.location.href
+    }
+  }
+
+  const redirect_to = (str) => {
+    if (typeof window !== `undefined`) {
+      return window.location.replace(str)
+    }
+  }
+
   const authorizeClap = () => {
     if (gitToken) return;
 
     const host = 'https://github.com/login/oauth/authorize'
     const client_id = `?client_id=${siteConfig.gitalk.clientID}`
-    const redirect_uri = `&redirect_uri=${window.location.href}`
+    const redirect_uri = `&redirect_uri=${pathUrl()}`
     const scope = '&scope=public_repo'
-    window.location.replace(host + client_id + redirect_uri + scope)
+    const url = host + client_id + redirect_uri + scope
+    redirect_to(url)
   }
   return (
     <div className={classNameParent} onClickCapture={authorizeClap}>
