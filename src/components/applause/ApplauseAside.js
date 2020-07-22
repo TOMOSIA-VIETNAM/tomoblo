@@ -11,7 +11,6 @@ const ApplauseAside = ({ width, height, onMobile }) => {
   const gitToken = localStorage.getItem('GT_ACCESS_TOKEN')
 
   const pathUrl = () => {
-    debugger
     if (typeof window !== `undefined`) {
       return window.location.href
     }
