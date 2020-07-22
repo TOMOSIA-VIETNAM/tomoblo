@@ -62,7 +62,7 @@ const BlogPost = props => {
               <div className="d-block">{getTechTags(tags)}</div>
             </div>
 
-            <hr class="delimiter" />
+            <hr className="delimiter" />
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} className="main-content" />
             <ApplauseAside onMobile="true" />
