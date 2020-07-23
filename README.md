@@ -69,6 +69,7 @@ tags:
   - rails
   - kotlin
   - android
+  - aws
 ```
 
 #### II. Viết bài.
