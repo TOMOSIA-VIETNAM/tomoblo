@@ -5,7 +5,7 @@ import "./applause_aside.scss"
 const siteConfig = require("../../../config")
 
 const ApplauseAside = ({ width, height, onMobile }) => {
-  const classNameParent = onMobile == 'true' ? 'applause-foot' : 'applause-aside'
+  const classNameParent = onMobile === 'true' ? 'applause-foot' : 'applause-aside'
   const gitToken = getLocalStorage('GT_ACCESS_TOKEN') ? true : false;
 
   const authorizeClap = () => {
