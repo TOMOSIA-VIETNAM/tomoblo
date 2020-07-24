@@ -6,10 +6,8 @@ const siteConfig = require("../../../config")
 
 const ApplauseAside = ({ width, height, onMobile }) => {
   const classNameParent = onMobile == 'true' ? 'applause-foot' : 'applause-aside'
-  const disabledClap = 'disabled-clap'
-  const gitToken = getLocalStorage('GT_ACCESS_TOKEN');
+  const gitToken = getLocalStorage('GT_ACCESS_TOKEN') ? true : false;
 
-  console.log("gitToken: " + gitToken)
   const authorizeClap = () => {
     console.log("gitToken: " + gitToken)
     if (gitToken) return;
@@ -21,9 +19,10 @@ const ApplauseAside = ({ width, height, onMobile }) => {
     const url = host + client_id + redirect_uri + scope
     redirectTo(url)
   }
+
   return (
     <div className={classNameParent} onClickCapture={authorizeClap}>
-      <applause-button style={{ width: width, height: height }} class={gitToken ? '' : disabledClap} />
+      <applause-button style={{ width: width, height: height }} class={gitToken ? '' : 'disabled-clap'} />
     </div>
   );
 };
