@@ -1,5 +1,3 @@
-"use strict"
-
 module.exports = {
   url: "https://tomosia-vietnam.github.io/tomoblo",
   title: "TOMOSIA VIETNAM",
