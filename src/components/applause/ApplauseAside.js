@@ -1,8 +1,6 @@
-/* eslint-disable import/first */
 import React from "react";
-if (typeof window !== `undefined`) require('applause-button');
 import { getLocalStorage, getPathUrl, redirectTo } from '../../utils/browser'
-import 'applause-button/dist/applause-button.css';
+import "./applause_button.css"
 import "./applause_aside.scss"
 
 const siteConfig = require("../../../config")
