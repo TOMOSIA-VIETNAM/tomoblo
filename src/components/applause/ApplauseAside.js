@@ -1,5 +1,6 @@
+/* eslint-disable import/first */
 import React from "react";
-import 'applause-button';
+if (typeof window !== `undefined`) require('applause-button');
 import 'applause-button/dist/applause-button.css';
 import "./applause_aside.scss"
 
