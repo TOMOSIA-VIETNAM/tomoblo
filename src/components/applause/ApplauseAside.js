@@ -10,7 +10,9 @@ const ApplauseAside = ({ width, height, onMobile }) => {
   const disabledClap = 'disabled-clap'
   const gitToken = getLocalStorage('GT_ACCESS_TOKEN');
 
+  console.log("gitToken: " + gitToken)
   const authorizeClap = () => {
+    console.log("gitToken: " + gitToken)
     if (gitToken) return;
 
     const host = 'https://github.com/login/oauth/authorize'
