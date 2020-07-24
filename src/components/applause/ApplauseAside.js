@@ -1,4 +1,3 @@
-/* eslint-disable import/first */
 import React from "react";
 import { getLocalStorage, getPathUrl, redirectTo } from '../../utils/browser'
 import "./applause_aside.scss"
@@ -10,7 +9,9 @@ const ApplauseAside = ({ width, height, onMobile }) => {
   const disabledClap = 'disabled-clap'
   const gitToken = getLocalStorage('GT_ACCESS_TOKEN');
 
+  console.log("gitToken: " + gitToken)
   const authorizeClap = () => {
+    console.log("gitToken: " + gitToken)
     if (gitToken) return;
 
     const host = 'https://github.com/login/oauth/authorize'
