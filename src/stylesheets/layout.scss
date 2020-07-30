@@ -85,6 +85,7 @@
 @media only screen and (max-width: 850px) {
   .sidebar{display: none;}
   .main-page { padding: 0; }
+  .post-detail { padding: 0 15px; }
   .index-main{
     display: flex;
     flex-direction: row;

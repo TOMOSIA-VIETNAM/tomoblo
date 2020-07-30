@@ -48,7 +48,7 @@ const BlogPost = props => {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <ApplauseAside />
-      <div className="post-page-main">
+      <div className="post-page-main post-detail">
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
           <div className="mt-3">
