@@ -72,7 +72,6 @@
 
 // LIST POSTS
 .post-list-main {
-  margin-left: -25px;
 
   .title {
     margin-bottom: 20px;
@@ -85,10 +84,7 @@
 }
 @media only screen and (max-width: 850px) {
   .sidebar{display: none;}
-  .post-list-main { margin-left: 0 }
-  .main-page {
-    padding: 0;
-  }
+  .main-page { padding: 0; }
   .index-main{
     display: flex;
     flex-direction: row;

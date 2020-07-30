@@ -28,7 +28,6 @@
   line-height: 3.4;
 }
 
-
 .bottom-bar {
   width: 100%;
   background: black;
@@ -51,6 +50,11 @@
   display: none;
 }
 
+@media only screen and (min-width: 1000px) {
+  .profile-img {
+    margin-left: 25px;
+  }
+}
 @media only screen and (max-width: 850px) {
   .bottom-bar{display: flex;}
   .social-links{display: none;}
