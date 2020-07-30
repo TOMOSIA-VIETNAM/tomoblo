@@ -6,7 +6,7 @@ applause-button {
   }
 
   .count-container {
-    top: -100%;
+    top: -100% !important;
     color: #797979;
 
     .count::after {

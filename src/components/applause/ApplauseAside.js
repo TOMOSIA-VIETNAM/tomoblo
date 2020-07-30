@@ -22,7 +22,7 @@ const ApplauseAside = ({ width, height, onMobile }) => {
 
   return (
     <div className={classNameParent} onClickCapture={authorizeClap}>
-      <applause-button style={{ width: width, height: height }} class={gitToken ? '' : 'disabled-clap'} />
+      <applause-button style={{ width: width, height: height }} class={gitToken ? '' : 'disabled-clap'} multiclap='true' />
     </div>
   );
 };
