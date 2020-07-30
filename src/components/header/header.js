@@ -10,20 +10,8 @@ import logo from "../../images/logo.png"
 const Header = ({ siteTitle, tagline, author, contacts }) => {
 
   return (
-    <header
-      className="head-main"
-      style={{
-        background: `white`,
-        borderBottom: `1px solid #f0f0f2`,
-        padding: `0 3.45rem`
-      }}
-    >
-      <div className="head-elements"
-        style={{
-          margin: `0`,
-          padding: `0 .75rem`
-        }}
-      >
+    <header className="head-main">
+      <div className="head-elements">
         <Link
           to="/"
           style={{
