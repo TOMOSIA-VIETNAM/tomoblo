@@ -10,7 +10,6 @@ export default function HTML(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         {props.headComponents}
         <link href="https://unpkg.com/applause-button/dist/applause-button.css" rel="stylesheet" />
-        <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -20,6 +19,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script src="https://unpkg.com/applause-button/dist/applause-button.js" defer></script>
       </body>
     </html>
   )
