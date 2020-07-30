@@ -5,6 +5,9 @@
   top: 0;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #f0f0f2;
+  padding: 0 2.45rem;
+  background: white
 }
 .profile-img {
   width: auto;
@@ -24,7 +27,6 @@
   justify-content: space-around;
   line-height: 3.4;
 }
-
 
 .bottom-bar {
   width: 100%;
@@ -48,6 +50,11 @@
   display: none;
 }
 
+@media only screen and (min-width: 1000px) {
+  .profile-img {
+    margin-left: 25px;
+  }
+}
 @media only screen and (max-width: 850px) {
   .bottom-bar{display: flex;}
   .social-links{display: none;}

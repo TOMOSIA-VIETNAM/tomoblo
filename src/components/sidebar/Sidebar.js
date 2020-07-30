@@ -51,14 +51,12 @@ const Sidebar = () => {
             `}
             render={data => (
                 <>
-                    <div className="sidebar-inner border-right">
-                        <Bio author={data.site.siteMetadata.author} tagline={data.site.siteMetadata.tagline} />
-                        <SocialLinks contacts={data.site.siteMetadata.contacts} />
-                        <div className="page-links">
-                        </div>
-                        <div className="tech-tags mt-4">
-                            <TechTags labels={data.site.siteMetadata.labels} posts={data.allMarkdownRemark.edges} />
-                        </div>
+                    <Bio author={data.site.siteMetadata.author} tagline={data.site.siteMetadata.tagline} />
+                    <SocialLinks contacts={data.site.siteMetadata.contacts} />
+                    <div className="page-links">
+                    </div>
+                    <div className="tech-tags mt-4">
+                        <TechTags labels={data.site.siteMetadata.labels} posts={data.allMarkdownRemark.edges} />
                     </div>
                 </>
             )}

@@ -1,11 +1,7 @@
 .sidebar {
   width: 90%;
-  padding: .5rem 1.5rem;
-
-  &-inner {
-    width: 100%;
-    height: 100vh;
-  }
+  padding: .5rem 1.45rem;
+  border-right: 1px solid #dee2e6 !important ;
 
   &-social-links {
     display: grid;
