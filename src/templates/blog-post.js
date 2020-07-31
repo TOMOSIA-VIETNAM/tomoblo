@@ -4,14 +4,13 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "../stylesheets/application.scss";
 
-import ApplauseAside from "../components/applause/ApplauseAside";
 import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
 import Gitalk from 'gatsby-plugin-gitalk';
 import 'gitalk/dist/gitalk.css';
-import { add_target_blank } from '../components/utils.js';
+import { addTargetBlank } from '../utils/common.js';
 
-add_target_blank();
+addTargetBlank();
 
 const BlogPost = props => {
   const post = props.data.markdownRemark;
@@ -50,7 +49,6 @@ const BlogPost = props => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <ApplauseAside />
       <div className="post-page-main post-detail">
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
@@ -68,7 +66,7 @@ const BlogPost = props => {
             <hr className="delimiter" />
 
             <div dangerouslySetInnerHTML={{ __html: post.html }} className="main-content" />
-            <ApplauseAside onMobile="true" />
+
             <CustomShareBlock
               title={post.frontmatter.title}
               siteName={siteName}
