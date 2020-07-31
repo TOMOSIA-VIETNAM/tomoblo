@@ -9,7 +9,6 @@ const ApplauseAside = ({ width, height, onMobile }) => {
   const gitToken = getLocalStorage('GT_ACCESS_TOKEN') ? true : false;
 
   const authorizeClap = () => {
-    console.log("gitToken: " + gitToken)
     if (gitToken) return;
 
     const host = 'https://github.com/login/oauth/authorize'
@@ -22,7 +21,7 @@ const ApplauseAside = ({ width, height, onMobile }) => {
 
   return (
     <div className={classNameParent} onClickCapture={authorizeClap}>
-      <applause-button style={{ width: width, height: height }} class={gitToken ? '' : 'disabled-clap'} multiclap='true' />
+      <applause-button style={{ width: width, height: height }} class={gitToken ? '' : 'disabled-clap'} />
     </div>
   );
 };
