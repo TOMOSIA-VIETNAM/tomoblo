@@ -7,9 +7,8 @@ tags:
   - android
 ---
 
-# Hướng dẫn tạo custom View Android
 
-Chào anh em, nếu anh em đã từng xem những video dạy iOS của kênh 
+Chào anh em, nếu anh em đã từng xem những video dạy iOS của kênh
 [***Lets Build That App***](https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA) trên Youtube thì có lẽ không xa lạ gì với việc dựng view 100% bằng code. Xem xong mấy anh em bên Android chắc cũng thắc mắc là không biết bên mình có làm được như vậy không.
 
 Câu trả lời là có, tuy nhiên do bên Android dựng view bằng XML cũng rất ngon rồi nên chẳng ai quan tâm đến việc dựng view bằng code. Đấy là trong đa số các trường hợp nhưng đôi khi sẽ có những view mặc định Android không hỗ trợ, như một view dạng hình tròn chằng hạn, khi đó chúng ta sẽ phải dùng tới thư viện hoặc tự tạo một class để vẽ view đó.
@@ -34,26 +33,26 @@ Mình trích dẫn nguyên từ tài liệu của  [Google](https://developer.an
 
 ---
 * Sau đó tạo class tên là CircleView, class này kế thừa class View
-  
+
 ```kotlin
-  
-class CircleView (context: Context, attrs: AttributeSet): View(context, attrs){  
-    var paint: Paint = Paint()  
-    var centerOfX =  340F  
-  var centerOfY =  340F  
-  var radiusOfCircleView =  140F  
-  
-  
-  init {  
-        paint.color = ContextCompat.getColor(context,android.R.color.holo_green_light)  
-        paint.strokeWidth = 40f  
-  paint.style = Paint.Style.STROKE// Constructor Call  
-  }  
-  
-    override fun onDraw(canvas: Canvas?) {  
-        canvas?.drawCircle(centerOfX,centerOfY,radiusOfCircleView,paint)  
-        super.onDraw(canvas)  
-    }  
+
+class CircleView (context: Context, attrs: AttributeSet): View(context, attrs){
+    var paint: Paint = Paint()
+    var centerOfX =  340F
+  var centerOfY =  340F
+  var radiusOfCircleView =  140F
+
+
+  init {
+        paint.color = ContextCompat.getColor(context,android.R.color.holo_green_light)
+        paint.strokeWidth = 40f
+  paint.style = Paint.Style.STROKE// Constructor Call
+  }
+
+    override fun onDraw(canvas: Canvas?) {
+        canvas?.drawCircle(centerOfX,centerOfY,radiusOfCircleView,paint)
+        super.onDraw(canvas)
+    }
 }
 
 ```
@@ -62,22 +61,22 @@ class CircleView (context: Context, attrs: AttributeSet): View(context, attrs){
 Trong Android Canvas là công cụ dùng để vẽ View, Paint là bút vẽ. Tạo class xong rồi, chúng ta sang bên XML khai báo để sử dụng thằng này.
 
 
-```xml 
-<?xml version="1.0" encoding="utf-8"?>  
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"  
-  xmlns:app="http://schemas.android.com/apk/res-auto"  
-  xmlns:tools="http://schemas.android.com/tools"  
-  android:layout_width="match_parent"  
-  android:layout_height="match_parent"  
-  tools:context=".MainActivity">  
-  
- <com.tomosia.customviewexample.CircleView  android:layout_width="match_parent"  
-  android:layout_height="match_parent"  
-  app:layout_constraintBottom_toBottomOf="parent"  
-  app:layout_constraintLeft_toLeftOf="parent"  
-  app:layout_constraintRight_toRightOf="parent"  
-  app:layout_constraintTop_toTopOf="parent" />  
-  
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+ <com.tomosia.customviewexample.CircleView  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:layout_constraintBottom_toBottomOf="parent"
+  app:layout_constraintLeft_toLeftOf="parent"
+  app:layout_constraintRight_toRightOf="parent"
+  app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ```
