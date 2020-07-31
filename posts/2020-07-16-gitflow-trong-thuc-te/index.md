@@ -5,23 +5,22 @@ published: true
 tags:
   - git
 ---
----
 
-Tiếp tục chuỗi bài về git, thì ta sẽ nói về gitflow. Ta hiểu đơn giản gitflow là các quy tắc sử dụng và phối hợp git theo nhóm. 
+Tiếp tục chuỗi bài về git, thì ta sẽ nói về gitflow. Ta hiểu đơn giản gitflow là các quy tắc sử dụng và phối hợp git theo nhóm.
 Trong tất cả các dự án thì việc xác định gitflow của dự án đó là điều bắt buộc.
 
 ## Tiền đề
 * Dựa trên mô hình của GitHub Flow. Về mô hình GitHub Flow, có thể xem bản hướng dẫn gốc của GitHub [ở đây](https://guides.github.com/introduction/flow/).
 * Dựa vào yêu cầu của mỗi dự án, skill của các members trong dự án mà mô hình này có thể được sửa lại cho phù hợp với từng dự án.
     * Ví dụ các dự án quá cũ, có cách vận hành gitflow khác thì không cần phải chuyển qua mô hình này.
-* Không có 1 mô hình tuyệt đối chính xác hay đúng đắn. Tất cả chỉ là tương đối. 
+* Không có 1 mô hình tuyệt đối chính xác hay đúng đắn. Tất cả chỉ là tương đối.
 
 ## Dự án trong giai đoạn develop
 
 ### Vai trò của các branch
 
 * `master`
-    * Luôn ở trạng thái có thể deploy. 
+    * Luôn ở trạng thái có thể deploy.
     * Không bị fail auto test (nếu dự án có yêu cầu dùng auto test)
         * nếu có vấn đề gì thì phải ưu tiên fix đầu tiên
     * Không được commit/push trực tiếp vào branch này. Branch `master` phải được bảo vệ bằng chức năng protected branchs của GitHub.
@@ -56,18 +55,18 @@ Trong tất cả các dự án thì việc xác định gitflow của dự án �
 > Có nhiều dự án sử dụng chức năng tự động deploy của CircleCI rất hiệu quả. Cách làm này tiết kiệm thời gian và cải thiện workflow trong team.
 
 ## Deploy lên production
-* Sử dụng branch `release` chuyên để deploy lên production. 
+* Sử dụng branch `release` chuyên để deploy lên production.
 * Khi deploy lên prd, tạo pull request từ branch `master` vào branch `release`. Branch `release` phải được bảo vệ bằng chức năng protected branchs của GitHub.
 * Xác nhận sự thay đổi, nếu không có vấn đề gì thì merge vào `release`.
-* Sau khi merge xong thì deploy lên server prd. Khuyến khích dùng deploy tự động. 
+* Sau khi merge xong thì deploy lên server prd. Khuyến khích dùng deploy tự động.
 
 ![release-branch.png](/release-branch.png)
 
 ## Fix lỗi khẩn cấp
 
-Các lỗi khẩn cấp này không muốn gặp nhưng đôi lúc vẫn xuất hiện. Lý do vì môi trường production thường khác môi trường staging. Prd thường có ELB, S3, biến môi trường khác biệt, ... 
+Các lỗi khẩn cấp này không muốn gặp nhưng đôi lúc vẫn xuất hiện. Lý do vì môi trường production thường khác môi trường staging. Prd thường có ELB, S3, biến môi trường khác biệt, ...
 
-Các lỗi này cần phải fix ngay lập tức, thường thì không có thời gian để trải qua đủ các quy trình deploy. 
+Các lỗi này cần phải fix ngay lập tức, thường thì không có thời gian để trải qua đủ các quy trình deploy.
 
 * hotfix-XXX
     * Tách ra từ branch `release`
@@ -79,9 +78,9 @@ Các lỗi này cần phải fix ngay lập tức, thường thì không có th�
 
 ## Mô hình git cho phase 2nd
 
-Phần này mình sẽ giải thích về mô hình git của dự án sau khi đã release phase 1st. 
-Mỗi dự án thường chia thành nhiều phase. Mỗi phase có những tính năng độc lập với nhau. 
-Vì sự độc lập này mà mô hình git cũng có ít nhiều thay đổi cho phù hợp. 
+Phần này mình sẽ giải thích về mô hình git của dự án sau khi đã release phase 1st.
+Mỗi dự án thường chia thành nhiều phase. Mỗi phase có những tính năng độc lập với nhau.
+Vì sự độc lập này mà mô hình git cũng có ít nhiều thay đổi cho phù hợp.
 
 
 ### Vai trò của các branch
