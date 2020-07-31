@@ -1,7 +1,7 @@
 const siteConfig = require("../../config")
 
 export function add_target_blank() {
-  if (!window) return;
+  if (typeof window == `undefined`) return;
 
   window.addEventListener("load", function () {
     let links = document.getElementsByTagName('a');
