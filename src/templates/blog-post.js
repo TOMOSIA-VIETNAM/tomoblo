@@ -9,6 +9,9 @@ import TechTag from "../components/tags/TechTag";
 import CustomShareBlock from "../components/CustomShareBlock";
 import Gitalk from 'gatsby-plugin-gitalk';
 import 'gitalk/dist/gitalk.css';
+import { add_target_blank } from '../components/utils.js';
+
+add_target_blank();
 
 const BlogPost = props => {
   const post = props.data.markdownRemark;

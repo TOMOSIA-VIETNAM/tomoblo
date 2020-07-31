@@ -1,4 +1,6 @@
 module.exports = {
+  localhost: "http://localhost",
+  host: "http://blog.tomosia.com",
   url: "https://tomosia-vietnam.github.io/tomoblo",
   title: "TOMOSIA VIETNAM",
   tagline: "お客様と共に新たな価値を生み出し、幸せの明かりを灯す会社。",
