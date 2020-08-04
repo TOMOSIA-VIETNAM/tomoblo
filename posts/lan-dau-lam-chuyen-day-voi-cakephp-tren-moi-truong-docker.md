@@ -1,9 +1,11 @@
 ---
 title: "Lần đầu làm chuyện đấy với Cakephp trên môi trường docker"
-
 date: "2020-08-03"
-
 published: true
+tags:
+  - php
+  - cakephp
+---
 
 Lần đầu tiên em gửi lời chào đến anh chị em trong công ty chúng ta, và cũng lần đầu tiên em viết bài trên  **tomoblo** cảm xúc vẫn còn phê phê. 
 Bài viết này ngoài đưa ra 1 cách để cài đặt **CakePHP** trên môi trường Docker thì cũng lưu lại 1 **quãng đường gian khổ** mày mò của em về sử dụng cái 
@@ -115,18 +117,12 @@ services:
     volumes:
       - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./src/htdocs:/var/www/html
-    networks:
-      vpcbr:
-        ipv4_address: 172.30.0.2
 
   php:
     container_name: cake_php
     build: config/php
     volumes:
       - ./src/htdocs:/var/www/html
-    networks:
-      vpcbr:
-        ipv4_address: 172.30.0.3
 
   db:
     image: mysql:5.7
@@ -143,16 +139,6 @@ services:
       - ./config/mysql/my.cnf:/etc/mysql/my.cnf
       - ./config/mysql/init:/docker-entrypoint-initdb.d
       - cake.db.volume:/var/lib/mysql
-    networks:
-      vpcbr:
-        ipv4_address: 172.30.0.4
-
-networks:
-  vpcbr:
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.30.0.0/16
 ```
 
 Ở app.local.php em chỉnh như sau:
@@ -216,7 +202,3 @@ Rất mong các bạn (anh/chị) thông cảm nếu thấy lằng nhằng ^^.
 https://hub.docker.com/r/occitech/cakephp
 https://github.com/diepz/cakephp
 ```
-
-tags:
-  - diep.do
----
