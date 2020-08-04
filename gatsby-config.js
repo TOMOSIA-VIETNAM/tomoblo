@@ -1,7 +1,7 @@
 'use strict'
 
 const siteConfig = require("./config")
-
+const siteUrl    = `https://blog.tomosia.com`
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -19,7 +19,7 @@ module.exports = {
       facebook: siteConfig.author.contacts.facebook
     },
     labels: siteConfig.labels,
-    siteUrl: 'http://blog.tomosia.com/',
+    siteUrl: siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -117,5 +117,35 @@ module.exports = {
         }
       }
     },
-  ],
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: siteUrl,
+        graphQLQuery: `
+          {
+            allMarkdownRemark(limit: 5) {
+              edges {
+                node {
+                  excerpt
+                  html
+                  fields { slug }
+                  frontmatter {
+                    title
+                    date(formatString: "DD-MM-YYYY")
+                  }
+                }
+              }
+            }
+          }
+        `,
+        serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          id: node.fields.slug,
+          url: siteUrl + node.fields.slug,
+          title: node.frontmatter.title,
+          date_published: node.frontmatter.date,
+          excerpt: node.excerpt
+        }))
+      }
+    }
+  ]
 }
