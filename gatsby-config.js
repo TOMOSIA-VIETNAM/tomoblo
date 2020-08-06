@@ -123,7 +123,10 @@ module.exports = {
         siteUrl: siteUrl,
         graphQLQuery: `
           {
-            allMarkdownRemark(limit: 5) {
+            allMarkdownRemark(
+              limit: 5
+              sort: { fields: [frontmatter___date], order: DESC }
+            ) {
               edges {
                 node {
                   excerpt
@@ -131,7 +134,7 @@ module.exports = {
                   fields { slug }
                   frontmatter {
                     title
-                    date(formatString: "DD-MM-YYYY")
+                    date(formatString: "YYYY.MM.DD")
                   }
                 }
               }
