@@ -12,11 +12,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - run: yarn
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install
     - run: |
         git config --global user.email 'anh.nguyen1@tomosia.com'
         git config --global user.name 'Nguyen Anh'
-
     - run: yarn deploy
       env:
         PA_TOKEN: ${{ secrets.PA_TOKEN }}
