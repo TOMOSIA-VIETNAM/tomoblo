@@ -3,14 +3,14 @@ module.exports = {
   host: "http://blog.tomosia.com",
   url: "https://tomosia-vietnam.github.io/tomoblo",
   title: "TOMOSIA VIETNAM",
-  tagline: "お客様と共に新たな価値を生み出し、幸せの明かりを灯す会社。",
-  copyright: "© 2019 TOMOSIA, All rights reserved",
+  tagline: "Tạo dựng môi trường dân chủ, năng động để tất cả mọi người được phát huy tài năng, sở trường của mình.",
+  copyright: "© 2020 TOMOSIA VIET NAM, All rights reserved",
   gitalk: {
     clientID: '69beba26a588a29737d6',
     clientSecret: 'c96383537bf4c5ffd7a37b01b84739a6cd16473c'
   },
   author: {
-    name: "「共に」「幸せ」「灯す」",
+    name: "Cùng phát triển, cùng thành công.",
     bio: "Self-taught web developer and whisky aficionado",
     contacts: {
       facebook: 'https://www.facebook.com/tomosiavn/',
