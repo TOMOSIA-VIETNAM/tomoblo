@@ -3,7 +3,7 @@ title: "Hướng dẫn tạo bài viết mới"
 date: "2020-07-03"
 published: true
 tags:
-  - ruby
+  -
 ---
 
 # Hướng dẫn viết bài cho TOMOSIA BLOG

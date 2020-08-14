@@ -1,5 +1,5 @@
 ---
-title: "Hướng dẫn tạo Custom View [Android]"
+title: "[Kotlin] Hướng dẫn tạo Custom View"
 date: "2020-07-20"
 published: true
 tags:
