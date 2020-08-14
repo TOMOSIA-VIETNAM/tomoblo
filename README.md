@@ -56,20 +56,33 @@ tags:
 Tech Tags có thể sử dụng trong blog :
 
 ```js
-
+# Fontend
 tags:
+  - javascript
   - react
   - nodejs
-  - git
-  - javascript
+
+# Backend
+tags:
   - ruby
+  - rails
   - php
+  - laravel
+  - cakephp
+
+# App
+tags:
   - swift
   - ios
-  - rails
   - kotlin
   - android
+
+# Others
+tags:
+  - git
   - aws
+  - instagram
+  - facebook
 ```
 
 #### II. Viết bài.
