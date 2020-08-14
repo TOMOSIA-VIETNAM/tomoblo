@@ -1,5 +1,5 @@
 ---
-title: "iOS 14 và xu hướng UI mobile 2020"
+title: "[iOS] iOS 14 và xu hướng UI mobile 2020"
 date: "2020-07-19"
 published: true
 tags:

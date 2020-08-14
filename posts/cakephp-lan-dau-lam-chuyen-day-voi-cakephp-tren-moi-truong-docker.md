@@ -1,5 +1,5 @@
 ---
-title: "Lần đầu làm chuyện đấy với Cakephp trên môi trường docker"
+title: "[CakePHP] Lần đầu làm chuyện đấy với Cakephp trên môi trường docker"
 date: "2020-08-03"
 published: true
 tags:
@@ -7,27 +7,27 @@ tags:
   - cakephp
 ---
 
-Lần đầu tiên em gửi lời chào đến anh chị em trong công ty chúng ta, và cũng lần đầu tiên em viết bài trên  **Tomoblo** cảm xúc vẫn còn phê phê. 
-Bài viết này ngoài đưa ra 1 cách để cài đặt **CakePHP** trên môi trường Docker thì cũng lưu lại 1 quãng đường gian khổ mày mò của em về sử dụng cái 
+Lần đầu tiên em gửi lời chào đến anh chị em trong công ty chúng ta, và cũng lần đầu tiên em viết bài trên  **Tomoblo** cảm xúc vẫn còn phê phê.
+Bài viết này ngoài đưa ra 1 cách để cài đặt **CakePHP** trên môi trường Docker thì cũng lưu lại 1 quãng đường gian khổ mày mò của em về sử dụng cái
 framework **CakePHP** rối rắm này (thực sự nó rối rắm lắm  ^^).
 
 ## Phần mở đầu lằng nhằng luyên thuyên
-Vốn dĩ là một người nhút nhát, e dè em thực sự đã gặp khó khăn khi giải quyết một vấn đề. 
-Sau đó em có hỏi thẳng luôn ông anh làm cùng, ông đã bày cho giải pháp là ảo hoá với **Vagrant**. 
-Nhưng không hiểu em xử lý thế nào mà lại cũng vẫn thiếu cái extension khó chịu kia. Và em lại phải đi tìm hiểu 1 chút. Và cũng vỡ ra được vài điều. 
-Vấn đề em gặp hoá ra nhiều bác trước cũng gặp rồi và các bác ấy cũng đề xuất ra mấy mô hình. 
+Vốn dĩ là một người nhút nhát, e dè em thực sự đã gặp khó khăn khi giải quyết một vấn đề.
+Sau đó em có hỏi thẳng luôn ông anh làm cùng, ông đã bày cho giải pháp là ảo hoá với **Vagrant**.
+Nhưng không hiểu em xử lý thế nào mà lại cũng vẫn thiếu cái extension khó chịu kia. Và em lại phải đi tìm hiểu 1 chút. Và cũng vỡ ra được vài điều.
+Vấn đề em gặp hoá ra nhiều bác trước cũng gặp rồi và các bác ấy cũng đề xuất ra mấy mô hình.
 Mô hình mà dùng Vagrant kia là mô hình thế này:
-                                                                            
+
 ![enter image description here](https://images.viblo.asia/3ea4768d-c5f2-40c1-aa44-248d8063fddb.png)
 
-Dùng máy ảo em không thấy hiệu quả với em. Mà kể cả hiệu quả thì việc dùng máy ảo tốn RAM em cũng không thích. 
-"Vũ khí tối thượng" cũ của em toàn là các loại thiếu tài nguyên nên kể cả khi dùng đồ này thì em cũng thực sự rén.... 
+Dùng máy ảo em không thấy hiệu quả với em. Mà kể cả hiệu quả thì việc dùng máy ảo tốn RAM em cũng không thích.
+"Vũ khí tối thượng" cũ của em toàn là các loại thiếu tài nguyên nên kể cả khi dùng đồ này thì em cũng thực sự rén....
 Thế là em lại phải về "tà đạo", mở đồ cũ code trên **Github** lấy demo cho nhanh. 😢
 
-Về lại "tà đạo" thuận tiện thật, nhưng lương tâm bứt rứt vô cùng. 
-em lại phải cố gắng làm thế nào mà nó lại có thể chạy trên môi trường kiểu Unix kia. 
-Và đành vượt qua nỗi sợ + đang dịch covid, em bắt đầu dấn thân tìm hiểu Docker. 
-Và sơ sơ em đã hiểu qua được mô hình của nó cũng như thích sự dùng đủ của containerization, 
+Về lại "tà đạo" thuận tiện thật, nhưng lương tâm bứt rứt vô cùng.
+em lại phải cố gắng làm thế nào mà nó lại có thể chạy trên môi trường kiểu Unix kia.
+Và đành vượt qua nỗi sợ + đang dịch covid, em bắt đầu dấn thân tìm hiểu Docker.
+Và sơ sơ em đã hiểu qua được mô hình của nó cũng như thích sự dùng đủ của containerization,
 không thích dùng ngốn nhưng ko dùng hết của virtualization.
 
 ![enter image description here](https://images.viblo.asia/633a002e-7f9b-4947-9aba-58a4a4933eb6.png)
@@ -44,13 +44,13 @@ $ docker run -it --rm -v ${PWD}:/usr/src/app php:7.1.5-apache bash
 ```
 Sau đó chạy thêm các thư viện cần thiết và cài composer:
 ```php
-root@f28aed5c29e7:/var/www/html# apt-get update && apt-get install -y libicu-dev libpq-dev libmcrypt-dev mysql-client git zip unzip 
-root@f28aed5c29e7:/var/www/html# rm -r /var/lib/apt/lists/* && docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd 
+root@f28aed5c29e7:/var/www/html# apt-get update && apt-get install -y libicu-dev libpq-dev libmcrypt-dev mysql-client git zip unzip
+root@f28aed5c29e7:/var/www/html# rm -r /var/lib/apt/lists/* && docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
 root@f28aed5c29e7:/var/www/html# docker-php-ext-install intl mbstring mcrypt pcntl pdo_mysql pdo_pgsql pgsql zip opcache
 root@f28aed5c29e7:/var/www/html# curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
 ```
-Mọi thứ đều rất ok cho tới khi em tạo Dockerfile và docker-compose.yml. 
-Đúng là mọi thứ đã chạy, vâng mọi thứ thực sự đã mỗi tội là không biết 
+Mọi thứ đều rất ok cho tới khi em tạo Dockerfile và docker-compose.yml.
+Đúng là mọi thứ đã chạy, vâng mọi thứ thực sự đã mỗi tội là không biết
 project đi đâu mà lần 😢 Làm sao để có thể code project được đây??
 
 ## Cố gắng lần 2: Khá trâu bò nhưng hiệu quả
@@ -183,7 +183,7 @@ Các bước tiếp theo về migrate, seed,... các bạn sẽ đọc ở blog 
 
 Tuy nhiên với bản thân mình thì còn cần tạo cả khung MVC với các bảng nữa nên mình sẽ để 1 terminal chạy docker-compose up ở 1 bên và mở terminal mới chạy lệnh sau:
 ```php
-docker exec -ti <tên của container chứa cakephp> /bin/bash 
+docker exec -ti <tên của container chứa cakephp> /bin/bash
 ```
 Với terminal này bạn có thể tuỳ ý chạy các command thông thường của CakePHP, ví dụ
 ```php
@@ -195,7 +195,7 @@ bin/cake bake all Users
 ## Tổng kết
 Tưởng như đơn giản mà làm không ra, rồi sai sót mấy lần.
 
-Cảm ơn các bạn (anh/chị) đã đọc cái bài post lộn xộn này. Nội dung cũng thập cẩm này nọ thật. 
+Cảm ơn các bạn (anh/chị) đã đọc cái bài post lộn xộn này. Nội dung cũng thập cẩm này nọ thật.
 Rất mong các bạn (anh/chị) thông cảm nếu thấy lằng nhằng ^^.
 
 ## Tham khảo

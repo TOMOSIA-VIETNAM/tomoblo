@@ -1,9 +1,10 @@
 ---
-title: "Sử dụng Serverless để chuyển đổi ảnh sang định dạng WEBP bằng Ruby"
+title: "[Aws] Converting a image to WebP in AWS Lambda using Ruby"
 date: "2020-06-29"
 published: true
 tags:
   - ruby
+  - aws
 ---
 
 ## Vấn đề đặt ra

@@ -3,13 +3,13 @@ title: "Hourensou trong công việc"
 date: "2020-07-31"
 published: true
 tags:
-  - japanese
+  -
 ---
 
 ## Hourensou là gì?
 <center>
 
-![Compare](https://lh3.googleusercontent.com/proxy/U3M9ft1IOCW1ILu0tRMA2D6OkP5AdnK64c9z5kpeeliFFO2gdHBjyDOugKws7jYe3o3mQFq7fA0PwXMY7G1cHZQtNecVKRqR3vvg6w5kJqZ1oDAOyFeAelExp2LtPunH87SKJ6nEdWd5K9BFXlWxYnBWQqUMjtrdyQuKsEIWjhRVPmcNl5KHVqEPr2wlPg)
+![Compare](http://jinzainews.net/system/item_images/images/000/017/982/medium/e4bd5fa4-117c-4de8-8e36-89ec309d8bc4.png?1524551872)
 
 </center>
 

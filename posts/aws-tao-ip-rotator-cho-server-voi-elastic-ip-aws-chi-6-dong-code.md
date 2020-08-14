@@ -1,5 +1,5 @@
 ---
-title: 'Tạo IP rotator cho server với Elastic IP AWS chỉ 6 dòng code'
+title: '[Aws] Tạo IP rotator cho server với Elastic IP AWS chỉ 6 dòng code'
 date: '2020-07-21'
 published: true
 tags:
