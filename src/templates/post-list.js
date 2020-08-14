@@ -13,8 +13,8 @@ const PostList = props => {
   const { currentPage, numPages } = props.pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString();
-  const nextPage = (currentPage + 1).toString();
+  const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`;
+  const nextPage = `/${currentPage + 1}`;
 
   const getTechTags = tags => {
     const techTags = [];
@@ -75,7 +75,7 @@ const PostList = props => {
           <div className="text-center mt-4">
             {!isFirst && (
               <Link to={prevPage} rel="prev" style={{ textDecoration: `none` }}>
-                <span className="text-dark">← Trang sau</span>
+                <span className="text-dark">← Trang trước</span>
               </Link>
             )}
             {!isLast && (
