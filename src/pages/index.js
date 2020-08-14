@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const labels = data.site.siteMetadata.labels;
   const currentPage = 1;
-  const postsPerPage = 5; // see limit in graphql query below
+  const postsPerPage = 10; // see limit in graphql query below
   const nextPage = (currentPage + 1).toString();
   const hasNextPage = data.allMarkdownRemark.totalCount > postsPerPage;
 
@@ -99,7 +99,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 5
+      limit: 10
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { published: { eq: true } } }
     ) {
