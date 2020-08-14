@@ -4,6 +4,7 @@ date: "2020-07-23"
 published: true
 tags:
   - facebook
+  - instagram
 ---
 
 ***Graph Facebook API là gì?***

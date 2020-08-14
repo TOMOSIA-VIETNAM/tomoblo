@@ -1,7 +1,7 @@
 'use strict'
 
 const siteConfig = require("./config")
-const siteUrl    = `https://blog.tomosia.com`
+const siteUrl = `https://blog.tomosia.com`
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -124,7 +124,7 @@ module.exports = {
         graphQLQuery: `
           {
             allMarkdownRemark(
-              limit: 5
+              limit: 10
               sort: { fields: [frontmatter___date], order: DESC }
             ) {
               edges {

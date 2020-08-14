@@ -1,7 +1,13 @@
 .sidebar {
+  position: relative;
   width: 90%;
   padding: .5rem 1.45rem;
   border-right: 1px solid #dee2e6 !important ;
+
+  &__inner {
+    position: fixed;
+    width: 26%;
+  }
 
   &-social-links {
     display: grid;
@@ -9,6 +15,10 @@
     float: left;
     margin: 1rem 0;
     margin-left: -10px;
+  }
+
+  .tech-tags {
+    margin-top: 8rem;
   }
 
   .author-bio {
