@@ -1,6 +1,6 @@
 ---
-title: "[Facebook SDK] Lấy dữ liệu Instagramer thông qua Graph SQL - Phần 1"
-date: "2020-07-23"
+title: "[Facebook SDK] Lấy dữ liệu Instagramer thông qua GraphQL - Phần 1"
+date: "2020-08-17"
 published: true
 tags:
   - facebook
