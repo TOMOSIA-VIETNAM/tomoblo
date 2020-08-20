@@ -3,13 +3,19 @@ title: "Tích hợp CI với Gitlab"
 date: "2020-08-19"
 published: true
 tags:
-  - change_me
+  - Gitlab CI
 ---
 
-# 1.Tác giả
-Giới thiệu qua 1 chút về mình nhé . Mình là Đạt , tên đầy đủ của mình là Hà Tiến Đạt , còn các bạn có thể gọi mình là  Đạt master, Đạt 09, Đạt gì gì đó cũng được nhé ... ahiii
+# 1.Vấn đề
+Toàn bộ quá trình phát triển một phần mềm (SDLC) truyền thống nhìn chung sẽ diễn ra qua 6 quá trình cụ thể :
+```
+Lập kế hoạch => Thực hiện kế hoạch => Kiểm tra => Thiết lập thông tin => Triển khai và bảo trì => Duy trì. 
+```
+Mô hình SDLC được sử dụng trong nhiều năm và nó đã thể hiện rất nhiều ưu điểm trong ngành công nghệ thông tin. Tuy nhiên, với sự ra đời và sử dụng rộng rãi của nhiều ứng dụng mới cùng với yêu cầu về nhu cầu của con người ngày càng cao thì mô hình SDLC cũ này đã từ bước bộc lộ những điểm yếu của mình.
 
-Mình (em , anh) sinh năm 1996 , cũng mới vào nghề được khoảng 2 năm, còn nhiều điều chưa được biết , nên trong bài viết này , có điều gì thiếu xót , gia đình xin được lượng thứ ạ =))
+Hai khía cạnh tốc độ và tự động hóa gần như không cho phép xuất hiện rộng rãi trong mô hình SDLC truyền thống
+
+Và đây chính là mảnh đất màu mỡ để ci/cd phát huy tác dụng. Vậy CI/CD là gì ?
 
 # 2.Giới thiệu
 ### 2.1 CI là gì ?
@@ -23,12 +29,12 @@ Theo mình tìm hiều thì trước khi `Gitlab CI` ra đời thì `Jenkins`  l
 
 Trước đây mình đã từng nghịch Jenkins để làm thử CI cho 1 project demo của mình thì mình thấy config khá phức tạp như `liên kết đến repo, phân quyền đủ kiểu để Jenkins có thể lấy source code từ repo` 
 
-Đến khi mình biết đến `Gitlab CI` , trái ngược với   sự chậm chạp, rắc rối của Jenkins là sự tuyệt vời của Gitlab CI luôn. Code để ở Gitlab, rồi trong đó có cho cài đặt CI/CD để test và deploy code tự động.Config dễ hiểu , không phải phân quyền giữa hệ thống CI và souce code , dễ cài đặt , quả thưc đây chính là CI phù hợp với mình
+Đến khi mình biết đến `Gitlab CI` , trái ngược với rắc rối của Jenkins là sự tuyệt vời của Gitlab CI luôn. Code để ở Gitlab, rồi trong đó có cho cài đặt CI/CD để test và deploy code tự động.Config dễ hiểu , không phải phân quyền giữa hệ thống CI và souce code , dễ cài đặt , quả thưc đây chính là CI phù hợp với mình
 
 ![d3358d65-f8ad-4d94-b371-9bbcc6afe3f0](https://i.ibb.co/bKzg2gf/d3358d65-f8ad-4d94-b371-9bbcc6afe3f0.png)
 
 
-# 3.	Các hoạt động
+# 3.	Cách hoạt động
 
 ### 3.1 Luồng hoạt động của CI
 Khi 1 anh (chị em ) developer hoàn thành một task nào đó và push commit lên Gitlab 
@@ -61,6 +67,7 @@ Theo mình thấy thì `Pipelines` là thành phần cấp cao nhất của tíc
 Bên dưới là ví dụ về đồ thị Pipeline thông thường :
 
 ![af6e91ef-0fd1-41e9-9efb-5127a7b239e9](https://i.ibb.co/pb91rdh/af6e91ef-0fd1-41e9-9efb-5127a7b239e9.png)
+
 Tóm lại, các bước để  **Gitlab CI**  hoạt động như sau :
 
 -   Thêm`.gitlab-ci.yml`  vào thư mục gốc của repo.
@@ -137,3 +144,5 @@ Sau khi cấu hình thành công, bạn có thể thấy trạng thái của com
 # Kết luận
 
 Hi vọng bài biết giúp các bạn hiểu được các khái niệm cơ bản về CI cũng như cách xây dựng hệ thống cơ bản với Gilab CI. Chúc các bạn coding vui vẻ ...
+
+by Hà Tiến Đạt - Tomosia Việt Nam
