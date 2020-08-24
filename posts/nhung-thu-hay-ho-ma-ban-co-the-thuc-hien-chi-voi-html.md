@@ -129,7 +129,9 @@ Những thứ hay ho mà bạn có thể thực hiện chỉ với HTML
 - Kết quả:
 <p contenteditable="true">This is a paragraph. It is editable. Try to change this text.</p>
 
-
+Đây là một số tính năng mà mình thay khá hữu dụng.
+Tuy nhiên, các bạn lưu ý một số trình duyệt version cũ có thể không hỗ trợ.
+Các bạn có thể kiểm tra trình duyệt hỗ trợ trên <a href="https://developer.mozilla.org/" target="_blank">mdn</a> hoặc <a href="https://www.w3schools.com/" target="_blank">w3chool</a> nhé ! <br />
 Cảm ơn các bạn đã kiên trì scroll đến đây. Hãy comment cho mình biết bạn là ai nhé :))
 
 __- From ĐMH -__
