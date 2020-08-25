@@ -76,7 +76,13 @@ name="Bash"
 echo "Hello, $name"
 ```
 
-Nếu không có `$` trước ``
+Nếu không có `$` trước `name` thì nó sẽ in ra màn hình thế này
+```bash
+$ ./script.sh
+Hello, name
+```
+
+Và đừng áp dụng coding convention vào đây
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDg4OTI2MjhdfQ==
+eyJoaXN0b3J5IjpbNjI4NTQ4OTUxXX0=
 -->
