@@ -64,7 +64,8 @@ const IndexPage = ({ data }) => {
                 <small className="d-block text-muted reading-time">
                   {post.node.frontmatter.date} <span className="dot">●</span> {post.node.fields.readingTime.text}
                 </small>
-                <p className="mt-3 d-inline">{post.node.excerpt}</p>
+                {/* <p className="mt-3 d-inline">{post.node.excerpt}</p> */}
+                <div className="snippet" dangerouslySetInnerHTML={{ __html: post.node.snippet }} />
 
                 <div className="list-tags">{getTechTags(tags)}</div>
               </div>
@@ -107,6 +108,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 200)
+          snippet
           html
           id
           frontmatter {
