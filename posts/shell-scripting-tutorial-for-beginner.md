@@ -82,7 +82,7 @@ $ ./script.sh
 Hello, name
 ```
 
-Và đừng áp dụng coding convention vào đây
+Và đừng áp dụng coding convention vào đây, thêm space vào trước và sau `=` sẽ ko hoạt động đâu. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI4NTQ4OTUxXX0=
+eyJoaXN0b3J5IjpbLTE4MTM1MzUyOTRdfQ==
 -->
