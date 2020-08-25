@@ -58,8 +58,10 @@ Tiếp tục với
 `echo` là command đơn giản, nhận tham số là 1 string và in nó ra màn hình.
 
 Cho những ai chưa biết
-`chmod +x ./script.sh` liên quan tới quản lý file trên linux, bạn cứ tạm hiểu, câu lệnh này cho phép file `script.sh` có thể chạy chỉ bằng
+`chmod +x ./script.sh` liên quan tới quản lý file trên linux, bạn cứ tạm hiểu, câu lệnh này cho phép file `script.sh` có thể được thực thi khi run command. `./script.sh`. 
+
+Không tin thì thử chạy `./script.sh` trước khi `chmod` xem nó sẽ thế nào.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4Nzk1NTg4Nl19
+eyJoaXN0b3J5IjpbLTE5NjAwOTA1NjhdfQ==
 -->
