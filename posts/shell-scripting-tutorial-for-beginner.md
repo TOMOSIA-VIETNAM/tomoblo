@@ -10,7 +10,7 @@ tags:
 
 # Shell Scripting Tutorial For Beginner
 
-Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên bắt gặp với file đuôi `.sh`
+Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên bắt gặp với file có extensions là `.sh`. Nội dung xem qua thật khó hiểu nhưng không 
 
 ## 1. Hello world
 
@@ -21,5 +21,5 @@ Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên b�
 echo "Hello World"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkzNjE4MDkzXX0=
+eyJoaXN0b3J5IjpbNDQyMTQ0ODc2XX0=
 -->
