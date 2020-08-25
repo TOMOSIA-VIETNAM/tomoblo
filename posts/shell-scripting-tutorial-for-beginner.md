@@ -64,8 +64,11 @@ Không tin thì thử chạy `./script.sh` trước khi `chmod` xem nó sẽ th�
 
 # 2. Variables
 
-Về cơ bản, shell script cũng là 1 ngôn ngữ mà bạn có thể lập trình được. Cơ bản là vậy, so với 1 ngôn ngữ lập trình 
+Về cơ bản, shell script cũng là 1 ngôn ngữ mà bạn có thể lập trình được. 
+Cơ bản là vậy, nhưng không thể so shell script với 1 ngôn ngữ lập trình đầy đủ như python, ruby, php ... được, đừng liên hệ chúng với nhau.
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM3MTgyNzU4XX0=
+eyJoaXN0b3J5IjpbLTIxMjI1Nzk5NjZdfQ==
 -->
