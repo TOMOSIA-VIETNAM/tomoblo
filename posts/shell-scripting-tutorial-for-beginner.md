@@ -16,7 +16,7 @@ Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên b�
 Bài viết này sẽ giúp bạn làm quen với cách mà `.sh` được thực thi.
 Các ví dụ trong bài viết chạy tốt trên môi trường linux, macos. Trên window thì tôi chưa thử.
 
-## 1. Hello world
+# 1. Hello world
 
 Chúng ta sẽ bắt đầu từ thứ cơ bản nhất. Hello world!
 
@@ -42,7 +42,7 @@ Trên terminal, bạn sẽ thấy dòng text sau.
 Hello World
 ```
 
-### Tôi sẽ giải thích cho bạn
+### Let me explain
 
 `#!/bin/bash` cái dòng này là [Shebang](https://en.wikipedia.org/wiki/Shebang_%28Unix%29)
 Nó có nhiệm vụ khai báo chương trình nào sẽ run những dòng command phía dưới.
@@ -62,6 +62,9 @@ Cho những ai chưa biết
 
 Không tin thì thử chạy `./script.sh` trước khi `chmod` xem nó sẽ thế nào.
 
+# 2. Variables
+
+Shell script cũng là 1 ngôn ngữ lập trình thôi.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjAwOTA1NjhdfQ==
+eyJoaXN0b3J5IjpbMjA4NzM2OTMyOV19
 -->
