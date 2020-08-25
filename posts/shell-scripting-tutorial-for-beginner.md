@@ -55,7 +55,11 @@ console.log("Hello Javascript")'
 Tiếp tục với
 `echo "Hello World"`
 
-echo
+`echo` là command đơn giản, nhận tham số là 1 string và in nó ra màn hình.
+
+Cho những ai chưa biết
+`chmod +x ./script.sh` 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3ODEyMTU5MV19
+eyJoaXN0b3J5IjpbMTQyMDA1MTI5NV19
 -->
