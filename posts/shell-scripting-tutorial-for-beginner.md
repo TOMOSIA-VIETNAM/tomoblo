@@ -43,10 +43,8 @@ Hello World
 
 ### Tôi sẽ giải thích cho bạn
 
-`#!/bin/bash` cái dòng này g
-
-
-
+`#!/bin/bash` cái dòng này là [Shebang](https://en.wikipedia.org/wiki/Shebang_%28Unix%29)
+Nó có nhiệm vụ khai báo chương trình nào sẽ run những dòng command phía dưới.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMDUzMDI2Nl19
+eyJoaXN0b3J5IjpbODc0NzA4MTgwXX0=
 -->
