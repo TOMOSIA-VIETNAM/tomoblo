@@ -17,12 +17,17 @@ Các ví dụ trong bài viết chạy tốt trên môi trường linux, macos. 
 
 ## 1. Hello world
 
-
+Tạo 1 file `script.sh` 
 ```bash
 #!/bin/bash
 
 echo "Hello World"
 ```
+
+Mở terminal và chạy lệnh sau.
+```bash
+chmod +x ./script.sh
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MTc4NzIyMV19
+eyJoaXN0b3J5IjpbLTQ0ODQxOTc1Ml19
 -->
