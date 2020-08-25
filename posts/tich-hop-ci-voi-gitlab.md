@@ -24,7 +24,7 @@ Theo mình tìm hiều thì trước khi `Gitlab CI` ra đời thì `Jenkins`  l
 
 Trước đây mình đã từng nghịch Jenkins để làm thử CI cho 1 project demo của mình thì mình thấy config khá phức tạp như `liên kết đến repo, phân quyền đủ kiểu để Jenkins có thể lấy source code từ repo` 
 
-Đến khi mình biết đến `Gitlab CI` , trái ngược với rắc rối của Jenkins là sự tuyệt vời của Gitlab CI luôn. Code để ở Gitlab, rồi trong đó có cho cài đặt CI/CD để test và deploy code tự động.Config dễ hiểu , không phải phân quyền giữa hệ thống CI và souce code , dễ cài đặt , quả thưc đây chính là CI phù hợp với mình
+Đến khi mình biết đến `Gitlab CI` , trái ngược với rắc rối của Jenkins là sự tuyệt vời của `Gitlab CI` luôn. Code để ở Gitlab, rồi trong đó có cho cài đặt CI/CD để test và deploy code tự động. Config dễ hiểu, không phải phân quyền giữa hệ thống CI và souce code , dễ cài đặt , quả thực đây chính là CI phù hợp với mình.
 
 ![d3358d65-f8ad-4d94-b371-9bbcc6afe3f0](https://i.ibb.co/bKzg2gf/d3358d65-f8ad-4d94-b371-9bbcc6afe3f0.png)
 
@@ -36,7 +36,7 @@ Khi 1 anh (chị em ) developer hoàn thành một task nào đó và push commi
 Chúng ta sẽ đến bước review code (tiết mục ăn hành của đồng đội )
 Nhưng trước đó chúng ta ăn hành của CI trước đã nhé !!!
 
-Khi bạn push code lên  **Gitlab** thì `Gitlab CI`  cũng bắt đầu thực hiện công việc mà nó được giao. Nó sử dụng file  `.gitlab-ci.ym`  nằm trong thư mục gốc của repo để cấu hình project sử dụng các  `Runner`. Một  `Pipeline`  CI sinh ra và report sẽ được hiển thị trên giao diện.
+Khi bạn push code lên  **Gitlab** thì `Gitlab CI`  cũng bắt đầu thực hiện công việc mà nó được giao. Nó sử dụng file  `.gitlab-ci.yml`  nằm trong thư mục gốc của repo để cấu hình project sử dụng các  `Runner`. Một  `Pipeline`  CI sinh ra và report sẽ được hiển thị trên giao diện.
 
 ![image](https://i.ibb.co/zX5cPtH/image.png)
 
@@ -101,7 +101,7 @@ rubocop:
 1.  Xác định  job  `rubocop`  với các lệnh thực thi khác nhau.
 2.  Trước mỗi job, các lệnh được xác định bởi  **before_script**  được thực thi.
 
-Nếu bạn muốn kiểm tra xem file`.gitlab-ci.yml`  có hợp lệ hay không, có một công cụ lint trong page  **/-/ci/lint**  trong namespace project. Bạn cũng có thể thấy nút  `CI Lint`  để đến trang này trong mục  **CI/CD**  ->  **Pipelines**  và  **Pipelines**  ->  **Jobs**  trong page Project.
+Nếu bạn muốn kiểm tra xem file `.gitlab-ci.yml` có hợp lệ hay không, có một công cụ lint trong page  **/-/ci/lint**  trong namespace project. Bạn cũng có thể thấy nút  `CI Lint`  để đến trang này trong mục  **CI/CD**  ->  **Pipelines**  và  **Pipelines**  ->  **Jobs**  trong page Project.
 
 ![Screen-Shot-2020-08-20-at-12-08-29-AM](https://i.ibb.co/1KNrCDd/Screen-Shot-2020-08-20-at-12-08-29-AM.png)
 #### 4.2. Push .gitlab-ci.yml to GitLab
@@ -134,7 +134,7 @@ Phần cài đặt này nó khá dài nên em không trình bày nhé , các b�
 -   [Cài đặt Runner](https://docs.gitlab.com/runner/install/)
 -   [Cấu hình Runner](https://docs.gitlab.com/ee/ci/runners/README.html#registering-a-specific-runner)
 
-Sau khi cấu hình thành công, bạn có thể thấy trạng thái của commit cuối cùng đã chuyển từ `pending` thành `running` or `success` or `failed`...
+Sau khi cấu hình thành công, bạn có thể thấy trạng thái của commit cuối cùng đã chuyển từ `pending` thành `running` rồi `success` or `failed`...
 
 # Kết luận
 
