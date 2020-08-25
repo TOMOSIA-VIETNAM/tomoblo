@@ -31,7 +31,16 @@ chmod +x ./script.sh
 
 Thực thi file vừa tạo
 ```bash
-`
+./script.sh
+```
+
+Trên terminal, bạn sẽ thấy dòng text sau.
+```
+Hello World
+```
+
+### Giải thích
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDUyOTc3NzVdfQ==
+eyJoaXN0b3J5IjpbMTQzNjkzNTQ2M119
 -->
