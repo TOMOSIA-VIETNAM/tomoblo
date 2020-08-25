@@ -130,16 +130,6 @@ module.exports = {
       },
     },
     {
-      "resolve": "gatsby-remark-custom-blocks",
-      "options": {
-        "blocks": {
-          "snippet": {
-            "classes": "snippet"
-          },
-        },
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         commonmark: true,
@@ -152,6 +142,16 @@ module.exports = {
             options: {
               strict: `ignore`
             }
+          },
+          {
+            "resolve": "gatsby-remark-custom-blocks",
+            "options": {
+              "blocks": {
+                "snippet": {
+                  "classes": "snippet"
+                },
+              },
+            },
           },
           'gatsby-remark-mermaid',
           `gatsby-remark-reading-time`,
