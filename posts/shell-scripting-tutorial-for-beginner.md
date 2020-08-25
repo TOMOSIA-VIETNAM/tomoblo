@@ -67,8 +67,16 @@ Không tin thì thử chạy `./script.sh` trước khi `chmod` xem nó sẽ th�
 Về cơ bản, shell script cũng là 1 ngôn ngữ mà bạn có thể lập trình được. 
 Cơ bản là vậy, nhưng không thể so shell script với 1 ngôn ngữ lập trình đầy đủ như python, ruby, php ... được, đừng liên hệ chúng với nhau.
 
+Đây là cách bạn khai báo biến và sử dụng nó
+```bash
+#!/bin/bash
 
+name="Bash"
 
+echo "Hello, $name"
+```
+
+Nếu không có `$` trước ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjI1Nzk5NjZdfQ==
+eyJoaXN0b3J5IjpbLTEzMDg4OTI2MjhdfQ==
 -->
