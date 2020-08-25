@@ -1,6 +1,6 @@
 ---
 title: "Tích hợp CI với Gitlab"
-date: "2020-08-19"
+date: "2020-08-25"
 published: true
 tags:
   - Gitlab CI
