@@ -10,7 +10,7 @@ tags:
 
 # Shell Scripting Tutorial For Beginner
 
-
+Nếu bạn hay làm việc với môi trường linux, hoặc 
 
 ## 1. Hello world
 
@@ -21,5 +21,5 @@ tags:
 echo "Hello World"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTA3ODQ4NjVdfQ==
+eyJoaXN0b3J5IjpbMzE2NDczMTczXX0=
 -->
