@@ -12,6 +12,8 @@ tags:
 
 Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên bắt gặp với file có extensions là `.sh`. Nội dung xem qua thật khó hiểu nhưng không khỏi thán phục vì nó giải quyết công việc cho bạn theo một cách thật ảo diệu. 
 
+Bài viết này sẽ giúp bạn làm quen với cách mà `.sh`
+
 ## 1. Hello world
 
 
@@ -21,5 +23,5 @@ Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên b�
 echo "Hello World"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODI3MDA3MF19
+eyJoaXN0b3J5IjpbLTg3NzQzMTY4NF19
 -->
