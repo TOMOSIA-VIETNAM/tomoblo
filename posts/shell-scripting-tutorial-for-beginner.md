@@ -43,10 +43,10 @@ Hello World
 
 ### Tôi sẽ giải thích cho bạn
 
-
+`#!/bin/bash` cái dòng này g
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk2ODAwNDk3XX0=
+eyJoaXN0b3J5IjpbMTYwMDUzMDI2Nl19
 -->
