@@ -24,10 +24,14 @@ Tạo 1 file `script.sh`
 echo "Hello World"
 ```
 
-Mở terminal và chạy lệnh sau.
+Mở terminal, `cd` vào thư mục chứa file vừa tạo và chạy lệnh sau.
 ```bash
 chmod +x ./script.sh
 ```
+
+Thực thi file vừa tạo
+```bash
+`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODQxOTc1Ml19
+eyJoaXN0b3J5IjpbLTExNDUyOTc3NzVdfQ==
 -->
