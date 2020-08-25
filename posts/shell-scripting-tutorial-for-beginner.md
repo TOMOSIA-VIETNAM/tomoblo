@@ -12,7 +12,11 @@ tags:
 
 ## 1. Hello world
 
+```bas
+#!/bin/bash
 
+echo "Hello World"
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzE4MTY4MjNdfQ==
+eyJoaXN0b3J5IjpbLTEwMjg3MzQ0NDldfQ==
 -->
