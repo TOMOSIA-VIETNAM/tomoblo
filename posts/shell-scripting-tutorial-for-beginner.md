@@ -17,6 +17,8 @@ Các ví dụ trong bài viết chạy tốt trên môi trường linux, macos. 
 
 ## 1. Hello world
 
+Chúng ta sẽ bắt đầu từ thứ cơ bản nhất. Hello world!
+
 Tạo 1 file `script.sh` 
 ```bash
 #!/bin/bash
@@ -39,8 +41,12 @@ Trên terminal, bạn sẽ thấy dòng text sau.
 Hello World
 ```
 
-### Giải thích
+### Tôi sẽ giải thích cho bạn
+
+
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNjkzNTQ2M119
+eyJoaXN0b3J5IjpbODk2ODAwNDk3XX0=
 -->
