@@ -8,7 +8,8 @@ tags:
   - tutorial
 ---
 
-# Shell Scripting Tutorial For Beginner
+Shell Scripting Tutorial For Beginner
+---------------------------
 
 Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên bắt gặp với file có extensions là `.sh`. Nội dung xem qua thật khó hiểu nhưng không khỏi thán phục vì nó giải quyết công việc cho bạn theo một cách thật ảo diệu. 
 
@@ -45,6 +46,14 @@ Hello World
 
 `#!/bin/bash` cái dòng này là [Shebang](https://en.wikipedia.org/wiki/Shebang_%28Unix%29)
 Nó có nhiệm vụ khai báo chương trình nào sẽ run những dòng command phía dưới.
+Ví dụ như này sẽ dễ hiểu hơn.
+```bash
+#!/bin/node
+
+console.log("Hello Javascript")'
+```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc0NzA4MTgwXX0=
+eyJoaXN0b3J5IjpbMjA3MjI5NDU1N119
 -->
