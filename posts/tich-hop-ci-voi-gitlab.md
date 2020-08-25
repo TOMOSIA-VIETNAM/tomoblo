@@ -7,15 +7,10 @@ tags:
 ---
 
 # 1.Vấn đề
-Toàn bộ quá trình phát triển một phần mềm (SDLC) truyền thống nhìn chung sẽ diễn ra qua 6 quá trình cụ thể :
-```
-Lập kế hoạch => Thực hiện kế hoạch => Kiểm tra => Thiết lập thông tin => Triển khai và bảo trì => Duy trì. 
-```
-Mô hình SDLC được sử dụng trong nhiều năm và nó đã thể hiện rất nhiều ưu điểm trong ngành công nghệ thông tin. Tuy nhiên, với sự ra đời và sử dụng rộng rãi của nhiều ứng dụng mới cùng với yêu cầu về nhu cầu của con người ngày càng cao thì mô hình SDLC cũ này đã từ bước bộc lộ những điểm yếu của mình.
 
-Hai khía cạnh tốc độ và tự động hóa gần như không cho phép xuất hiện rộng rãi trong mô hình SDLC truyền thống
+Ngày nay, với xu hướng agile/lean dẫn đến việc phát triển tính năng là điều đã đơn giản đi rất nhiều thì điều quan trọng nhất với việc xây dựng ứng dụng là phải nhanh, chính xác với yêu cầu. Nếu một tính năng mà mất 2, 3 tháng mới release thì dẫn đến nhiều hệ lụy như làm không phù hợp nhu cầu khách hàng, hoặc đối thủ đã ra mắt trước đó, mất đi cái lợi thế dẫn đầu. Do đó, việc làm ra một sản phẩm, tính năng đòi hỏi thần tốc là ưu tiên số một hiện nay.
 
-Và đây chính là mảnh đất màu mỡ để ci/cd phát huy tác dụng. Vậy CI/CD là gì ?
+Bên cạnh đó, để nhanh chóng ra mắt một tính năng, phiên bản mới nếu theo cách cổ điển sẽ mất nhiều thời gian bởi công việc chân tay khá nhiều và mỗi lần release cũng huy động một cơ số người không nhỏ để cập nhật một thay đổi dù là nhỏ nhất. Bởi vậy, xu hướng CI/CD giúp cung cấp các framework, workflow giúp tiết kiệm thời gian, nguồn lực của quá trình release (delivery)
 
 # 2.Giới thiệu
 ### 2.1 CI là gì ?
