@@ -3,7 +3,7 @@ title: "Hướng dẫn tạo bài viết mới"
 date: "2020-07-03"
 published: true
 tags:
-  -
+  - ruby
 ---
 
 # Hướng dẫn viết bài cho TOMOSIA BLOG
@@ -77,3 +77,6 @@ $ git push origin master
 Tạo `Pull Request` vào repository `TOMOSIA-VIETNAM/tomoblo`.
 
 Sau khi pull request được merge vào `TOMOSIA-VIETNAM/tomoblo` chờ một vài phút thì bài viết sẽ được hiển thị lên [http://blog.tomosia.com/](http://blog.tomosia.com/).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDU5NDA3NjM5XX0=
+-->
