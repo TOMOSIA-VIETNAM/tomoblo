@@ -14,7 +14,7 @@ Shell Scripting Tutorial For Beginner
 Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên bắt gặp với file có extensions là `.sh`. Nội dung xem qua thật khó hiểu nhưng không khỏi thán phục vì nó giải quyết công việc cho bạn theo một cách thật ảo diệu. 
 
 Bài viết này sẽ giúp bạn làm quen với cách mà `.sh` được thực thi.
-Các ví dụ trong bài viết chạy tốt trên môi trường linux, macos. Trên window thì ko biết thế nào. 
+Các ví dụ trong bài viết chạy tốt trên môi trường linux, macos. Trên window thì tôi chưa thử.
 
 ## 1. Hello world
 
@@ -52,8 +52,10 @@ Ví dụ như này sẽ dễ hiểu hơn.
 
 console.log("Hello Javascript")'
 ```
+Tiếp tục với
+`echo "Hello World"`
 
-
+echo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MjI5NDU1N119
+eyJoaXN0b3J5IjpbMTg3ODEyMTU5MV19
 -->
