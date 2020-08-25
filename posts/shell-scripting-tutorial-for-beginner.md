@@ -10,13 +10,16 @@ tags:
 
 # Shell Scripting Tutorial For Beginner
 
+
+
 ## 1. Hello world
 
-```bas
+
+```bash
 #!/bin/bash
 
 echo "Hello World"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjg3MzQ0NDldfQ==
+eyJoaXN0b3J5IjpbLTE1NTA3ODQ4NjVdfQ==
 -->
