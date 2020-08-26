@@ -101,8 +101,26 @@ Hello godcrampy!
 ```
 `read` là lệnh cho phép nhập input từ màn hình sau đó gán vào 1 biến
 
-***tip** dùng `{}` để dùng biến trong chuỗi string.
+***tip** dùng `{}` để trỏ tới biến trong chuỗi string.
+
+# 4. Comments
+
+```bash
+# Comments start with hash
+```
+Over!
+
+# 5. Arguments
+
+```bash
+#!/bin/bash
+
+echo $0
+echo $1
+echo $2
+echo "${@}" # Access all the arguments [More on this later]
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU0NTcwMzg5LDEyMTQ2OTc1NjksMjAxMj
-k0NDQyM119
+eyJoaXN0b3J5IjpbLTk5NzQ3NDU0NiwxMjE0Njk3NTY5LDIwMT
+I5NDQ0MjNdfQ==
 -->
