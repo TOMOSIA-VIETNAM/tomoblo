@@ -147,11 +147,19 @@ Bash có 3 kiểu Expressions gặp nhiều
 
 ## 6.2 Arithmetic Evaluation
 
-Toán tử được đặt trong 2 dấu `
+Toán tử được đặt trong  `(( ))`
+Vd:
 ```bash
-(( 1 <= 5))
+(( 1 <= 5 ))
+
+i=1
+(( i++ ))
 ```
+
+## 6.3 Test command
+
+Test command được đặt trong `[]` hoặc `[[ ]]` với biểu thư
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwODIwODA2MywxMjE0Njk3NTY5LDIwMT
-I5NDQ0MjNdfQ==
+eyJoaXN0b3J5IjpbMjc1MjM4MTEzLDEyMTQ2OTc1NjksMjAxMj
+k0NDQyM119
 -->
