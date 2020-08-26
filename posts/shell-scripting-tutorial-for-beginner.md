@@ -42,7 +42,7 @@ Trên terminal, bạn sẽ thấy dòng text sau.
 Hello World
 ```
 
-### Giải mã
+## Giải thích
 
 `#!/bin/bash` cái dòng này là [Shebang](https://en.wikipedia.org/wiki/Shebang_%28Unix%29)
 Nó có nhiệm vụ khai báo chương trình nào sẽ run những dòng command phía dưới.
@@ -84,7 +84,9 @@ Hello, name
 
 Và đừng áp dụng coding convention vào đây, thêm `space` vào trước và sau `=` sẽ ko hoạt động đâu. Assign một biến, đừng thêm `space`
 
+# 3. User Input
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNDY5NzU2OSwyMDEyOTQ0NDIzXX0=
+eyJoaXN0b3J5IjpbMTMzMzc3NzAxNywxMjE0Njk3NTY5LDIwMT
+I5NDQ0MjNdfQ==
 -->
