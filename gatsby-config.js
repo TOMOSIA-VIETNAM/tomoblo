@@ -87,7 +87,7 @@ module.exports = {
               },
             ],
             "truncate": {
-              "length": 80,
+              "length": 200,
               "byWords": true,
               "ellipsis": "…"
             },
