@@ -345,8 +345,8 @@ greet every single body # Hello, every single body
 
 OK, nếu bạn đọc đến đây, tôi nghĩ bạn sẽ không còn bỡ ngỡ khi gặp những file bash nữa. Hi vọng bài này sẽ là base để bạn tự mày mò sâu hơn về thế giới của bash.
 
-
+*by Vitvungve - Tomosia Việt Nam*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzI0MDcxMzMsMTIxNDY5NzU2OSwyMD
-EyOTQ0NDIzXX0=
+eyJoaXN0b3J5IjpbLTE3MzQ5MDM5MDcsLTE2NzI0MDcxMzMsMT
+IxNDY5NzU2OSwyMDEyOTQ0NDIzXX0=
 -->
