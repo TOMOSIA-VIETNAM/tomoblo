@@ -226,7 +226,65 @@ else
   echo "No Arguments passed"
 fi
 ```
+
+# 8. Looping (For loop)
+
+```bash
+# print numbers 1 to 10
+
+# c like for loop
+for (( i = 1; i <= 10; ++i ))
+do
+  echo "$i"
+done
+
+# for in
+for i in {1..10}
+do
+  echo "$i"
+done
+
+# while
+i=1
+while [[ "$i" -le 10 ]]
+do
+  echo "$i"
+  ((i++))
+done
+
+# until
+i=1
+until [[ "$i" -eq 11 ]]
+do
+  echo "unitl $i"
+  ((i++))
+done
+```
+
+```bash
+arr=(a b c d)
+
+# For in
+for i in "${arr[@]}"
+do
+  echo "$i"
+done
+
+# c like for
+for (( i = 0; i < "${#arr[@]}"; i++))
+do
+  echo "${arr[$i]}"
+done
+
+# while
+i=0
+while [[ "$i" -le "${#arr[@]}" ]]
+do
+  echo "${arr[$i]}"
+  (( i++ ))
+done
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MjY3MjY4NywxMjE0Njk3NTY5LDIwMT
+eyJoaXN0b3J5IjpbLTM2MzE1ODgzNCwxMjE0Njk3NTY5LDIwMT
 I5NDQ0MjNdfQ==
 -->
