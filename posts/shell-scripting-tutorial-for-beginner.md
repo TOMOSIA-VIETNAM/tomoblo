@@ -91,15 +91,15 @@ Và đừng áp dụng coding convention vào đây, thêm `space` vào trước
 
 read -p "What is you name: " name
 
-echo "Hello $name"
+echo "Hello {$name}!"
 ```
-Với file bash nội dung như trên, khi run, bạn sẽ nhập 
+Với file bash nội dung như trên, khi run, bạn sẽ nhập input và in ra text bao gồm nội dung vừa nhập.
 ```
 $ ./script.sh
 What is you name: godcrampy
-Hello godcrampy
+Hello godcrampy!
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODM3MTI3NTAsMTIxNDY5NzU2OSwyMD
+eyJoaXN0b3J5IjpbLTExNDk1MTg4MzUsMTIxNDY5NzU2OSwyMD
 EyOTQ0NDIzXX0=
 -->
