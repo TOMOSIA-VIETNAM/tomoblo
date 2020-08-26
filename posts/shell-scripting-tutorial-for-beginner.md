@@ -137,8 +137,9 @@ first second
 
 Bash có 3 kiểu Expressions gặp nhiều
 
-1. 
+1. **Return Values**
+2. **Arithmetic Evaluation**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTU3OTM2NDAsMTIxNDY5NzU2OSwyMD
-EyOTQ0NDIzXX0=
+eyJoaXN0b3J5IjpbLTM3ODMzMTA2MiwxMjE0Njk3NTY5LDIwMT
+I5NDQ0MjNdfQ==
 -->
