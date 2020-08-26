@@ -138,8 +138,11 @@ first second
 Bash có 3 kiểu Expressions gặp nhiều
 
 1. **Return Values**
-2. **Arithmetic Evaluation**
+2. **Arithmetic Evaluation** (Dạng toán tử)
+3. **`Test`  Command** (Dùng để check true false)
+
+## 6.1 Return valúe
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODMzMTA2MiwxMjE0Njk3NTY5LDIwMT
-I5NDQ0MjNdfQ==
+eyJoaXN0b3J5IjpbLTE0NjQ4NTQ1MjUsMTIxNDY5NzU2OSwyMD
+EyOTQ0NDIzXX0=
 -->
