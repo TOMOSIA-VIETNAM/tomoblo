@@ -112,15 +112,27 @@ Over!
 
 # 5. Arguments
 
+Bạn có thể truyền tham số cho 1 file bash khi run.
+`$0`
+
 ```bash
 #!/bin/bash
 
 echo $0
 echo $1
 echo $2
-echo "${@}" # Access all the arguments [More on this later]
+echo "${@}" # Access all the arguments
+```
+
+Sau khi run
+```
+$ ./script.sh first second
+./script.sh
+first
+second
+first second
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NzQ3NDU0NiwxMjE0Njk3NTY5LDIwMT
-I5NDQ0MjNdfQ==
+eyJoaXN0b3J5IjpbNTIzMzQyMTkxLDEyMTQ2OTc1NjksMjAxMj
+k0NDQyM119
 -->
