@@ -158,8 +158,34 @@ i=1
 
 ## 6.3 Test command
 
-Test command được đặt trong `[]` hoặc `[[ ]]` với biểu thư
+Test command được đặt trong `[]` hoặc `[[ ]]` với biểu thức phức tạp.
+
+```bash
+[[ -e "$file" ]] # True if file exists
+[[ -d "$file" ]] # True if file exists and is a directory
+[[ -f "$file" ]] # True if file exists and is a regular file
+[[ -z "$str" ]]  # True if string is of length zero
+[[ -n "$str" ]]  # True is string is not of length zero
+
+# Compare Strings
+[[ "$str1" == "$str2" ]]
+[[ "$str1" != "$str2" ]]
+
+# Integer Comparisions
+[[ "$int1" -eq "$int2" ]] # $int1 == $int2
+[[ "$int1" -ne "$int2" ]] # $int1 != $int2
+[[ "$int1" -gt "$int2" ]] # $int1 > $int2
+[[ "$int1" -lt "$int2" ]] # $int1 < $int2
+[[ "$int1" -ge "$int2" ]] # $int1 >= $int2
+[[ "$int1" -le "$int2" ]] # $int1 <= $int2
+
+# And 
+[[ ... ]] && [[ ... ]] # And
+[[ ... ]] || [[ ... ]] # Or
+
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc1MjM4MTEzLDEyMTQ2OTc1NjksMjAxMj
-k0NDQyM119
+eyJoaXN0b3J5IjpbMTAzMjE1NTg4NCwxMjE0Njk3NTY5LDIwMT
+I5NDQ0MjNdfQ==
 -->
