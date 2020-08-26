@@ -1,9 +1,9 @@
 ---
-title: "Mysql cơ bản"
+title: "Mysql basic for beginner"
 date: "2020-08-25"
 published: true
 tags:
-  - change_me
+  - Mysql
 ---
 
 # I. Giới thiệu
@@ -83,25 +83,25 @@ MySQL là RDBMS có tốc độ cao, ổn định, dễ sử dụng, và có lư
 
 **_1. Connect database_**
 
-```
+```bash
 mysql -h[HOSTNAME] -u[USERNAME] -p[PASSWORD] [DATABASENAME];
 ```
 
 **_2. Create database_**
 
-```
+```mysql
 create database [DATABASENAME];
 ```
 
 **_3. Drop database_**
 
-```
+```mysql
 drop database [DATABASENAME];
 ```
 
 **_4. Create Table_**
 
-```
+```mysql
 CREATE TABLE users (  
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,  
 firstname VARCHAR(30) NOT NULL,  
@@ -113,26 +113,26 @@ reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 **_5. Drop table_**
 
-```
+```mysql
 drop table [TABLENAME];
 ```
 
 **_6. Truncate table_**
 
-```
+```mysql
 TRUNCATE TABLE table_name;
 ```
 
 **_7. Insert data_**
 
-```
+```mysql
 INSERT INTO table_name (column1, column2, column3,...)  
 VALUES (value1, value2, value3,...)
 ```
 
 **_8. Update data_**
 
-```
+```mysql
 UPDATE table_name  
 SET column1 = value1, column2 = value2, ...  
 WHERE condition;
@@ -140,38 +140,38 @@ WHERE condition;
 
 **_9. Select data_**
 
-```
+```mysql
 SELECT * FROM table_name;
 ```
 
 **_10. Delete data_**
 
-```
+```mysql
 DELETE  FROM table_name WHERE  condition;
 ```
 
 **_11. Show all database_**
-```
+```mysql
 SHOW databases;
 ```
 
 **_12. Show all table_**
-```
+```mysql
 SHOW tables;
 ```
 
 **_13. Show create table_**
-```
+```mysql
 SHOW CREATE TABLE table_name;
 ```
 
 **_14. Show all column in table_**
-```
+```mysql
 DESC table_name;
 ```
 
 **_14. Show index in table_**
-```
+```mysql
 SHOW INDEX FORM table_name;
 ```
 
