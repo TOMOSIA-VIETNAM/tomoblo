@@ -299,24 +299,27 @@ echo "${arr[@]:1}"   # Elements from 1
 echo "${arr[@]:1:3}" # Elements from 1 to 3
 ```
 
+Insert, update
 ```bash
 arr[5]=e                            # direct address and insert/update
 arr=(${arr[@]:0:1} new ${arr[@]:1}) # Adding 'new' to array
 ```
 
+Delete 
 ```bash
 arr=(a b c d)
 unset arr[1]
 echo << "${arr[1]}" # Outputs nothing
 ```
 
+Delete không tự động update index của các phần tử khác nên để đánh lại index
 ```bash
 arr=(a b c d)
 unset arr[1]
 arr=("${arr[@]}")
-echo << "${arr[1]}" # c
+echo << "${arr[1]}" # sẽ print c
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQxNDg3MzIyLDEyMTQ2OTc1NjksMjAxMj
+eyJoaXN0b3J5IjpbMzI5OTkyNjgzLDEyMTQ2OTc1NjksMjAxMj
 k0NDQyM119
 -->
