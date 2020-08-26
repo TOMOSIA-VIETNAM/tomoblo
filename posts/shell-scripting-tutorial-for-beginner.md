@@ -284,7 +284,13 @@ do
   (( i++ ))
 done
 ```
+
+# 9. Arrays
+
+```bash
+arr=(a b c d)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MzE1ODgzNCwxMjE0Njk3NTY5LDIwMT
-I5NDQ0MjNdfQ==
+eyJoaXN0b3J5IjpbNjAwNDQ1MzU3LDEyMTQ2OTc1NjksMjAxMj
+k0NDQyM119
 -->
