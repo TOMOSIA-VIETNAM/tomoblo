@@ -141,8 +141,17 @@ Bash có 3 kiểu Expressions gặp nhiều
 2. **Arithmetic Evaluation** (Dạng toán tử)
 3. **`Test`  Command** (Dùng để check true false)
 
-## 6.1 Return valúe
+## 6.1 Return values
+
+Điển hình ví dụ như `grep` `find` 
+
+## 6.2 Arithmetic Evaluation
+
+Toán tử được đặt trong 2 dấu `
+```bash
+(( 1 <= 5))
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQ4NTQ1MjUsMTIxNDY5NzU2OSwyMD
-EyOTQ0NDIzXX0=
+eyJoaXN0b3J5IjpbLTcwODIwODA2MywxMjE0Njk3NTY5LDIwMT
+I5NDQ0MjNdfQ==
 -->
