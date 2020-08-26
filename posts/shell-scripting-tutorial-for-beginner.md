@@ -86,7 +86,20 @@ Và đừng áp dụng coding convention vào đây, thêm `space` vào trước
 
 # 3. User Input
 
+```bash
+#!/bin/bash
+
+read -p "What is you name: " name
+
+echo "Hello $name"
+```
+Với file bash nội dung như trên, khi run, bạn sẽ nhập 
+```
+$ ./script.sh
+What is you name: godcrampy
+Hello godcrampy
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzc3NzAxNywxMjE0Njk3NTY5LDIwMT
-I5NDQ0MjNdfQ==
+eyJoaXN0b3J5IjpbLTEyODM3MTI3NTAsMTIxNDY5NzU2OSwyMD
+EyOTQ0NDIzXX0=
 -->
