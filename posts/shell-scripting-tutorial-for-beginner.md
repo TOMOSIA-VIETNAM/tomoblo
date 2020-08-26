@@ -340,8 +340,8 @@ greet every single body # Hello, every single body
 
 # Tổng kết
 
-OK, vậy la
+OK, nếu bạn đọc đến đây, tôi nghĩ bạn sẽ không còn bỡ ngỡ khi gặp những file bash nữa. Hi vọng bài này sẽ là base để bạn tự mày mò sâu hơn về thế giới 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MzgxMzQxOSwxMjE0Njk3NTY5LDIwMT
+eyJoaXN0b3J5IjpbMTc1MjYxOTg2MiwxMjE0Njk3NTY5LDIwMT
 I5NDQ0MjNdfQ==
 -->
