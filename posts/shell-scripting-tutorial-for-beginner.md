@@ -319,7 +319,29 @@ unset arr[1]
 arr=("${arr[@]}")
 echo << "${arr[1]}" # sẽ print c
 ```
+
+# 10. Functions
+
+```bash
+greet() {
+  echo "Hello, $1"
+}
+
+greet Bash # Hello, Bash
+```
+
+```bash
+greet() {
+  echo "Hello, ${@}"
+}
+
+greet every single body # Hello, every single body
+```
+
+# Tổng kết
+
+OK, vậy la
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI5OTkyNjgzLDEyMTQ2OTc1NjksMjAxMj
-k0NDQyM119
+eyJoaXN0b3J5IjpbLTI1MzgxMzQxOSwxMjE0Njk3NTY5LDIwMT
+I5NDQ0MjNdfQ==
 -->
