@@ -16,7 +16,7 @@ Nếu bạn hay làm việc với môi trường linux, sẽ thường xuyên b�
 Bài viết này sẽ giúp bạn làm quen với cách mà `.sh` được thực thi.
 Các ví dụ trong bài viết chạy tốt trên môi trường linux, macos. Trên window thì tôi chưa thử.
 
-Bài viết được tham khảo và dịch lại, 
+Bài viết được tham khảo và dịch lại, click vào link dưới để xem bài gốc nhé.
 [https://dev.to/godcrampy/the-missing-shell-scripting-crash-course-37mk](https://dev.to/godcrampy/the-missing-shell-scripting-crash-course-37mk)
 
 # 1. Hello world
@@ -344,7 +344,9 @@ greet every single body # Hello, every single body
 # Tổng kết
 
 OK, nếu bạn đọc đến đây, tôi nghĩ bạn sẽ không còn bỡ ngỡ khi gặp những file bash nữa. Hi vọng bài này sẽ là base để bạn tự mày mò sâu hơn về thế giới của bash.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgwMzE5NTAzLDEyMTQ2OTc1NjksMjAxMj
-k0NDQyM119
+eyJoaXN0b3J5IjpbLTE2NzI0MDcxMzMsMTIxNDY5NzU2OSwyMD
+EyOTQ0NDIzXX0=
 -->
