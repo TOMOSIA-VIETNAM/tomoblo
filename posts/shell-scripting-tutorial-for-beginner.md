@@ -99,7 +99,10 @@ $ ./script.sh
 What is you name: godcrampy
 Hello godcrampy!
 ```
+`read` là lệnh cho phép nhập input từ màn hình sau đó gán vào 1 biến
+
+***tip** i
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDk1MTg4MzUsMTIxNDY5NzU2OSwyMD
-EyOTQ0NDIzXX0=
+eyJoaXN0b3J5IjpbNzM3NTc2NDgzLDEyMTQ2OTc1NjksMjAxMj
+k0NDQyM119
 -->
