@@ -179,13 +179,54 @@ Test command được đặt trong `[]` hoặc `[[ ]]` với biểu thức phứ
 [[ "$int1" -ge "$int2" ]] # $int1 >= $int2
 [[ "$int1" -le "$int2" ]] # $int1 <= $int2
 
-# And 
+# And , Or
 [[ ... ]] && [[ ... ]] # And
 [[ ... ]] || [[ ... ]] # Or
 
 ```
 
+# 7. Conditionals (IF..THEN..ELSE)
+
+```bash
+# 1. Return values
+
+# If notes.md file doesn't exist, create one and 
+# add the text "created by bash"
+if find notes.md
+then
+  echo "notes.md file already exists"
+else
+  echo "created by bash" | cat >> notes.md
+fi
+```
+
+```bash
+# 2. Arithmetic Evaluations
+read -p "Enter your age: " age
+
+if (( "$age" > 18 ))
+then
+  echo "Adult!"
+elif (( "$age" > 12 ))
+then
+  echo "Teen!"
+else
+  echo "Kid"
+fi
+```
+
+```bash
+# 3. Test Expressions
+# Check if argument was passed
+# "$1" corresponds to first argument
+if [[ -n "$1" ]]
+then
+  echo "Your first argument was $1"
+else
+  echo "No Arguments passed"
+fi
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMjE1NTg4NCwxMjE0Njk3NTY5LDIwMT
+eyJoaXN0b3J5IjpbMTU2MjY3MjY4NywxMjE0Njk3NTY5LDIwMT
 I5NDQ0MjNdfQ==
 -->
