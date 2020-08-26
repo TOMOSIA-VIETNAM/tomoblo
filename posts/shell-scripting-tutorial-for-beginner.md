@@ -113,7 +113,7 @@ Over!
 # 5. Arguments
 
 Bạn có thể truyền tham số cho 1 file bash khi run.
-`$0`
+`$0` luôn là tên file bash
 
 ```bash
 #!/bin/bash
@@ -132,7 +132,13 @@ first
 second
 first second
 ```
+
+# 6. Expressions (Biểu thức)
+
+Bash có 3 kiểu Expressions gặp nhiều
+
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIzMzQyMTkxLDEyMTQ2OTc1NjksMjAxMj
-k0NDQyM119
+eyJoaXN0b3J5IjpbLTEzNTU3OTM2NDAsMTIxNDY5NzU2OSwyMD
+EyOTQ0NDIzXX0=
 -->
