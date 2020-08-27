@@ -22,7 +22,7 @@ Hiện nay có rất nhiều hệ thống như  **Travis**,  **Jenkin**,  **Circ
 
 Theo mình tìm hiều thì trước khi `Gitlab CI` ra đời thì `Jenkins`  là hệ thống được tích hợp vào làm CI nhiều nhất , nên chúng ta sẽ sánh thử xem giữa `Gitlab CI` và `Jenkins`  có gì khác nhau nhé
 
-Trước đây mình đã từng nghịch Jenkins để làm thử CI cho 1 project demo của mình thì mình thấy config khá phức tạp như `liên kết đến repo, phân quyền đủ kiểu để Jenkins có thể lấy source code từ repo` 
+Trước đây mình đã từng nghịch Jenkins để làm thử CI cho 1 project demo của mình thì mình thấy config khá phức tạp như `liên kết đến repo, phân quyền đủ kiểu để Jenkins có thể lấy source code từ repo`
 
 Đến khi mình biết đến `Gitlab CI` , trái ngược với rắc rối của Jenkins là sự tuyệt vời của `Gitlab CI` luôn. Code để ở Gitlab, rồi trong đó có cho cài đặt CI/CD để test và deploy code tự động. Config dễ hiểu, không phải phân quyền giữa hệ thống CI và souce code , dễ cài đặt , quả thực đây chính là CI phù hợp với mình.
 
@@ -32,7 +32,7 @@ Trước đây mình đã từng nghịch Jenkins để làm thử CI cho 1 proj
 # 3.	Cách hoạt động
 
 ### 3.1 Luồng hoạt động của CI
-Khi 1 anh (chị em ) developer hoàn thành một task nào đó và push commit lên Gitlab 
+Khi 1 anh (chị em ) developer hoàn thành một task nào đó và push commit lên Gitlab
 Chúng ta sẽ đến bước review code (tiết mục ăn hành của đồng đội )
 Nhưng trước đó chúng ta ăn hành của CI trước đã nhé !!!
 
