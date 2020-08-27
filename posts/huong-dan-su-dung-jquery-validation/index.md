@@ -1,4 +1,3 @@
-
 ---
 title: "[jQuery] How to use jQuery Validation"
 date: "2020-08-24"
