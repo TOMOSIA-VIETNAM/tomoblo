@@ -56,6 +56,40 @@ Mỗi ứng dụng có những loại dữ liệu khác nhau nên việc liệt 
 
 Cách thông thường nhất là chúng ta sử dụng  **RegEx**  để kiểm tra định dạng dữ liệu.
 
+## Một số điều kiện để kiểm tra các phần tử của form bằng jQuery Validation :
+
+required - *Không được bỏ trống*
+
+remote - *Gửi yêu cầu về Web Server để xác thực*
+
+minlength - *Độ dài tối thiểu*
+
+maxlength - *Độ dài tối đa*
+
+rangelength - *Độ dài tối thiểu từ x tới y*
+
+min - *Số tối thiểu*
+
+max - *Số tối đa*
+
+range - *Số tối thiểu từ x tới y*
+
+email - *Xác thực định dạng Email*
+
+url - *Xác thực định dạng URL*
+
+date - *Xác thực định dạng ngày tháng*
+
+dateISO - *Xác thực định dạng ngày tháng theo chuẩn ISO*
+
+number - *Phải là số, bao gồm số thập phân*
+
+digits - *Chỉ chấp nhận số nguyên dương*
+
+creditcard - *Xác thực số thẻ tín dụng*
+
+equalTo - *Phải trùng với phần tử nào đó*
+
 # 5. Như vậy
 
 Chúng ta đã hoàn tất được công việc “Validate” rồi đấy.
