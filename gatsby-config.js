@@ -144,16 +144,24 @@ module.exports = {
             }
           },
           {
-            "resolve": "gatsby-remark-custom-blocks",
-            "options": {
-              "blocks": {
-                "snippet": {
-                  "classes": "snippet"
+            resolve: `gatsby-remark-custom-blocks`,
+            options: {
+              blocks: {
+                snippet: {
+                  classes: "snippet"
                 },
+                image_caption: {
+                  classes: "image-caption",
+                  title: "optional"
+                },
+                author: {
+                  classes: "author",
+                  title: "required"
+                }
               },
             },
           },
-          'gatsby-remark-mermaid',
+          `gatsby-remark-mermaid`,
           `gatsby-remark-reading-time`,
           {
             resolve: `gatsby-remark-prismjs`,

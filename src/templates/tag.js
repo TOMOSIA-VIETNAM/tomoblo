@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Sidebar from "../components/sidebar/Sidebar";
 import TechTag from "../components/tags/TechTag";
+import { excerpt } from '../utils/common.js';
 
 const Tag = ({ pageContext, data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -67,10 +68,12 @@ const Tag = ({ pageContext, data }) => {
                 <Link to={post.node.fields.slug} className="text-dark">
                   <h2 className="title">{post.node.frontmatter.title}</h2>
                 </Link>
-                <small className="d-block text-info">
-                  Được đăng vào {post.node.frontmatter.date}
+
+                <small className="d-block text-muted reading-time">
+                  {post.node.frontmatter.date} <span className="dot">●</span> {post.node.fields.readingTime.text}
                 </small>
-                <p className="mt-3 d-inline">{post.node.excerpt}</p>
+
+                <div className="snippet mt-3 d-inline" dangerouslySetInnerHTML={{ __html: excerpt(post) }} />
                 <div className="d-block">{getTechTags(tags)}</div>
               </div>
             );
@@ -134,6 +137,9 @@ export const pageQuery = graphql`
           }
           fields {
             slug
+            readingTime {
+              text
+            }
           }
         }
       }
