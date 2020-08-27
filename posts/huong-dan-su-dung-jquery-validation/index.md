@@ -1,6 +1,6 @@
 
 ---
-title: "[jQuery] Hướng dẫn sử dụng jQuery Validation"
+title: "[jQuery] How to use jQuery Validation"
 date: "2020-08-24"
 published: true
 tags:
