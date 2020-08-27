@@ -58,6 +58,12 @@ tags:
   - change_me
 ---
 
+[[snippet]]
+| Mô tả nội dung ngắn ....
+| Có thể viết mô tả trên nhiều dòng.
+| Viết thêm dòng nửa :))
+
+
 ```
 #### II. Viết bài.
 Để viết bài chúng ta sẽ thêm nội dung vào phía dưới `---`, có 2 cách để viết content.
