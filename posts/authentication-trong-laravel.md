@@ -1,5 +1,5 @@
 ---
-title: "Authentication trong Laravel"
+title: "Authentication basic Laravel"
 date: "2020-08-26"
 published: true
 tags:
@@ -7,7 +7,7 @@ tags:
   - laravel
 ---
 
-Chào mọi người! Hôm nay chúng ta hay cùng nhau chia sẻ kiến thức về Authentication trong Framework Laravel nhé, để cùng nhau !
+Chào mọi người, hôm nay chúng ta hãy cùng nhau chia sẻ kiến thức về Authentication cơ bản trong Framework Laravel nhé!
 
 
 #  Khái niệm
@@ -25,7 +25,7 @@ Tương tự như khái niệm trên, authentication trong Laravel cũng đư�
 Như đã giới thiệu ở trên, Laravel làm cho việc triển khai xác thực trở nên đơn giản và hiệu quả, vậy cách cấu hình và sử dụng như thế nào?
 
 Đầu tiên, hãy mở file `auth.php` trong thư mục config trong project Laravel:
-
+```php
     <?php
     return [
     /*
@@ -191,14 +191,15 @@ Như đã giới thiệu ở trên, Laravel làm cho việc triển khai xác th
     */
     'password_timeout'  =>  10800,
     ];
-
+```
 Chúng ta đang tìm hiểu cơ bản về Authentication Laravel nên tại đây chúng ta chỉ quan tâm tới phần cấu hình này 
-
+```php
     'providers' => [ 
 	    'users' => [ 
 		    'driver' => 'eloquent', 
 		    'model' => App\User::class, 
-	    ],
+        ],
+```
 *Driver: Đây là thiết lập xác định phương thức lấy thông tin người dùng để xác thực, và như các bạn thấy thì mặc định nó sẽ sử dụng  _**[eloquent]([https://laravel.com/docs/7.x/eloquent](https://laravel.com/docs/7.x/eloquent)),**_ tuy nhiên còn một sự lựa chọn khác là _database_ và thậm trí bạn cũng có thể tạo thêm một driver riêng theo nhu cầu sử dụng của bạn (mình sẽ nói ở phần nâng cao).*
 
 *Model: Đây là thiết lập nguồn dữ liệu lấy ra từ đâu. Ở đây mặc định Laravel chọn là moder User (local: App\User.php). Thông số này bạn có thể chỉnh thành name model của bạn muốn truy xuất để lấy dữ liệu. 
@@ -230,13 +231,15 @@ Nếu  `Guards`  hỗ trợ việc định nghĩa logic để xác thực thì  
 
 Để tạo Auth trong Laravel thì cũng hết sức đơn giản. Chúng ta dùng lệnh:
 + version laravel <= 5.x
-```php
+```bash
     php artisan make:auth
 ```
  + version laravel >= 6.x 
-```php
+```bash
 composer require laravel/ui
+```
 
+```bash
 php artisan ui vue --auth
 ```
 Sau khi chạy lệnh này lên thì Laravel sẽ thêm cho chúng ta một homeController, 2 route và các view mới.
