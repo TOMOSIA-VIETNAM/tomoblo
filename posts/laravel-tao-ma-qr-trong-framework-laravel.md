@@ -1,11 +1,12 @@
 ---
-title: "Tạo mã QR trong Framework Laravel"
+title: "[Laravel] Tạo mã QR trong Framework Laravel"
 date: "2020-08-02"
 published: true
 tags:
   - php
+  - laravel
 ---
-Chúng ta biết rằng `Mã QR` là nhãn hiệu cho một loại mã vạch ma trận (hoặc mã vạch hai chiều) và thường được sử dụng để lưu trữ URL hoặc thông tin khác được đọc bằng camera trên điện thoại thông minh hay các loại máy có chức năng quét mã khác. Mã QR có thể chứa 3248 bit hoặc 406 byte. 
+Chúng ta biết rằng `Mã QR` là nhãn hiệu cho một loại mã vạch ma trận (hoặc mã vạch hai chiều) và thường được sử dụng để lưu trữ URL hoặc thông tin khác được đọc bằng camera trên điện thoại thông minh hay các loại máy có chức năng quét mã khác. Mã QR có thể chứa 3248 bit hoặc 406 byte.
 
 Tìm hiểu thêm `Mã QR` qua bài viết của này để hiểu rõ hơn [ QR Code Generator](https://www.qr-code-generator.com/qr-code-marketing/qr-codes-basics/)
 
@@ -38,7 +39,7 @@ composer create-project --prefer-dist laravel/laravel qr-code
 Đầu tiên, thêm Simple QrCode package vào require trong file `composer.json` của bạn:
 
 ```
-"require": { 
+"require": {
  ...
  "simplesoftwareio/simple-qrcode": "^3.0"
 }
@@ -63,7 +64,7 @@ hoặc bạn có thể dùng command sau để thay thế cách trên:
 
 và thêm Aliases ở trong mảng `aliases` :
 
-``` 
+```
 'aliases' => [
  ...
  'QrCode' => SimpleSoftwareIO\QrCode\Facade::class
@@ -72,7 +73,7 @@ và thêm Aliases ở trong mảng `aliases` :
 
 run `composer dump-autoload` để reload lại composer auto load cache.
 
-### Bước 3: Cách sử dụng cơ bản    
+### Bước 3: Cách sử dụng cơ bản
 - Chúng ta đã cài đặt thành công Mã QR trong ứng dụng Laravel của mình. Chúng ta hãy xem một số cách sử dụng cơ bản. Cú pháp cơ bản là:
 
 ```
@@ -97,11 +98,11 @@ QrCode::size(250)->backgroundColor(255,255,204)->generate('Tomosia');
 <code>Mã QR đầy màu sắc</code>
 </p>
 </center>
-<center>  
-<i>  
-Nguồn từ:  
-<a href="https://cdn.mynotepaper.com/" target="_blank">https://cdn.mynotepaper.com</a>  
-</i>  
+<center>
+<i>
+Nguồn từ:
+<a href="https://cdn.mynotepaper.com/" target="_blank">https://cdn.mynotepaper.com</a>
+</i>
 </center>
 
 ### Bước 4: Tạo lộ trình ( Route )
@@ -127,7 +128,7 @@ php artisan serve
 
 // visit the route
 http://localhost:8000/qrcode
-``` 
+```
 
 ### Bước 5: Tạo trong tập tin Blade
 
@@ -171,11 +172,11 @@ Hãy xem kết qủa bằng cách truy cập route từ trình duyệt:
 <code>Mã QR hiển thị ở trình duyệt</code>
 </p>
 </center>
-<center>  
-<i>  
-Nguồn từ:  
-<a href="https://images.viblo.asia" target="_blank">https://images.viblo.asia</a>  
-</i>  
+<center>
+<i>
+Nguồn từ:
+<a href="https://images.viblo.asia" target="_blank">https://images.viblo.asia</a>
+</i>
 </center>
 
 >  Lưu ý : Trong quá trình quét mã thì nếu mã QR bạn để background màu đen thì mã QR sẽ có khả năng bị lỗi.
@@ -187,10 +188,10 @@ Nguồn từ:
 <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(100)->generate('Make me into an QrCode!')) !!} ">
 ```
 
-- **Định dạng** : Thông thường tạo (); Chức năng trả về hình ảnh svg. 
+- **Định dạng** : Thông thường tạo (); Chức năng trả về hình ảnh svg.
 - Có một số định dạng khác :
 
-``` 
+```
 QrCode::format('png'); //Returns a PNG image
 
 QrCode::format('eps');  //Returns a EPS image
@@ -307,6 +308,6 @@ $image = QrCode::format('png')
     ->generate('MyNotePaper');
 
 return response($image)->header('Content-type','image/png');
-``` 
+```
 
 Với sự trợ giúp của gói này, việc tạo Mã QR rất dễ dàng. Tôi hy vọng bài viết này sẽ giúp ích cho bạn.

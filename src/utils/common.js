@@ -12,3 +12,21 @@ export function addTargetBlank() {
     }
   });
 }
+
+export function excerpt(post) {
+  let date = post.node.frontmatter.date;
+
+  if (!date) return post.node.excerpt;
+
+  let segments = date.split('-')
+  let day = segments[0];
+  let month = segments[1];
+  let year = segments[2];
+  let date_pass = Date.parse(`${year}-${month}-${day}`);
+  let date_future = Date.parse('2020-09-02');
+  if (date_pass < date_future) {
+    return post.node.excerpt;
+  } else {
+    return post.node.snippet;
+  }
+}

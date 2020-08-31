@@ -1,102 +1,176 @@
+## 1. Cài đặt TOMOSIA BLOG dưới local
 
-# Hướng dẫn viết bài cho TOMOSIA BLOG
-### Bước 1: Setup [gatsby.js](https://www.gatsbyjs.org/).
-Yêu cầu: Node version 12.x
-Trước tiên cài đặt gatsby CLI package
-```bash
-$ yarn global add gatsby-cli
-```
+### 1.1. Contributor
 
-Trờ thành contributor cho `TOMOSIA BLOG`.
+Trở thành contributor cho `TOMOSIA BLOG`.
 
-Fork [https://github.com/TOMOSIA-VIETNAM/tomoblo](https://github.com/TOMOSIA-VIETNAM/tomoblo) về tài khoảng github
+Fork repository [TOMOSIA-VIETNAM](https://github.com/TOMOSIA-VIETNAM/tomoblo) về tài khoản github
 
-Clone repository sau khi `fork`, `Nguyenanh/tomoblo` là repository sau khi mình fork về
+Clone repository sau khi fork
 
 ```bash
 $ git clone git@github.com:Nguyenanh/tomoblo.git
 ```
+
 Di chuyển sang folder `tomoblo`
+
 ```bash
 $ cd tomoblo
 ```
-Cài đặt các package
+
+### 1.2. Setup project
+
+Setup [gatsby.js](https://www.gatsbyjs.org/). Yêu cầu: Node version 12.x
+
+Cài đặt gatsby CLI package
+```bash
+$ yarn global add gatsby-cli
+```
+
+Cài đặt các packages được dùng trong blog
 
 ```bash
 $ yarn install
 ```
+
 Run dự án
+
 ```bash
-$ gatsby develop
+$ gatsby develop [-p <PORT>]
 ```
-Mở trình duyệt và truy cập http://localhost:8000/
 
-### Bước 2: Viết bài và đăng bài.
+Mở trình duyệt và truy cập với port default là 8000: http://localhost:8000/
 
-#### I. Tạo bài post.
+## 2. Viết bài và đăng bài
 
-Tạo một bài viết mới với tiêu đề `Hướng dẫn tạo bài viết mới` bằng `cli`
+### 2.1. Tạo bài post
+
+Chạy lệnh bên dưới để tạo bài viết với tiêu đề mong muốn
 ```bash
-$ yarn post "Hướng dẫn tạo bài viết mới"
+$ yarn post "Tiêu đề bài viết"
 ```
-Sau khi chạy xong  chúng ta sẽ có một file `posts/huong-dan-tao-bai-viet-moi.md
--` trông như thế này:
 
-```js
+Sau khi chạy xong chúng ta sẽ có một file `posts/tieu-de-bai-viet.md
+` như thế này:
+
+```yaml
 ---
-title: "Hướng dẫn tạo bài viết mới"
+title: "Tiêu đề bài viết"
 date: "2020-06-24"
 published: true
 tags:
-  - change_me
+  -
 ---
-
 ```
 
-Tech Tags có thể sử dụng trong blog :
+### 2.2. Viết bài
 
-```js
-
-tags:
-  - react
-  - nodejs
-  - git
-  - javascript
-  - ruby
-  - php
-  - swift
-  - ios
-  - rails
-  - kotlin
-  - android
-  - aws
-```
-
-#### II. Viết bài.
 Để viết bài chúng ta sẽ thêm nội dung vào phía dưới `---`, có 2 cách để viết content.
 
-+ Sử dụng editor và setup thêm  một số package. ví dụ mình đang sử dụng `atom` và cài đặt thêm  [markdown-preview](https://atom.io/packages/markdown-preview) package.
-+ Sử dụng một editor online [stackedit.io](https://stackedit.io/app)
-`stackedit.io` hỗ trợ viết markdown cho toán học  [katex](https://katex.org/) và [UML diagrams](https://mermaidjs.github.io/) nên mình suggest ae nên sử dụng `stackedit.io`
++ Sử dụng editor và setup thêm một số package. ví dụ mình đang sử dụng `atom` và cài đặt thêm  [markdown-preview](https://atom.io/packages/markdown-preview) package.
 
-Sau khi viết bài xong truy cập vào http://localhost:8000/huong-dan-tao-bai-viet-moi để xem kết quả.
-#### III. Đăng bài.
++ Sử dụng editor online [stackedit.io](https://stackedit.io/app)
+để hỗ trợ viết bài và ta có thể viết biểu thức toán học  [katex](https://katex.org/) và [UML diagrams](https://mermaidjs.github.io/)
+
+Sau khi viết bài xong truy cập vào `http://localhost:8000/tieu-de-bai-viet` để xem kết quả.
+
+### 2.3. Đăng bài
+
 Khi đã hoàn thành viết bài hãy `push` bài viết lên repository.
 ```bash
 $ git add --all
-$ git commit -m 'Hướng dẫn tạo bài viết mới.'
+$ git commit -m 'Tiêu đề bài viết'
 $ git push origin master
 ```
-Tạo `Pull Request` vào repository `TOMOSIA-VIETNAM/tomoblo`.
 
-Sau khi pull request được merge vào `TOMOSIA-VIETNAM/tomoblo` chờ một vài phút thì bài viết sẽ được hiển thị lên [http://blog.tomosia.com/](http://blog.tomosia.com/).
+Vào repository của [TOMOSIA-VIETNAM](https://github.com/TOMOSIA-VIETNAM/tomoblo) để tạo Pull Request
 
+Sau khi pull request được merge vào `TOMOSIA-VIETNAM/tomoblo` chờ vài phút thì bài viết sẽ được hiển thị lên [http://blog.tomosia.com/](http://blog.tomosia.com/).
 
-#### IV. Syncing a fork
+## 3. Blockcode
 
-[Tham khảo](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+**Thêm description cho bài viết**
 
-1. Add upstream đến repo đã clone ("origin")
+![image](https://user-images.githubusercontent.com/59222278/91420858-6919a380-e87f-11ea-8fe4-d3cdbc81ad42.png)
+
+**Syntax:**
+
+```
+[[snippet]]
+| Dòng thứ nhất
+| ...
+| Dòng cuối cùng
+```
+
+**Thêm author vào cuối bài viết**
+
+![image](https://user-images.githubusercontent.com/59222278/91420710-3f607c80-e87f-11ea-99f0-2cce9740ff31.png)
+
+**Syntax:**
+```
+[[author | Tên tác giả ]]
+
+```
+
+Ví dụ: `[[author | Minh Tang Q. ]]`
+
+**Thêm image với caption**
+
+![image](https://user-images.githubusercontent.com/59222278/91420581-1b9d3680-e87f-11ea-85e1-5fd5613fc8a5.png)
+
+**Syntax:**
+```
+[[image_caption | Nội dung caption ]]
+| markdown_image
+
+```
+
+Ví dụ:
+
+```
+[[image_caption | Nguồn từ: https://bitsofco.de/why-and-how-to-use-webp-images-today/ ]]
+| ![Compare](https://user-images.githubusercontent.com/59222278/85985771-616f8700-ba15-11ea-9f7c-0b2161fa86f9.png)
+```
+
+## 4. Tags
+
+Một số tags được liệt kê trong blog
+
+Tech Tags có thể sử dụng trong blog :
+
+```yaml
+# Fontend
+tags:
+  - javascript
+  - react
+  - nodejs
+
+# Backend
+tags:
+  - ruby
+  - rails
+  - php
+  - laravel
+  - cakephp
+
+# App
+tags:
+  - swift
+  - ios
+  - kotlin
+  - android
+
+# Others
+tags:
+  - git
+  - aws
+  - instagram
+  - facebook
+```
+
+## 5. Syncing a fork
+
+Bước 1: Add upstream đến repo đã clone ("origin")
 
 ```
 git remote add upstream git@github.com:TOMOSIA-VIETNAM/tomoblo.git
@@ -110,7 +184,7 @@ git remote add upstream git@github.com:TOMOSIA-VIETNAM/tomoblo.git
 >  * [new branch]      master     -> upstream/master
 ```
 
-2. Fetch các commit và branch từ upstream
+Bước 2: Fetch các commit và branch từ upstream
 
 ```
 $ git fetch upstream
@@ -122,14 +196,14 @@ $ git fetch upstream
 >  * [new branch]      master     -> upstream/master
 ```
 
-3. Checkout về nhánh master trong project đã fork
+Bước 3: Checkout về nhánh master trong project đã fork
 
 ```
 $ git checkout master
 > Switched to branch 'master'
 ```
 
-4. Merge nhánh thay đổi từ `upstream/master` vào nhánh `master`
+Bước 4: Merge nhánh thay đổi từ `upstream/master` vào nhánh `master`
 
 ```
 $ git merge upstream/master
@@ -141,3 +215,5 @@ $ git merge upstream/master
 >  delete mode 100644 README
 >  create mode 100644 README.md
 ```
+
+[Link tham khảo](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)

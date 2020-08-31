@@ -1,10 +1,12 @@
 ---
-title: "Sử dụng Serverless để chuyển đổi ảnh sang định dạng WEBP bằng Ruby"
+title: "[Aws] Converting a image to WebP in AWS Lambda using Ruby"
 date: "2020-06-29"
 published: true
 tags:
   - ruby
+  - aws
 ---
+
 
 ## Vấn đề đặt ra
 - Thứ nhất: Làm thế nào để hiển thị 100 tấm ảnh/1 trang một cách nhanh nhất? Đảm bảo tối ưu tốc độ load ảnh, nâng cao hiệu quả SEO Google và trải nghiệm người dùng tốt hơn.
@@ -19,32 +21,27 @@ tags:
 
 Định dạng Webp sẽ giúp bạn giảm 26%  dung lượng so với PNG. và  25 – 34% so với định dạng JPEG, mà vẫn vẫn giữ được chất lượng hiển thị. Điều này giúp web giảm thời gian tải ảnh, tăng tốc độ trải nghiệm người dùng.
 
-<figure class="paragraph-image">
-  <img src="https://user-images.githubusercontent.com/59222278/85985771-616f8700-ba15-11ea-9f7c-0b2161fa86f9.png" alt="web compress">
-  <figcaption>Nguồn từ: https://bitsofco.de/why-and-how-to-use-webp-images-today/</figcaption>
-</figure>
+[[image_caption | Nguồn từ: https://bitsofco.de/why-and-how-to-use-webp-images-today/ ]]
+| ![Compare](https://user-images.githubusercontent.com/59222278/85985771-616f8700-ba15-11ea-9f7c-0b2161fa86f9.png)
 
 Tuy nhiên với định dạng Webp thì không phải tất cả các trình duyệt đều hỗ trợ. Hiện tại, WebP thực sự được hỗ trợ trong các phiên bản mới nhất của Google Chrome, Firefox, Edge, trình duyệt Opera, Trình duyệt Android và Samsung internet.
 
-<figure class="paragraph-image">
-  <img src="https://user-images.githubusercontent.com/59222278/85986227-19049900-ba16-11ea-8707-5e09c467ba4f.png" alt="WebP support table">
-  <figcaption><a href="https://bitsofco.de/why-and-how-to-use-webp-images-today" target="_blank">WebP support table</a></figcaption>
-</figure>
+[[image_caption | WebP support table: https://bitsofco.de/why-and-how-to-use-webp-images-today/ ]]
+| ![Compare](https://user-images.githubusercontent.com/59222278/85986227-19049900-ba16-11ea-8707-5e09c467ba4f.png)
 
 ## Triển khai ý tưởng
 Ở browser, khi người dùng upload ảnh thì web server sẽ có nhiệm vụ gián tiếp nhận hình ảnh, xác thực và đẩy ảnh lên S3 để lưu trữ. Khi S3 nhận thấy rằng có ảnh mới được đẩy lên sẽ gọi (trigger) đến lambda để tiến hành convert sang dạng webp. Sau khi convert ảnh thì sẽ được lưu tại thư mục mới mà ta chỉ định (dĩ nhiên ta sẽ không override lại ảnh gốc mà user đẩy lên, mà là tạo ra 1 file ảnh thumb với định dạng webp). Trong quá trình  Lambda xử lý ta có thể dùng cloudWatch để debug.
 
-<figure class="paragraph-image">
-  <img src="https://user-images.githubusercontent.com/59222278/85989062-30458580-ba1a-11ea-9a22-4dad722102d8.png" alt="diagram s3-lambda">
-  <figcaption>Diagram S3 Lambda</figcaption>
-</figure>
+
+[[image_caption | Diagram S3 Lambda ]]
+| ![Diagram S3 Lambda](https://user-images.githubusercontent.com/59222278/85989062-30458580-ba1a-11ea-9a22-4dad722102d8.png)
+
 
 Vậy để chuyển đổi ảnh sang định dạng Webp thì chúng ta có thể dùng [imageMagick](https://imagemagick.org/index.php) hoặc [cwebp](https://developers.google.com/speed/webp/docs/cwebp).
 
-<figure class="paragraph-image">
-  <img src="https://miro.medium.com/max/500/1*_TeG6-eUitTR_l3SKpJ5Ow.jpeg" alt="LEGENDARY">
-</figure>
 
+[[image_caption]]
+| ![LEGENDARY](https://miro.medium.com/max/500/1*_TeG6-eUitTR_l3SKpJ5Ow.jpeg)
 
 ## Thực hiện
 
@@ -327,4 +324,4 @@ Dùng để tạo 1 bucket đích. Để sau khi xử lý convert xong thì ta u
 
 Trong bài này mình đã hướng dẫn và giải thích chi tiết, hi vọng khi thực hiện sẽ không phát sinh lỗi. Nếu có thì chúng ta có thể xem log trong Cloudwatch để fix dần thôi. Chúc các bạn thành công.
 
-######                    *<div style="text-align: right"> - by Minh Tăng </div>*
+[[author | Minh Tang Q. ]]

@@ -1,11 +1,12 @@
 ---
-title: "Lấy dữ liệu Instagramer thông qua Graph Facebook Api phần 1:
-Giới thiệu, hướng dẫn đăng ký Graph Facebook API app và Business Facebook Page."
-date: "2020-07-23"
+title: "[Facebook SDK] Lấy dữ liệu Instagramer thông qua GraphQL - Phần 1"
+date: "2020-08-17"
 published: true
 tags:
-  - sdk
+  - facebook
+  - instagram
 ---
+
 ***Graph Facebook API là gì?***
 
 Ngày nay các `social API` đang đóng một vai trò quan trọng trong việc thu thập thông tin về một cá nhân hoặc một tổ chức hoặc hầu hết mọi thứ. Trong bài viết này mình xin giới thiệu một social API để có thể làm được các việc đấy, đó là `Graph Facebook API`.

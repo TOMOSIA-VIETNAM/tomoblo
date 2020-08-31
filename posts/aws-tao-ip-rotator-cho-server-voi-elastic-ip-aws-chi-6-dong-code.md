@@ -1,5 +1,5 @@
 ---
-title: 'Tạo IP rotator cho server với Elastic IP AWS chỉ 6 dòng code'
+title: '[Aws] Tạo IP rotator cho server với Elastic IP AWS chỉ 6 dòng code'
 date: '2020-07-21'
 published: true
 tags:
@@ -30,7 +30,7 @@ flowchart TB
 #### Viết code để triển khai ý tưởng.
  Tôi tạo một file mới đặt tên `aws-ip-rotator.sh`. Ở đây mình dùng `shell script` và `aws-cli` để viết code, các dịch vụ của aws hầu như đều có thư viện cho hầu hết các ngôn ngữ lập trình hay dùng. Nên chúng ta hoàn toàn có thể triển khai ý tưởng bằng các ngôn ngữ khác như ruby, php, nodejs,...
 
-```sh
+```bash
 #!/usr/bin/env bash
 
 INSTANCE=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)

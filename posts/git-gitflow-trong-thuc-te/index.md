@@ -1,5 +1,5 @@
 ---
-title: "Gitflow trong thực tế"
+title: "[Git] Gitflow trong thực tế"
 date: "2020-07-16"
 published: true
 tags:

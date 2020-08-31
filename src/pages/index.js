@@ -6,12 +6,13 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Sidebar from "../components/sidebar/Sidebar";
 import TechTag from "../components/tags/TechTag";
+import { excerpt } from '../utils/common.js';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const labels = data.site.siteMetadata.labels;
   const currentPage = 1;
-  const postsPerPage = 5; // see limit in graphql query below
+  const postsPerPage = 10; // see limit in graphql query below
   const nextPage = (currentPage + 1).toString();
   const hasNextPage = data.allMarkdownRemark.totalCount > postsPerPage;
 
@@ -64,7 +65,8 @@ const IndexPage = ({ data }) => {
                 <small className="d-block text-muted reading-time">
                   {post.node.frontmatter.date} <span className="dot">●</span> {post.node.fields.readingTime.text}
                 </small>
-                <p className="mt-3 d-inline">{post.node.excerpt}</p>
+
+                <div className="snippet mt-3 d-inline" dangerouslySetInnerHTML={{ __html: excerpt(post) }} />
 
                 <div className="list-tags">{getTechTags(tags)}</div>
               </div>
@@ -99,7 +101,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 5
+      limit: 10
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { published: { eq: true } } }
     ) {
@@ -107,6 +109,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 200)
+          snippet
           html
           id
           frontmatter {

@@ -1,5 +1,5 @@
 ---
-title: "Làm sao để tạo một chuyển động sóng đơn giản trong iOS với Swift"
+title: "[Swift] Làm sao để tạo một chuyển động sóng đơn giản trong iOS với Swift"
 date: "2020-07-04"
 published: true
 tags:
