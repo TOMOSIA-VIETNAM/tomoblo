@@ -1,7 +1,7 @@
 ---
 title: "IT career path - Con đường nào cho developers ?"
 date: "2020-08-25"
-published: 
+published: true
 tags:
   - career
 ---
