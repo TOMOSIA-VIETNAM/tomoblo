@@ -225,7 +225,7 @@ module.exports = {
         graphQLQuery: `
           {
             allMarkdownRemark(
-              limit: 5
+              limit: 10
               sort: { fields: [frontmatter___date], order: DESC }
             ) {
               edges {
