@@ -61,6 +61,10 @@ published: true
 tags:
   -
 ---
+
+[[snippet]]
+| Mô tả ở đây
+| Hoặc có thể viết trên nhiều dòng
 ```
 
 ### 2.2. Viết bài
