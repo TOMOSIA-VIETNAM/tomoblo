@@ -6,7 +6,7 @@ tags:
   - aws
 ---
 
-`Crawling` dữ liệu không phải là khái niệm quá xa lạ, nhưng để lấy dữ liệu từ một website đôi khi chúng ta cũng hay gặp tình trạng bị chặn IP dẫn đến server không thể tiếp lục dữ liệu.
+Crawling dữ liệu không phải là khái niệm quá xa lạ, nhưng để lấy dữ liệu từ một website đôi khi chúng ta cũng hay gặp tình trạng bị chặn IP dẫn đến server không thể tiếp lục dữ liệu.
 #### Ý tưởng.
 Ý tưởng để giải quyết vấn đề đấy là chúng ta sẽ tiến hành tạo một service IP rotator để renew lại IP khi website hoặc API chúng ta muốn lấy dữ liệu chặn IP.
 

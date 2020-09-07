@@ -23,8 +23,8 @@ export function excerpt(post) {
   let month = segments[1];
   let year = segments[2];
   let date_pass = Date.parse(`${year}-${month}-${day}`);
-  let date_future = Date.parse('2020-09-02');
-  if (date_pass < date_future) {
+  let date_future = Date.parse('2020-09-07');
+  if (date_pass <= date_future) {
     return post.node.excerpt;
   } else {
     return post.node.snippet;
