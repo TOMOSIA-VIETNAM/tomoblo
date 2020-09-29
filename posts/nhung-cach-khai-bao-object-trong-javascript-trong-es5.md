@@ -1,5 +1,5 @@
 ---
-title: "Những cách khai báo object trong ES5"
+title: "The ways to declare objects in ES5"
 date: "2020-09-29"
 published: true
 tags:
