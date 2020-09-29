@@ -6,8 +6,6 @@ tags:
   - javascript
 ---
 
-Nhận thấy kiến thức JS của mình vẫn còn nhiều thiếu sót, nên trong bài viết này mình xin vừa chia sẻ cho các bạn và vừa ôn lại kiến thức cơ bản luôn. Mời các bạn cùng theo dõi nhé.
-
 **ES5 là gì ?**
 
 ES (ECMAScript) là một ngôn ngữ được chuẩn hóa bởi tổ chức ECMA và được giám sát bởi hội đồng TC39. Và Javascript là cài đặt cụ thể của chuẩn ECMAScript này và trở thành một ngôn ngữ thông dụng trong lập trình web hiện nay. ES5 là phiên bản thứ năm cửa ECMAScript, nó được giới thiệu vào năm 2009. Nó được chúng ta sử dụng nhiều nhất trong nhiều năm để làm chuẩn cài đặt ra Javascript được hỗ trợ hầu hết bởi tất cả các trình duyệt hiện tại. Trong bài viết này, chúng ta sẽ chỉ đề cập đến ES5 các bạn nhé.
