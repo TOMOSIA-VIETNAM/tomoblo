@@ -8,9 +8,9 @@ tags:
 [[snippet]]
 | **Khai thác - tấn công - phá hoại** doanh nghiệp từ những lỗ hổng bảo mật trên website luôn là vấn đề đau đầu của nhà phát triển. Việc kiểm tra và cảnh báo trong quá trình development là rất cần thiết.
 
-# Giới thiệu chung
+## Giới thiệu chung
 
-   ## 1. Brakeman là gì?
+   ### 1. Brakeman là gì?
 
    ![alt](https://camo.githubusercontent.com/92cf013ec2d2c5538bd5d0ec8b1fd600d3614f2b/687474703a2f2f6272616b656d616e7363616e6e65722e6f72672f696d616765732f6c6f676f5f6d656469756d2e706e67)
 
@@ -20,7 +20,7 @@ tags:
 
    Brakeman sẽ căn cứ vào phiên bản Rails của ứng dụng để đưa ra các cảnh báo thích hợp. Hơn nữa vì chỉ đánh gía trên source code tĩnh mà không cần thực thi nên thời gian thực hiện và đưa ra kết quả đánh giá của brakeman rất nhanh.
 
-   ## 2. SQL Injection
+   ### 2. SQL Injection
 
    Hacker khai thác lỗi hổng từ các câu lệnh SQL raw. 
 
@@ -41,7 +41,7 @@ tags:
 Đứng vị trí Top 1 dựa trên đánh giá [Open Web Application Security Project (OWASP) 2010](https://www.owasp.org/index.php/Top_10_2010-A1) nhưng hiện tại SQL Injection vẫn là một lỗ hổng bảo mật phổ biến mà các website lớn nhỏ rất dễ mắc phải.
 
 
-   ## 3. Cross-Site Request Forgery (CSRF)
+   ### 3. Cross-Site Request Forgery (CSRF)
 
    CSRF là kỹ thuật đánh lừa người dùng bằng cách gửi script đến người dùng khi họ vẫn đang truy cập trang bằng session đã đăng nhập của mình
 
@@ -49,14 +49,14 @@ tags:
 
 Để tăng thêm lớp bảo mật Rails là chèn thêm một token ẩn vào dưới form và so sánh với biến _csrf_token lưu ở session khi người dùng gửi một phương thức POST đến server.
 
-# Áp dụng
+## Áp dụng
 
 Chỉ cần một bước cài đặt có thể sử dụng ngay brakeman
 
     # Gemfile
     gem 'brakeman'
 
-   ## 1. Kết quả kiểm tra đánh giá 
+   ### 1. Kết quả kiểm tra đánh giá 
 
   Chạy lệnh `bundle exec brakeman` ở dưới CLI và cùng xem kết quả
 
@@ -72,7 +72,7 @@ Chúng ta có thể thấy brakeman trả về thông báo rất rõ ràng:
 
   * Cảnh báo [Dynamic Render Path](https://brakemanscanner.org/docs/warning_types/dynamic_render_paths/) tức đường dẫn này đang bị ảnh hưởng bởi tham số tuỳ ý từ người dùng và trong trường hợp cụ thể này có thể gây hại đến app
 
-   ## 2. Tích hợp với CI/CD
+   ### 2. Tích hợp với CI/CD
 
 Brakeman cung cấp các [options](https://brakemanscanner.org/docs/options/) linh hoạt tuỳ vào mức độ dự án. Ví dụ như:
 
@@ -93,7 +93,7 @@ Ví dụ mình muốn tất cả commit của mình phải phải CI với đi�
       ...
 
 
-# Tổng kết
+## Tổng kết
 
 Linh hoạt, đơn giản, nhẹ nhàng tại sao chúng ta không áp dụng brakeman vào dự án của mình. Để brakeman có thể giúp ta tránh được những rủi ro tiềm tàng mà chúng ta có thể xử lý được. Chúng ta hãy cùng cân nhắc cái giá phải trả của việc lộ thông tin khách hàng và trang website bị phá hoại nếu bị Hacker để mắt đến.
 
