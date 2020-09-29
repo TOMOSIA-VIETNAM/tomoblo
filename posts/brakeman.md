@@ -1,13 +1,12 @@
 ---
-title: "Kiểm tra bảo mật của Rails app bằng brakeman"
+title: "Bảo vệ Rails app với brakeman"
 date: "2020-09-29"
 published: true
 tags:
   - Rails
 ---
-
-**Khai thác - tấn công - phá hoại** doanh nghiệp từ những lỗ hổng bảo mật trên website luôn là vấn đề đau đầu của quản trị viên và nhà phát triển. Việc kiểm tra và cảnh báo trong quá trình development là rất cần thiết
-
+[[snippet]]
+| **Khai thác - tấn công - phá hoại** doanh nghiệp từ những lỗ hổng bảo mật trên website luôn là vấn đề đau đầu của nhà phát triển. Việc kiểm tra và cảnh báo trong quá trình development là rất cần thiết.
 
 # Giới thiệu chung
 
@@ -105,3 +104,5 @@ Hy vọng qua bài viết mọi người sẽ hiểu hơn tầm quan trọng cua
 Github: https://github.com/presidentbeef/brakeman
 
 Document: https://brakemanscanner.org/docs/
+
+[[author | Huy Nguyen ]]
