@@ -1,5 +1,5 @@
 ---
-title: "Xử lý Massive Data trong Rails"
+title: "Handle Massive Data in Rails"
 date: "2020-09-11"
 published: true
 tags:
