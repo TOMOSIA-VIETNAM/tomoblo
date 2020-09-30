@@ -1,9 +1,9 @@
 ---
-title: "Bảo vệ Rails app với brakeman"
+title: "Protect Rails application with brakeman gem"
 date: "2020-09-29"
 published: true
 tags:
-  - Rails
+  - rails
 ---
 [[snippet]]
 | **Khai thác - tấn công - phá hoại** doanh nghiệp từ những lỗ hổng bảo mật trên website luôn là vấn đề đau đầu của nhà phát triển. Việc kiểm tra và cảnh báo trong quá trình development là rất cần thiết.
@@ -16,7 +16,7 @@ tags:
 
    Brakeman là **Static Application Security Testing (SAST)** công cụ kiểm tra và cảnh báo lỗ hổng bảo mật có thể xảy ra dựa trên source code tĩnh được viết cho các ứng dụng rake như Sinatra, Ruby on Rails,.. Ngoài các lỗ hổng phổ biến và nguy hiểm như là [SQL Injection](https://guides.rubyonrails.org/security.html#sql-injection) và [Cross Site Request Forgery](https://guides.rubyonrails.org/security.html#cross-site-request-forgery-csrf) nói chung thì Brakeman còn đưa ra cảnh báo cho các lỗi bảo mật của ứng dụng Rails nói riêng như là [Attribute Restriction](https://brakemanscanner.org/docs/warning_types/attribute_restriction/), [Cross Site Scripting (Content Tag)](https://brakemanscanner.org/docs/warning_types/content_tag), vv ...
 
-   Mặc dù trong [tài liệu](https://guides.rubyonrails.org/security.html) của Rails đã đề cập đến và đưa ra cách mà Rails xử lý nhưng trong quá trình phát triển thực tế thì việc thiếu xót là không tránh khỏi. Vì vậy một công cụ cảnh báo như Brakeman kết hợp với CI/CD là rất cần thiết và việc review sẽ trở nên đơn giản hơn.
+   Mặc dù trong [tài liệu](https://guides.rubyonrails.org/security.html) của Rails đã đề cập đến và đưa ra cách mà Rails xử lý nhưng trong quá trình phát triển thực tế thì việc thiếu xót là không thể tránh khỏi. Vì vậy một công cụ cảnh báo như Brakeman kết hợp với CI/CD là rất cần thiết và việc review sẽ trở nên đơn giản hơn.
 
    Brakeman sẽ căn cứ vào phiên bản Rails của ứng dụng để đưa ra các cảnh báo thích hợp. Hơn nữa vì chỉ đánh gía trên source code tĩnh mà không cần thực thi nên thời gian thực hiện và đưa ra kết quả đánh giá của brakeman rất nhanh.
 
@@ -81,7 +81,7 @@ Brakeman cung cấp các [options](https://brakemanscanner.org/docs/options/) li
 * --except BasicAuth: Bỏ qua lỗi [Basic authentication](https://guides.rubyonrails.org/getting_started.html#basic-authentication) và tiếp tục tiến trình
 * vv, ...
 
-Ví dụ mình muốn tất cả commit của mình phải phải CI với điều kiện phải fix hết tất cả các warning ở mức độ medium trở lên và bỏ qua cảnh báo Basic Auth của Rails:
+Ví dụ mình muốn tất cả commit phải fix hết tất cả các warning ở mức độ medium trở lên và bỏ qua cảnh báo Basic Auth của Rails:
 
     # cicleci/config.yml
     ...
@@ -103,6 +103,6 @@ Hy vọng qua bài viết mọi người sẽ hiểu hơn tầm quan trọng cua
 
 Github: https://github.com/presidentbeef/brakeman
 
-Document: https://brakemanscanner.org/docs/
+Document: https://brakemanscanner.org/docs
 
 [[author | Huy Nguyen ]]
