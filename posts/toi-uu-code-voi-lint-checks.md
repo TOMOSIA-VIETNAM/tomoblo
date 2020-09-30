@@ -1,5 +1,5 @@
 ---
-title: "[Android] Tối ưu code với Lint Check Tools"
+title: "Optimize source code with Lint Check Tools in android"
 date: "2020-09-27"
 published: true
 tags:
