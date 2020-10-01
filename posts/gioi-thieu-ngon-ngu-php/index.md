@@ -1,7 +1,7 @@
 
 
 ---
-title: "What is PHP ?"
+title: "PHP for beginners"
 date: "2020-09-29"
 published: true
 tags:
