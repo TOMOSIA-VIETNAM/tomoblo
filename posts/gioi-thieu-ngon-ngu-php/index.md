@@ -1,7 +1,7 @@
 
 
 ---
-title: "PHP for beginners"
+title: "PHP for beginner"
 date: "2020-09-29"
 published: true
 tags:
