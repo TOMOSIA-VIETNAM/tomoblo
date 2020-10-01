@@ -7,6 +7,9 @@ tags:
   - instagram
 ---
 
+[[snippet]]
+| Làm thế nào để chúng ta có thể lấy được một User Access Token của Facebook vĩnh viễn không hết hạn nhằm sử dụng vào nhiều dự án khác nhau của dự án. Mời các bạn cùng theo dõi bài viết của mình. :D
+
 ***Access Token là gì?***
 Access Token là một chuỗi kí tự để xác định một User, App, hoặc Trang và được sử dụng bởi __App__ để gọi API. Khi ai đó
 kết nối với ứng dụng bằng cách __Đăng nhập với Facebook__ và phê duyệt yêu cầu cấp quyền, ứng dụng sẽ nhận được mã thông báo truy cập tạm thời, an toàn để truy cập vào __Facebook APIs__.
