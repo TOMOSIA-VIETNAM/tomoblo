@@ -1,5 +1,5 @@
 ---
-title: "[Aws] Cách cài đặt HTTPS bằng Cerbot cho Apache2 trên AWS EC2"
+title: "[Aws] How to install HTTPS using Cerbot for Apache2 on AWS EC2"
 date: "2020-01-10"
 published: true
 tags:
