@@ -7,7 +7,9 @@ tags:
   - laravel
 ---
 Ở [bài viết trước](https://blog.tomosia.com/authentication-trong-laravel/) chúng ta đã tìm hiểu về Authentication cơ bản trong framework Laravel và demo một vài tính năng đăng nhập, đăng ký,... Nhưng đó là chỉ là 1 auth user, thông thường 1 website ít nhất sẽ có 2 đối tượng user (User thông thường, User Administrator). Chưa kể có những hệ thống có rất nhiều user và nằm ở các bảng khác nhau trong database. 
-Ví dụ: 1 công ty có các cửa hàng, trong cửa hàng có các nhân viên và người dùng mua hàng
+
+Ví dụ: 
+1 công ty có các cửa hàng, trong cửa hàng có các nhân viên và người dùng mua hàng
 Chúng ta sẽ cần có Account Company, Account Shop, Account Employee, Account User và các acc này không có cùng thuộc tính giống nhau nên không thể lưu chung 1 bảng được mà phải lưu ở các bảng khác nhau trong database. Vậy Laravel sẽ xử lý ra sao chúng ta cùng tìm hiểu nhé!
 
 _Authentication basic Laravel_ : 
