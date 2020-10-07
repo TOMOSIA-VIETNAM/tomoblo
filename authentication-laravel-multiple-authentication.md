@@ -1,5 +1,5 @@
 ---
-title: "Authentication Laravel - Multiple Authenticate (v5.x, 6.x, 7.x)"
+title: "Authentication Laravel - Multiple Authenticate"
 date: "2020-10-07"
 published: true
 tags:
@@ -12,6 +12,8 @@ Chúng ta sẽ cần có Account Company, Account Shop, Account Employee, Accoun
 
 _Authentication basic Laravel_ : 
 [https://blog.tomosia.com/authentication-trong-laravel/](https://blog.tomosia.com/authentication-trong-laravel/)
+
+_Version Laravel: 5.x, 6.x, 7.x_
 # I. Chuẩn bị dữ liệu
 **_1. Database_**
 - Dùng migrations để tạo 4 bảng tương ứng với 4 authenticate user của hệ thống
