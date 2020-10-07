@@ -1,5 +1,5 @@
 ---
-title: "Authentication Laravel - Multiple Authenticate"
+title: "Authentication Laravel - Multiple Authenticate (v5.x, 6.x, 7.x)"
 date: "2020-10-07"
 published: true
 tags:
