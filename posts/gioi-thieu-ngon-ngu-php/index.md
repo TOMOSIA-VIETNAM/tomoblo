@@ -1,5 +1,3 @@
-
-
 ---
 title: "PHP for beginner"
 date: "2020-09-29"
@@ -98,4 +96,3 @@ tags:
 Chúng ta đã có hiểu biết cơ bản về  “PHP” rồi đấy.
 
 #### <i>Hẹn gặp các bạn vào các bài viết sắp tới. See ya !!!</i>
-
