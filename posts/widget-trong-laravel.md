@@ -244,7 +244,7 @@ Widget::group('sidebar')->count(); // int
 
 ## Kết luận
 - Qua bài viết trên chúng ta có thể thấy Laravel Widget dễ sử dụng, cú pháp thân thiện và giải quyết được nhiều vấn đề trong quá trình xây dựng website.
-- Laravel Widget tương thích với nhiều phiên bản của Laravel và khá linh hoạt trong bất kể Design partent nào.
+- Laravel Widget tương thích với nhiều phiên bản của Laravel và khá linh hoạt trong bất kể Design pattern nào.
 - Tuy nhiên vẫn còn 1 số điểm hạn chế về việc sử dụng bất đồng bộ, pagination,... và quá trình phát triển phải custom lại 1 số thứ về logic xử lý.
 
 ## Tài liệu tham khảo
