@@ -7,9 +7,7 @@ tags:
   - laravel
 ---
 Ở [bài viết trước](https://blog.tomosia.com/authentication-trong-laravel/) chúng ta đã tìm hiểu về Authentication cơ bản trong framework Laravel và demo một vài tính năng đăng nhập, đăng ký,... Nhưng đó là chỉ là 1 auth user, thông thường 1 website ít nhất sẽ có 2 đối tượng user (User thông thường, User Administrator). Chưa kể có những hệ thống có rất nhiều user và nằm ở các bảng khác nhau trong database. 
-
-Ví dụ: 
-1 công ty có các cửa hàng, trong cửa hàng có các nhân viên và người dùng mua hàng
+Ví dụ: 1 công ty có các cửa hàng, trong cửa hàng có các nhân viên và người dùng mua hàng
 Chúng ta sẽ cần có Account Company, Account Shop, Account Employee, Account User và các acc này không có cùng thuộc tính giống nhau nên không thể lưu chung 1 bảng được mà phải lưu ở các bảng khác nhau trong database. Vậy Laravel sẽ xử lý ra sao chúng ta cùng tìm hiểu nhé!
 
 _Authentication basic Laravel_ : 
@@ -345,3 +343,6 @@ class AdminAuth
 ## IV. Kết luận
 - **Multiple Authenticate** rất tiện lợi và dễ sử dụng, hơn nữa nó làm cho Framework Laravel trở nên ưu việt hơn khi có thể kết hợp được với nhiều thư viện authenticate khác để xây dựng hệ thống website đa dạng hơn hoặc 1 service API tuyệt vời.
 - Mong bài viết này sẽ phần nào giúp các bạn hiểu được cơ bản về **multiple authenticate Laravel** giúp các bạn có thể ứng dụng được khi làm project và yêu thích PHP & Laravel hơn để có thể tìm hiểu sâu và cùng nhau chia sẻ các kiến thức về lĩnh vực lập trình PHP & Laravel nhé!
+
+######                    *<div style="text-align: right"> - by Ngoc Quan </div>*
+
