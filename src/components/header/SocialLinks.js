@@ -11,7 +11,7 @@ const SocialLinks = ({ contacts }) => {
                 <span className="text-dark d-block py-1">Viết bài</span>
             </a>
             <a className="text-main ml-4"
-                href='https://blog.tomosia.com/huong-dan-tao-bai-viet-moi/'>
+                href='../huong-dan-tao-bai-viet-moi/'>
                 <span className="text-main d-block py-1">Hướng dẫn viết bài!</span>
             </a>
             <Link to="/archive"><span className="text-dark d-block py-1 ml-4">Tất cả blog</span></Link>

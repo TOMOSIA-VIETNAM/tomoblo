@@ -1,0 +1,35 @@
+.author {
+  font-style: italic;
+  font-size: .75em;
+  line-height: 1.5em;
+  text-align: right;
+  margin-top: 20px;
+
+  &::before {
+    content: 'Viết bởi: ';
+    display: inline;
+  }
+
+  div { display: inline; }
+}
+
+.image-caption {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  .custom-block-heading {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(117, 117, 117, 1);
+  }
+
+  p {
+    margin: unset !important;
+    line-height: unset !important;
+  }
+  a { color: rgba(117, 117, 117, 1); }
+}

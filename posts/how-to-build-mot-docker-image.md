@@ -10,7 +10,7 @@ tags:
 Mình còn nhớ hồi những năm 2011 gì đó, mình join vào làm dev php cho Chodientu.vn như bao anh em dev khác ngày đầu bỡ ngỡ và một trong những thủ tục chào hỏi cơ bản xong bắt đầu vào làm quen với dự án,
 nào là checkout code về local và cài cắm môi trường,... Mọi thứ cài cắm ok hết rồi còn duy nhất một ứng dụng cài mãi không được, đó là Mongodb cái tứ *** này bị sao vậy nhỉ! Sau một buổi sáng tìm hiểu thì đã tìm ra nguyên nhân là do ở Window phải cài đúng file .dll version mới chạy được,
 Cũng may dự án đó chỉ cài cắm vài thứ cơ bản mà còn vất đến vậy! Dự án đó mà cài thêm mấy cái nữa chắc mất cả tuần mất! Cần có một cái gì đó có thể build và cài sẵn để tối ưu hoá time cho các anh em khác! Hồi đó mình chưa kiếm được một ứng dụng nào có thể đảm nhận yêu cầu này, cho tới 2013 Docker mới ra đời, nó đảm bảo các yêu cầu của anh em dev tìm hiểu và cài cắm nghịch ngợm này nọ!
-Bữa nay mình xin giới thiệu đôi chút về Docker, một trong những ứng dụng tuyệt vời của thế kỷ dev :D  
+Bữa nay mình xin giới thiệu đôi chút về Docker, một trong những ứng dụng tuyệt vời của thế kỷ dev :D
 
 # Problem
 Đối với các dev, một trong những việc quan trọng đó là build môi trường, một trong những ưu điểm sau làm mình thích thú với nó:
@@ -38,7 +38,7 @@ Bữa nay mình xin giới thiệu đôi chút về Docker, một trong những 
 
 ## Ví dụ tạo nội dung Dockerfile với nội dung cơ bản sau:
 ```dockerfile
-# The line below states we will base our new image on the Latest Official Ubuntu 
+# The line below states we will base our new image on the Latest Official Ubuntu
 FROM ubuntu:latest
 
 #
@@ -60,24 +60,24 @@ EXPOSE 80
 #
 # Last is the actual command to start up NGINX within our Container
 CMD ["nginx", "-g", "daemon off;"]
-```    
+```
 
 ### Build thử
 ```bash
 docker build .
 ```
 ### Kết quả đúng:
-```logs
+```bash
 apples-MBP-6:test apple$ touch Dockerfile
-apples-MBP-6:test apple$ nano Dockerfile 
+apples-MBP-6:test apple$ nano Dockerfile
 apples-MBP-6:test apple$ docker build .
 Sending build context to Docker daemon  2.048kB
 Step 1/6 : FROM ubuntu:latest
 latest: Pulling from library/ubuntu
-54ee1f796a1e: Pull complete 
-f7bfea53ad12: Pull complete 
-46d371e02073: Pull complete 
-b66c17bbf772: Pull complete 
+54ee1f796a1e: Pull complete
+f7bfea53ad12: Pull complete
+46d371e02073: Pull complete
+b66c17bbf772: Pull complete
 Digest: sha256:31dfb10d52ce76c5ca0aa19d10b3e6424b830729e32a89a7c6eee2cda2be67a5
 Status: Downloaded newer image for ubuntu:latest
  ---> 4e2eef94cd6b
@@ -351,7 +351,7 @@ the time zones in which they are located.
   1. Africa      4. Australia  7. Atlantic  10. Pacific  13. Etc
   2. America     5. Arctic     8. Europe    11. SystemV
   3. Antarctica  6. Asia       9. Indian    12. US
-Geographic area: 
+Geographic area:
 Use of uninitialized value $_[1] in join or string at /usr/share/perl5/Debconf/DbDriver/Stack.pm line 111.
 
 Current default time zone: '/UTC'
@@ -461,7 +461,7 @@ docker run 76debc75be96
     ```bash
     docker pull <image name>:<tag>
     ```
-  
+
 ## Lời kết
 Như vậy bạn đã nắm được kha khá kiến thức vè Docker rồi đấy :D, nhưng nhớ là đừng mang đi chém gió nhé bay xác đấy :D
 Hy vọng qua các ví dụ và hướng dãn trên bạn đã phần nào nắm và hiểu được về cách build một Docker image, bạn có thể đẩy lên Hub rồi đó, còn cách đẩy lên hub như nào thì vui lòng search thêm hoặc đợi bài viết sau của mình nhé!

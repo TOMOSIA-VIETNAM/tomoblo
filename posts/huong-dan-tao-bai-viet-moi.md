@@ -1,4 +1,12 @@
-## 1. Cài đặt TOMOSIA BLOG dưới local
+---
+title: "Hướng dẫn tạo bài viết mới"
+date: "2020-07-03"
+published: true
+tags:
+  -
+---
+
+## 1. Cài đặt blog dưới local
 
 ### 1.1. Contributor
 
