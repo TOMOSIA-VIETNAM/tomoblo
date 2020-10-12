@@ -29,6 +29,8 @@ Có thể làm ảnh hưởng tới chức năng auto-complete hay Find referenc
 
 Ví dụ:
 ```php
+<?php
+
 class Config {
     private $username;
     private $password;
@@ -45,7 +47,11 @@ class Config {
         return $this->password;
     }
 }
-// C1. Không sử dụng DI
+```
+C1. Không sử dụng DI
+```php
+<?php
+
 class Database
 {
     private $config;
@@ -58,7 +64,11 @@ class Database
 }
 $database = new Database('tmpuser', 'tmppass');
 var_dump($database->getConfig());
-// C2. Sử dụng DI
+```
+C2. Sử dụng DI
+```php
+<?php
+
 class Database {
     private $config;
     public function __construct(Config $config) {
@@ -71,7 +81,11 @@ class Database {
 $config = new Config('tmpuser', 'tmppass');
 $database = new Database($config);
 var_dump($database->getConfig());
-// C3. Sử dụng DI trong setter
+```
+C3. Sử dụng DI trong setter
+```php
+<?php
+
 class Database
 {
     private $config;
@@ -88,7 +102,11 @@ $config = new Config('tmpuser', 'tmppass');
 $database = new Database();
 $database->setConfig($config);
 var_dump($database->getConfig());
-// C4. Sử dụng DI thông qua Interface
+```
+C4. Sử dụng DI thông qua Interface
+```php
+<?php
+
 interface DatabaseInterface {
     public function getConfig();
     public function setConfig(Config $config);
