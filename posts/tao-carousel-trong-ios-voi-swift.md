@@ -1,5 +1,5 @@
 ---
-title: "Tạo carousel trong iOS với Swift"
+title: "Build Carousel in iOS with Swift"
 date: "2020-10-11"
 published: true
 tags:
