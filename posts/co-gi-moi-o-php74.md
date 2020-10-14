@@ -81,20 +81,20 @@ Với PHP 7.4, nó sẽ in ra:
 
 array(6) {
 [0]=>
-string(3)  "dog"
+string(3) "dog"
 [1]=>
-string(3)  "cat"
+string(3) "cat"
 [2]=>
-string(8)  "elephant"
+string(8) "elephant"
 [3]=>
-string(4)  "lion"
+string(4) "lion"
 [4]=>
-string(5)  "tiger"
+string(5) "tiger"
 [5]=>
-string(7)  "giraffe"
+string(7) "giraffe"
 }
 ```
-Với array expression này, spread operatos có hiệu năng tốt hơn so với bản 7.3  **array_merge**. Đó là vì spread oeprator là ngôn ngữ cấu trúc trong khi đó  **array_merge**  là một hàm. Cũng vì spread operator hỗ trợ  **objects**  triển khai ngang còn  **array_merge**  chỉ hỗ trợ arrays.
+Với array expression này, spread operatos có hiệu năng tốt hơn so với bản 7.3  **array_merge**. Đó là vì spread operator là ngôn ngữ cấu trúc trong khi đó  **array_merge**  là một hàm. Cũng vì spread operator hỗ trợ  **objects**  triển khai ngang còn  **array_merge**  chỉ hỗ trợ arrays.
 
 Một vài điều cần lưu ý, bạn chỉ có thể dùng indexed arrays vì string keys không được hỗ trợ. Nếu sử dụng, lỗi recoverable sẽ xuất ra màn hình, vì phát hiện thấy string key.
 
@@ -111,11 +111,11 @@ var_dump($array);
 // prints
 array(3) {
 [0]=>
-string(6)  "banana"
+string(6) "banana"
 [1]=>
-string(5)  "apple"
+string(5) "apple"
 [2]=>
-string(6)  "orange"
+string(6) "orange"
 }
 ```
 Một ưu điểm của 7.4 sử dụng function generator.  [Generator function](https://www.php.net/manual/en/language.generators.syntax.php)  cũng giống như một hàm thông thường, ngoại trừ việc thay vì trả về một giá trị, generator function có thể trả về nhiều giá trị.
@@ -124,8 +124,8 @@ Hãy xem thử ví dụ bên dưới:
 ```php
 <?php
 
-function generator()  {
-    for  ($i = 3; $i <= 5; $i++)  {
+function generator() {
+    for ($i = 3; $i <= 5; $i++)  {
         yield $i;
     }
 }
@@ -143,7 +143,7 @@ WeakReference {
     /* Methods */
     public __construct(void)
     public static create(object $referent): WeakReference
-    public get(void)  ?object
+    public get(void) ?object
 }
 ```
 ### Contravariant Parameters và Covariant Returns
@@ -170,11 +170,11 @@ Ví dụ loại contravariant parameter:
 <?php
 
 interface Concatable {
-2.      function concat(Iterator $input);
+    function concat(Iterator $input);
 }
 class Collection implements Concatable {
-// accepts all iterables, not just Iterator
-    function concat(iterable $input)  {/* . . . */}
+    // accepts all iterables, not just Iterator
+    function concat(iterable $input)  {/* ... */}
 }
 ```
 ### Typed Properties 2.0
@@ -206,7 +206,7 @@ class User {
     /** @var string $name */
     private $name;
 
-    public function __construct(int $id, string $name)  {
+    public function __construct(int $id, string $name) {
         $this->id = $id;
         $this->name = $name;
     }
@@ -235,10 +235,10 @@ class User {
     public string $name;
 
     public function __construct(int $id, string $name)  
-      {
+    {
         $this->id = $id;
         $this->name = $name;
-     }
+    }
 }
 ```
 Đây là một vài ví dụ khác của các type mà 7.4 hỗ trợ:
@@ -254,7 +254,7 @@ class Example {
     // Types are also legal on static properties
     public static iterable $staticProp;
 
-     // Types can also be used with the "var" notation
+    // Types can also be used with the "var" notation
     var bool $flag;
 
     // Typed properties may have default values (more below)
@@ -278,15 +278,15 @@ Hãy xem code sau nó dùng PHP 7.3:
 ```php
 <?php
 
-function array_values_from_keys($arr, $keys)  {
-    return array_map(function ($x) use ($arr)  { return $arr[$x]; }, $keys);
+function array_values_from_keys($arr, $keys) {
+    return array_map(function ($x) use ($arr) { return $arr[$x]; }, $keys);
 }
 ```
 Còn đây là cú pháp chính xác của PHP 7.4:
 ```php
 <?php
 
-function array_values_from_keys($arr, $keys)  {
+function array_values_from_keys($arr, $keys) {
     return array_map(fn($x) => $arr[$x], $keys);
 }
 ```
@@ -305,7 +305,7 @@ $fn1 = fn($x) => $x + $y;
 
 $fn2 = function ($x) use ($y)
 {
-   return $x + $y;
+    return $x + $y;
 };
 ```
 Nó cũng hoạt động được nếu arrow function kết hợp lại:
