@@ -57,19 +57,19 @@
 
 <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"dog"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"dog"</span>
 <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"cat"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"cat"</span>
 <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"elephant"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"elephant"</span>
 <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"lion"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"lion"</span>
 <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"tiger"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"tiger"</span>
 <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"giraffe"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"giraffe"</span>
 <span class="token punctuation">}</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>Với array expression này, spread operatos có hiệu năng tốt hơn so với bản 7.3  <strong>array_merge</strong>. Đó là vì spread oeprator là ngôn ngữ cấu trúc trong khi đó  <strong>array_merge</strong>  là một hàm. Cũng vì spread operator hỗ trợ  <strong>objects</strong>  triển khai ngang còn  <strong>array_merge</strong>  chỉ hỗ trợ arrays.</p>
+<p>Với array expression này, spread operatos có hiệu năng tốt hơn so với bản 7.3  <strong>array_merge</strong>. Đó là vì spread operator là ngôn ngữ cấu trúc trong khi đó  <strong>array_merge</strong>  là một hàm. Cũng vì spread operator hỗ trợ  <strong>objects</strong>  triển khai ngang còn  <strong>array_merge</strong>  chỉ hỗ trợ arrays.</p>
 <p>Một vài điều cần lưu ý, bạn chỉ có thể dùng indexed arrays vì string keys không được hỗ trợ. Nếu sử dụng, lỗi recoverable sẽ xuất ra màn hình, vì phát hiện thấy string key.</p>
 <p>Một ưu điểm nổi trội khá của 7.4 là việc loại bỏ array_merge.</p>
 <p>Ví dụ, hãy xem một array merge bên dưới:</p>
@@ -82,18 +82,18 @@
 <span class="token comment">// prints</span>
 <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"banana"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"banana"</span>
 <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"apple"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"apple"</span>
 <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">></span>
-<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>  <span class="token double-quoted-string string">"orange"</span>
+<span class="token function">string</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token double-quoted-string string">"orange"</span>
 <span class="token punctuation">}</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Một ưu điểm của 7.4 sử dụng function generator.  <a href="https://www.php.net/manual/en/language.generators.syntax.php">Generator function</a>  cũng giống như một hàm thông thường, ngoại trừ việc thay vì trả về một giá trị, generator function có thể trả về nhiều giá trị.</p>
 <p>Hãy xem thử ví dụ bên dưới:</p>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="token keyword">function</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
-    <span class="token keyword">for</span>  <span class="token punctuation">(</span><span class="token variable">$i</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
+<span class="token keyword">function</span> <span class="token function">generator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
         <span class="token keyword">yield</span> <span class="token variable">$i</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -107,7 +107,7 @@ WeakReference <span class="token punctuation">{</span>
     <span class="token comment">/* Methods */</span>
     <span class="token keyword">public</span> <span class="token function">__construct</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token function">create</span><span class="token punctuation">(</span>object <span class="token variable">$referent</span><span class="token punctuation">)</span><span class="token punctuation">:</span> WeakReference
-    <span class="token keyword">public</span> <span class="token function">get</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span>  <span class="token operator">?</span>object
+    <span class="token keyword">public</span> <span class="token function">get</span><span class="token punctuation">(</span>void<span class="token punctuation">)</span> <span class="token operator">?</span>object
 <span class="token punctuation">}</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h3>Contravariant Parameters và Covariant Returns</h3>
 <p>Hiện tại, PHP sử dụng hầu như invariant parameter types và return types. Có nghĩa là, nếu một phương thức có parameter hay return type của X thì subtype parameter hoặc return type cũng phải là loại  <strong>X</strong>.</p>
@@ -126,11 +126,11 @@ WeakReference <span class="token punctuation">{</span>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
 <span class="token keyword">interface</span> <span class="token class-name">Concatable</span> <span class="token punctuation">{</span>
-<span class="token number">2.</span>      <span class="token keyword">function</span> <span class="token function">concat</span><span class="token punctuation">(</span>Iterator <span class="token variable">$input</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">concat</span><span class="token punctuation">(</span>Iterator <span class="token variable">$input</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">class</span> <span class="token class-name">Collection</span> <span class="token keyword">implements</span> <span class="token class-name">Concatable</span> <span class="token punctuation">{</span>
-<span class="token comment">// accepts all iterables, not just Iterator</span>
-    <span class="token keyword">function</span> <span class="token function">concat</span><span class="token punctuation">(</span>iterable <span class="token variable">$input</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span><span class="token comment">/* . . . */</span><span class="token punctuation">}</span>
+    <span class="token comment">// accepts all iterables, not just Iterator</span>
+    <span class="token keyword">function</span> <span class="token function">concat</span><span class="token punctuation">(</span>iterable <span class="token variable">$input</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span><span class="token comment">/* ... */</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h3>Typed Properties 2.0</h3>
 <p>Từ PHP 5, type hints đã được hỗ trợ, cho phép một loại biến nhất định được chuyển tới hàm hoặc class. Khi nâng cấp lên PHP 7.2, data type  <strong>object</strong>  xuất hiện, và các loại khác có thể cũng được chờ đón hơn trong tương lai. Tương lai giờ đã ở đây rồi</p>
@@ -152,7 +152,7 @@ any <span class="token keyword">class</span> <span class="token class-name">or</
     <span class="token comment">/** @var string $name */</span>
     <span class="token keyword">private</span> <span class="token variable">$name</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span>int <span class="token variable">$id</span><span class="token punctuation">,</span> string <span class="token variable">$name</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span>int <span class="token variable">$id</span><span class="token punctuation">,</span> string <span class="token variable">$name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">id</span> <span class="token operator">=</span> <span class="token variable">$id</span><span class="token punctuation">;</span>
         <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">name</span> <span class="token operator">=</span> <span class="token variable">$name</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
@@ -179,10 +179,10 @@ any <span class="token keyword">class</span> <span class="token class-name">or</
     <span class="token keyword">public</span> string <span class="token variable">$name</span><span class="token punctuation">;</span>
 
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">__construct</span><span class="token punctuation">(</span>int <span class="token variable">$id</span><span class="token punctuation">,</span> string <span class="token variable">$name</span><span class="token punctuation">)</span>  
-      <span class="token punctuation">{</span>
+    <span class="token punctuation">{</span>
         <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">id</span> <span class="token operator">=</span> <span class="token variable">$id</span><span class="token punctuation">;</span>
         <span class="token variable">$this</span><span class="token operator">-</span><span class="token operator">></span><span class="token property">name</span> <span class="token operator">=</span> <span class="token variable">$name</span><span class="token punctuation">;</span>
-     <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Đây là một vài ví dụ khác của các type mà 7.4 hỗ trợ:</p>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
@@ -196,7 +196,7 @@ any <span class="token keyword">class</span> <span class="token class-name">or</
     <span class="token comment">// Types are also legal on static properties</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> iterable <span class="token variable">$staticProp</span><span class="token punctuation">;</span>
 
-     <span class="token comment">// Types can also be used with the "var" notation</span>
+    <span class="token comment">// Types can also be used with the "var" notation</span>
     <span class="token keyword">var</span> bool <span class="token variable">$flag</span><span class="token punctuation">;</span>
 
     <span class="token comment">// Typed properties may have default values (more below)</span>
@@ -215,13 +215,13 @@ any <span class="token keyword">class</span> <span class="token class-name">or</
 <p>Hãy xem code sau nó dùng PHP 7.3:</p>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="token keyword">function</span> <span class="token function">array_values_from_keys</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">,</span> <span class="token variable">$keys</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token function">array_map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$x</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token variable">$arr</span><span class="token punctuation">[</span><span class="token variable">$x</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token variable">$keys</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">array_values_from_keys</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">,</span> <span class="token variable">$keys</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">array_map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$x</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token variable">$arr</span><span class="token punctuation">[</span><span class="token variable">$x</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token variable">$keys</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Còn đây là cú pháp chính xác của PHP 7.4:</p>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
 
-<span class="token keyword">function</span> <span class="token function">array_values_from_keys</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">,</span> <span class="token variable">$keys</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
+<span class="token keyword">function</span> <span class="token function">array_values_from_keys</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">,</span> <span class="token variable">$keys</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token function">array_map</span><span class="token punctuation">(</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token variable">$x</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token variable">$arr</span><span class="token punctuation">[</span><span class="token variable">$x</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token variable">$keys</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Arrow function giờ có dạng đơn giản hơn nhiều:</p>
@@ -236,7 +236,7 @@ any <span class="token keyword">class</span> <span class="token class-name">or</
 
 <span class="token variable">$fn2</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token variable">$x</span><span class="token punctuation">)</span> <span class="token keyword">use</span> <span class="token punctuation">(</span><span class="token variable">$y</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-   <span class="token keyword">return</span> <span class="token variable">$x</span> <span class="token operator">+</span> <span class="token variable">$y</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token variable">$x</span> <span class="token operator">+</span> <span class="token variable">$y</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Nó cũng hoạt động được nếu arrow function kết hợp lại:</p>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
