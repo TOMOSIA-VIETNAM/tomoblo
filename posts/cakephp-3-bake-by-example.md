@@ -1,5 +1,5 @@
 ---
-title: "CakePHP 3: Bake by example"
+title: "CakePHP 3: FOR BEGINNER"
 date: "2020-10-07"
 published: true
 tags:
