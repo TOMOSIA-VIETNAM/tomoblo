@@ -1,6 +1,6 @@
 ---
-title: "CakePHP 3: FOR BEGINNER"
-date: "2020-10-07"
+title: "CakePHP 3: For Beginner"
+date: "2020-10-14"
 published: true
 tags:
   - php
