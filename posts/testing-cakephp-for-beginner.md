@@ -1,9 +1,10 @@
 ---
-title: "CakePHP Testing for Beginner"
+title: "Integration PhpUnit test into Cakephp for beginner"
 date: "2020-10-14"
 published: true
 tags:
   - php
+  - cakephp
 ---
 CakePHP cung cấp khá nhiều các chức năng hữu ích cho lập trình viên trong đó có việc tích hợp sẵn PHPUnit. Ngoài các tính năng do PHPUnit cung cấp, CakePHP cũng cung cấp một số tính năng bổ sung giúp việc kiểm thử dễ dàng hơn. Bài viết này bao gồm việc hướng dẫn cài đặt PHPUnit và thực hiện một vài kiểm thử đơn giản. 
 
