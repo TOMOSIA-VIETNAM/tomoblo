@@ -15,13 +15,13 @@ Laravel permission cho phép chúng ta có thể dễ dàng phân chia các vai 
 -   Nếu bạn đang có sẵn file ```config/permission.php``` bạn phải đổi tên hoặc xóa, bởi vì khi setup thì package sẽ được publishes vào ```config/permission.php```
 Chúng ta chạy câu lệnh dưới để cài đặt package nhé:
 
-```
+```php
 composer require spatie/laravel-permission
 ```
 
 Sau đó, trong config/app.php chúng ta add service provide cho package như sau:
 
-```
+```php
 'providers' => [
     // ...
     Spatie\Permission\PermissionServiceProvider::class,
@@ -30,7 +30,7 @@ Sau đó, trong config/app.php chúng ta add service provide cho package như sa
 
 Sau đó, publish migration thông qua lệnh:
 
-```
+```php
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
 ```
 
@@ -40,7 +40,7 @@ Chạy lệnh ```php artisan migrate``` và chúng ta sẽ có các bảng như 
 
 Đầu tiên add trait của ```Spatie\Permission\Traits\HasRoles``` vào model mà bạn muốn phần quyền ở đây thì mình sẽ add vào model ``` Admin``` nhé:
 
-```
+```php
 use Spatie\Permission\Traits\HasRoles;
 
 class Admin extends Authenticatable
@@ -52,43 +52,43 @@ class Admin extends Authenticatable
 ```
 
 Sau đó chúng ta thêm các vai trò (roles) và quyền (permissions), một role có thể có nhiều permission. Chúng ta làm như sau:
-```
+```php
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
-$role = Role::create(['name' => 'sub_admin']);
-$permission = Permission::create(['name' => 'management user']);
+$role = Role::create(['name' => 'subAdmin']);
+$permission = Permission::create(['name' => 'managementUser']);
 ```
 
-Như trên các bạn đã thấy, mình vừa tạo ra một Role có tên là ```sub_admin``` và một Permission là ```management user```
+Như trên các bạn đã thấy, mình vừa tạo ra một Role có tên là ```subAdmin``` và một Permission là ```managementUser```
 
 Một quyền có thể được chỉ định cho một vài cho bằng một trong các phương pháp sau:
-```
+```php
 $role->givePermissionTo($permission);
-//hoặc...
+//or...
 $permission->assignRole($role);
 ```
 
 Nhiều quyền có thể được đồng bộ hóa với một vai trò bằng một trong các phương pháp sau:
-```
+```php
 $role->syncPermissions($permissions);
 $permission->syncRoles($roles);
 ```
 
 Có thể xóa quyền khỏi vai trò bằng một trong các phương pháp sau:
-```
+```php
 $role->revokePermissionTo($permission);
 $permission->removeRole($role);
 ```
 
-Để lấy thông tin tất cả các ```users``` có role là ```sub_admin``` chúng ta làm như sau:
-```
-$user = Admin::role('sub_admin')->get()
+Để lấy thông tin tất cả các ```users``` có role là ```subAdmin``` chúng ta làm như sau:
+```php
+$user = Admin::role('subAdmin')->get()
 ```
 
-hoặc trả về các user có quyền truy cập ```management user```
-```
-$user = Admin::permission('management user')->get();
+hoặc trả về các user có quyền truy cập ```managementUser```
+```php
+$user = Admin::permission('managementUser')->get();
 ```
 
 ## III. Cách sử dụng
@@ -96,25 +96,25 @@ $user = Admin::permission('management user')->get();
 **_1. Trao quyền trực tiếp cho 1 user_**
 
 Bạn có thể giao một quyền cho một ```user``` như sau:
-```
-$user->givePermissionTo('management user');
+```php
+$user->givePermissionTo(managementUser');
 ```
 
 bạn cũng có thể giao nhiều quyền user trong một lần hoặc có thể sử dụng mảng:
-```
-$user->givePermissionTo('management user', 'management contact');
-//hoặc
-$user->givePermissionTo(['management user', 'management contact']);
+```php
+$user->givePermissionTo('managementUser', 'managementContact');
+//or
+$user->givePermissionTo(['managementUser', 'managementContact']);
 ```
 
 Để xóa một quyền khỏi một ```user``` nào đó, chúng ta làm như sau :
-```
-$user->revokePermissionTo('management user');
+```php
+$user->revokePermissionTo('managementUser');
 ```
 
 hoặc xóa và thêm mới một quyền khác thì chúng ta làm như sau:
-```
-$user->syncPermissions(['management user', 'management contact']);
+```php
+$user->syncPermissions(['managementUser', 'managementContact']);
 ```
 
 Và còn một số option khác, các bạn có thể tham khảo thêm https://spatie.be
@@ -122,43 +122,43 @@ Và còn một số option khác, các bạn có thể tham khảo thêm https:/
 **_2. Trao quyền thông qua Role_**
 
 Một roles có thể được trao cho bất cứ ```users``` nào bằng cách :
-```
+```php
 $user->assignRole('edit');
 ```
 
 Bạn cũng có thể giao nhiều roles cho user trong một lần hoặc có thể sử dụng mảng:
-```
-$user->assignRole('sub_admin', 'admin');
-// hoặc
-$user->assignRole(['sub_admin', 'admin'])
+```php
+$user->assignRole('subAdmin', 'admin');
+// or
+$user->assignRole(['subAdmin', 'admin'])
 ```
 
 Bạn có thể xóa và thêm vai trò mới thông qua
-```
-$user->syncRole('sub_admin')
+```php
+$user->syncRole('subAdmin')
 ```
 
 Hoặc để xóa một role khỏi một user, chúng ta chỉ cần làm như sau:
-```
+```php
 $user->removeRole('admin');
 ```
 
 Bạn cũng có thể check xem liệu ```user``` có phải là ```role``` đang cần tìm bằng cách :
-```
+```php
 $user->hasRole('admin');
 ```
 
 **_3. Sử dụng với middleware_**
 
 Bạn có thể sử dụng ```can``` như một mặc định để giới hạn quyền truy cập cho trang web bằng cách :
-```
-Route::group(['middleware' => ['can:management user']], function () {
+```php
+Route::group(['middleware' => ['can:managementUser']], function () {
     //
 });
 ```
 
 Hoặc nếu bạn không muốn sử dụng mặc định, Laravel permission mang đến cho chúng ta các middleware ```RoleMiddleware```, ```PermissionMiddleware``` and ```RoleOrPermissionMiddleware```. Để sử dụng, bạn cần thêm vào app/Http/Kernel.php file như sau:
-```
+```php
 protected $routeMiddleware = [
     // ...
     'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
@@ -167,14 +167,12 @@ protected $routeMiddleware = [
 ```
 
 Sau đó sử dụng chúng để kiểm tra các route :
-```
-// Chỉ có role là super-admin mới có thể truy cập vào các route của group này
+```php
 Route::group(['middleware' => ['role:super-admin']], function () {
     //
 });
 
-// Chỉ có permission là management user thì mới có thể truy cập vào các route của group  này
-Route::group(['middleware' => ['permission:management user']], function () {
+Route::group(['middleware' => ['permission:managementUser']], function () {
     //
 });
 ```
@@ -182,29 +180,29 @@ Route::group(['middleware' => ['permission:management user']], function () {
 **_4. Sử dụng trực tiếp trên Blade_**
 
 Đối với phần view, để hiển thị view tương ứng cho các vai trò, chúng ta có thể sử dụng ```@can```, ```@cannot```, ```@canany```, and ```@guest``` để kiểm tra việc xem thông tin hiển thị trên một trang web. Chúng ta làm như sau:
-```
-@can('management user')
+```php
+@can('managementUser')
   //
 @endcan
 ```
 
 Bạn cũng có thể dùng ```role``` để check việc này:
-```
-@role('sub_admin')
+```php
+@role('subAdmin')
     //
 @endrole
 ```
 
 Hoặc là:
-```
-@hasrole('sub_admin')
+```php
+@hasrole('subAdmin')
 //
 @endhasrole
 ```
 
 Chúng ta có thể linh hoạt trong việc check nhiều ```roles``` hơn như sau:
-```
-@hasanyrole('sub_admin|admin')
+```php
+@hasanyrole('subAdmin|admin')
    //
 @else
   //
