@@ -9,13 +9,13 @@ tags:
   - ci
   - git
 ---
-Amazon Elastic Container Registry (**ECR**) là dịch vụ lưu chữ bộ chứa [Docker](https://aws.amazon.com/vi/docker/) được quản lý đầy đủ giúp các nhà phát triển dễ dàng lưu trữ, quản lý và triển khai hình ảnh bộ chứa Docker. Amazon **ECR** được tích hợp với [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/vi/ecs/), giúp đơn giản hóa quy trình công việc từ khi khâu phát triển đến khâu sản xuất. Amazon ECR giúp bạn không phải vận hành các kho bộ chứa riêng hay thay đổi quy mô cơ sở hạ tầng ngầm. Amazon ECR sẽ trở thành máy chủ lưu trữ hình ảnh của bạn trong kiến trúc có độ sẵn sàng cao và quy mô linh hoạt, cho phép bạn triển khai các bộ chứa cho ứng dụng của mình một cách ổn định. Khả năng tích hợp với AWS Identity and Access Management (**IAM**) đem đến cho bạn khả năng kiểm soát từng kho ở cấp tài nguyên. Với Amazon **ECR**, bạn sẽ không phải trả tiền trước hay có cam kết gì. Bạn chỉ phải chi trả chi phí cho lượng dữ liệu bạn lưu trong các kho cũng như dữ liệu được truyền lên Internet.
+Amazon Elastic Container Registry (**ECR**) là dịch vụ lưu trữ bộ chứa [Docker](https://aws.amazon.com/vi/docker/) được quản lý đầy đủ giúp các nhà phát triển dễ dàng lưu trữ, quản lý và triển khai hình ảnh bộ chứa Docker. Amazon **ECR** được tích hợp với [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/vi/ecs/), giúp đơn giản hóa quy trình công việc từ khi khâu phát triển đến khâu sản xuất. Amazon ECR giúp bạn không phải vận hành các kho bộ chứa riêng hay thay đổi quy mô cơ sở hạ tầng ngầm. Amazon ECR sẽ trở thành máy chủ lưu trữ hình ảnh của bạn trong kiến trúc có độ sẵn sàng cao và quy mô linh hoạt, cho phép bạn triển khai các bộ chứa cho ứng dụng của mình một cách ổn định. Khả năng tích hợp với AWS Identity and Access Management (**IAM**) đem đến cho bạn khả năng kiểm soát từng kho ở cấp tài nguyên. Với Amazon **ECR**, bạn sẽ không phải trả tiền trước hay có cam kết gì. Bạn chỉ phải chi trả chi phí cho lượng dữ liệu bạn lưu trong các kho cũng như dữ liệu được truyền lên Internet.
 ![enter image description here](https://d1.awsstatic.com/diagrams/product-page-diagrams/Product-Page-Diagram_Amazon-ECR.bf2e7a03447ed3aba97a70e5f4aead46a5e04547.png)
 # Lợi ích
-- Đây là dịch vụ lưu chữ Docker image cho các dự án và nhiều môi trường sử dụng nền tảng đám mây **AWS**, ECR cho phép bạn tạo phân vùng theo [region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html) định sẵn.
+- Đây là dịch vụ lưu trữ Docker image cho các dự án và nhiều môi trường sử dụng nền tảng đám mây **AWS**, ECR cho phép bạn tạo phân vùng theo [region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html) định sẵn.
 
--  Sự kết hợp tuyệt vời với **AWS Beanstalk**, đối với các dự án tích hợp deploy bằng CI/CD khi  sử dụng đến *Beanstalk* thì Docker ECR là một trong những sự lựa tối ưu và đa dụng nhất trong hệ sinh thái đám mây AWS.
-- **Docker ECR** được mã hoá file và sử dụng AWS Identity nên chỉ có thể truy cập và sử dụng nếu có Identity, bạn không thể copy nguyên link của Docker image này rồi truy cập ở một nơi khác khi không có Identity được. Bạn có thể build image từ local, CI/CD và pust lên Docker ECR kèm theo **Identity** đã cho.
+-  Sự kết hợp tuyệt vời với **AWS Beanstrữtalk**, đối với các dự án tích hợp deploy bằng CI/CD khi  sử dụng đến *Beanstalk* thì Docker ECR là một trong những sự lựa tối ưu và đa dụng nhất trong hệ sinh thái đám mây AWS.
+- **Docker ECR** được mã hoá file và sử dụng AWS Identity nên chỉ có thể truy cập và sử dụng nếu có Identity, bạn không thể copy nguyên link của Docker image này rồi truy cập ở một nơi khác khi không có Identity được. Bạn có thể build image từ local, CI/CD và pust lên Docker ECR kèm theo **Identity** đã cho.
 - Dựa vào region đã định sẵn nên tốc độ build/deploy dự án sẽ nhanh hơn là dùng Docker hub, bạn có thể sử dụng một repo chứa nhiều môi trường(test, develop, staging).
 ## Được quản lý toàn phần
 
@@ -32,15 +32,15 @@ Amazon Elastic Container Registry được tích hợp với Amazon ECS và CLI 
 
 # Kết hợp với CI/CD
 ##  Ưu điểm:
-- Từ các ứng dụng CI/CD hot nhất hiện nay như: Circleci, Github Action, Gitlab Action,... có thể sử dụng để build các Docker image **ECR** và thực hiện testing trong các Docker container đó rất tiện dụng và giảm thiểu khả năng rủi do cho môi trường production.
+- Từ các ứng dụng CI/CD hot nhất hiện nay như: Circleci, Github Action, Gitlab Action,... có thể sử dụng để build các Docker image **ECR** và thực hiện testing trong các Docker container đó rất tiện dụng và giảm thiểu khả năng rủi do cho môi trường production.
 - Chúng ta có thể linh động để build các job theo quy trình để kiểm thử code, docker hoạt động có chơn chu hay không trước khi tiến đến bước deploy dự án,...
-- Sử dụng Docker ECR trong CI bạn sẽ không cần phải mất nhiều thời gian để đi chỉ cho các thanh niên develop khác rằng đoạn code này có thể lỗi hay không và lỗi đó ở đâu, cách fix như thế nào, các thanh niên đó sẽ tự biết cách fix và tìm hiểu,... Bạn có thể dành time làm các công việc khác trong một mớ công việc được giao :D.
+- Sử dụng Docker ECR trong CI bạn sẽ không cần phải mất nhiều thời gian để đi chỉ cho các thanh niên develop khác rằng đoạn code này có thể lỗi hay không và lỗi đó ở đâu, cách fix như thế nào, các thanh niên đó sẽ tự biết cách fix và tìm hiểu,... Bạn có thể dành time làm các công việc khác trong một mớ công việc được giao :D.
 - Bạn có thể kết nối đến các **RDS** từ bên trong mỗi container.
 ##  Nhược điểm:
-- Docker ECR chỉ dành cho khách hàng chịu chơi, bạn sẽ phải tốn thêm chi phí cho mỗi lần build và deploy dự án.
+- Docker ECR chỉ dành cho khách hàng chịu chơi, bạn sẽ phải tốn thêm chi phí cho mỗi lần build và deploy dự án.
 - Chỉ dành cho người về Docker mới có thể build và sử dụng.
 - Chỉ dành cho các dự án có sử dụng đến nền tảng đám mây AWS.
-- Tài liệu về Docker ECR còn ít đòi hỏi khả năng research của bạn phải đạt mức thượngd thừa :D.
+- Tài liệu về Docker ECR còn ít đòi hỏi khả năng research của bạn phải đạt mức thượng thừa :D.
 - Bạn phải am hiểu về AWS mới có thể cấu hình cho dự án hoạt động đúng yêu cầu.
 
 # Kết luận
