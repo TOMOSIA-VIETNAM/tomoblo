@@ -40,7 +40,7 @@ Amazon Elastic Container Registry được tích hợp với Amazon ECS và CLI 
 - Docker ECR chỉ dành cho khách hàng chịu chơi, bạn sẽ phải tốn thêm chi phí cho mỗi lần build và deploy dự án.
 - Chỉ dành cho người về Docker mới có thể build và sử dụng.
 - Chỉ dành cho các dự án có sử dụng đến nền tảng đám mây AWS.
-- Tài liệu về Docker ECR còn ít đòi hỏi khả năng research của bạn phải đạt mức thượngd thừa :D.
+- Tài liệu về Docker ECR còn ít đòi hỏi khả năng research của bạn phải đạt mức thượng thừa :D.
 - Bạn phải am hiểu về AWS mới có thể cấu hình cho dự án hoạt động đúng yêu cầu.
 
 # Kết luận
