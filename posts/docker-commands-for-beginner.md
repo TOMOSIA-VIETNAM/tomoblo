@@ -6,7 +6,6 @@ tags:
   - Docker
 ---
 
-# I. Các lệnh cơ bản khi dùng docker
 
 Có rất nhiều docker command được giới thiệu trong document của docker. Chúng ta chắc hẳn không sử dụng hết tất cả chúng. Vậy với những người mới bắt đầu sử dụng docker, chúng ta cần chú ý đến những command nào. Trong bài viết này, mình sẽ giới thiệu cho các bạn các lệnh docker hay sử dụng nhất.
 

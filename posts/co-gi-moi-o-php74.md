@@ -7,7 +7,6 @@ tags:
   - php7.4
 ---
 
-# Có gì mới ở PHP 7.4?
 
 
 Từ năm 2016, PHP7 đã được nâng cấp hằng năm. Mỗi năm nó đều có tính năng mới, và có tính năng giúp viết code gọn hơn, khiến cho ngôn ngữ lập trình thân thiện với người quản lý website hơn.
