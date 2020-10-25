@@ -4,6 +4,7 @@ date: "2020-10-25"
 published: true
 tags:
   - ruby
+  - instagram
 ---
 
 [[snippet]]
