@@ -94,7 +94,7 @@ Sau khi lấy được để tranh việc PhantomJS ngốn memory chúng ta nên
     session.driver.quit
 ## Tổng kết
 
--   Bài viết này sẽ giúp chúng ta có thể lấy được cookie của account Instgram một cách nhanh chóng và hàng loạt khi cookie acoount Instagram hết hạn.
+-   Bài viết này sẽ giúp chúng ta có thể lấy được cookie của account Instgram một cách nhanh chóng và hàng loạt khi cookie account Instagram hết hạn.
 -   Cảm ơn mọi người đã dành thời gian đọc bài viết, rất mong nhận được sự góp ý từ mọi người để có thể cải thiện ở các bài viết tiếp theo.
 -   Ở Part 2 mình sẽ giới thiệu về cách crawler một bài post trên Instagram, rất mong được sự ủng hộ từ mọi người.
 
