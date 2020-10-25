@@ -3,7 +3,7 @@ title: "Auto Login and Get Instagram Cookie When Your Account Enable Two-Factor 
 date: "2020-10-25"
 published: true
 tags:
-  - rubyonrails
+  - ruby
 ---
 
 [[snippet]]
