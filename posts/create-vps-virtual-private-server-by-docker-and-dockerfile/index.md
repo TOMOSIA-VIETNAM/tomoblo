@@ -7,7 +7,7 @@ tags:
 ---
 
 [[snippet]]
-|Thế giới ngày càng hiện đại và phát triển, đi theo nó cũng là công nghệ, các thư viện sử dụng, môi trường triển khai cũng thay đổi. Để tránh sự không đồng bộ lúc cài đặt, triển khai hệ thống đống nhất, tránh xảy ra lỗi deployment, thì một dự án open platform được ra đời, đó là Docker
+| Thế giới ngày càng hiện đại và phát triển, đi theo nó cũng là công nghệ, các thư viện sử dụng, môi trường triển khai cũng thay đổi. Để tránh sự không đồng bộ lúc cài đặt, triển khai hệ thống đống nhất, tránh xảy ra lỗi deployment, thì một dự án open platform được ra đời, đó là Docker
 
 ## Docker là gì
 
