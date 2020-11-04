@@ -1,5 +1,5 @@
 ---
-title: "20 tips hữu ích với laravel Eloquent"
+title: "20 Laravel Eloquent Tips and Tricks"
 date: "2020-11-03"
 published: true
 tags:
@@ -423,4 +423,4 @@ $q->orWhere(['b' => 2, 'c' => 3]);
 
 Hi vọng với những mẹo này sẽ giúp các bạn nhiều hơn khi làm việc với dự án laravel 
 
-###### *<div style="text-align: right"> - Created by  Nam Tran </div>*
+###### *<div style="text-align: right"> [Nam Tran | Trần Thành Nam ] </div>*
