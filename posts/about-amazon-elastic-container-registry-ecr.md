@@ -14,7 +14,7 @@ Amazon Elastic Container Registry (**ECR**) là dịch vụ lưu trữ bộ ch�
 # Lợi ích
 - Đây là dịch vụ lưu trữ Docker image cho các dự án và nhiều môi trường sử dụng nền tảng đám mây **AWS**, ECR cho phép bạn tạo phân vùng theo [region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html) định sẵn.
 
--  Sự kết hợp tuyệt vời với **AWS Beanstrữtalk**, đối với các dự án tích hợp deploy bằng CI/CD khi  sử dụng đến *Beanstalk* thì Docker ECR là một trong những sự lựa tối ưu và đa dụng nhất trong hệ sinh thái đám mây AWS.
+-  Sự kết hợp tuyệt vời với **AWS Beanstalk**, đối với các dự án tích hợp deploy bằng CI/CD khi  sử dụng đến *Beanstalk* thì Docker ECR là một trong những sự lựa tối ưu và đa dụng nhất trong hệ sinh thái đám mây AWS.
 - **Docker ECR** được mã hoá file và sử dụng AWS Identity nên chỉ có thể truy cập và sử dụng nếu có Identity, bạn không thể copy nguyên link của Docker image này rồi truy cập ở một nơi khác khi không có Identity được. Bạn có thể build image từ local, CI/CD và pust lên Docker ECR kèm theo **Identity** đã cho.
 - Dựa vào region đã định sẵn nên tốc độ build/deploy dự án sẽ nhanh hơn là dùng Docker hub, bạn có thể sử dụng một repo chứa nhiều môi trường(test, develop, staging).
 ## Được quản lý toàn phần
