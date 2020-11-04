@@ -74,7 +74,10 @@ Trong Laravel Eloquent có một function `boot()` cho phép bạn ghi đè lạ
 ```php
 class User extends Model
 {
-    public static function boot()
+    /**
+    * @return void
+    */
+    public static function boot(): void
     {
         parent::boot();
         static::updating(function($model)
@@ -89,7 +92,10 @@ class User extends Model
 Ứng dụng nhiều nhất của function này là set uuid cho đối tượng
 
 ```php
-public static function boot()
+/**
+* @return void
+*/
+public static function boot(): void
 {
     parent::boot();
     self::creating(function ($model) {
@@ -103,7 +109,11 @@ public static function boot()
 Dưới đây là một cách mà các bạn thường dùng để định nghĩa một relationship
 
 ```php
-public function users() {
+/**
+* @return mixed
+*/
+public function users()
+{
     return $this->hasMany('App\User');    
 }
 ```
@@ -113,7 +123,12 @@ Tuy nhiên bạn hoàn toàn có thể thêm `where` hoặc `orderBy`
 Ví dụ trong trường hợp cụ thể, bạn cần tạo quan hệ giữa bảng `categories` và `posts` nhưng thêm điều kiện là `post` phải có trạng thái là `APPROVED` và sắp xếp theo thứ tụ tăng dần.
 
 ```php
-public function posts() {
+
+/**
+* @return mixed
+*/
+public function posts() 
+{
     return $this->hasMany('App\Models\Category')->where('status', 'APPROVED')->orderBy('id', 'DESC');
 }
 ```
@@ -183,6 +198,9 @@ User::whereYear('created_at', date('Y'));
 Sử dụng khi bạn cần lấy `post` mới nhất trong 1 list `categories`. Đầu tiên bạn cần define 1 relationship riêng việt cho `post` mới nhất của `categories`
 
 ```php
+/**
+* @return mixed
+*/
 public function latestPost()
 {
     return $this->hasOne(\App\Models\Post::class)->latest();
@@ -246,6 +264,9 @@ Tất nhiên vẫn có cách giải quyết kiểu như
 Nhưng bạn hoàn toàn có thể làm nó ở relationship
 
 ```php
+/**
+* @return mixed
+*/
 public function author()
 {
     return $this->belongsTo('App\Author')->withDefault([
@@ -259,7 +280,11 @@ public function author()
 Hãy tưởng tượng bạn có cái này:
 
 ```php
-function getFullNameAttribute()
+/**
+* Get fullname by first name and last name
+* @return string
+*/
+function getFullNameAttribute(): string
 {
   return $this->attributes['first_name'] . ' ' . $this->attributes['last_name'];
 }
@@ -281,7 +306,10 @@ Lưu ý rằng tên function khác nhau nhé. Nó k phải `orderBy` mà là `so
 Nếu bạn muốn `User:all()` luôn được order by name? Bạn có thể sủ dụng method `boot()` như sau:
 
 ```php
-protected static function boot()
+/**
+* @return void
+*/
+protected static function boot(): void
 {
     parent::boot();
 
