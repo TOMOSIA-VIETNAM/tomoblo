@@ -1,18 +1,18 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
-import "./index.css";
+import "../stylesheets/application.scss";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Sidebar from "../components/sidebar/Sidebar";
 import TechTag from "../components/tags/TechTag";
+import { excerpt } from '../utils/common.js';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const labels = data.site.siteMetadata.labels;
   const currentPage = 1;
-  const postsPerPage = 5; // see limit in graphql query below
+  const postsPerPage = 10; // see limit in graphql query below
   const nextPage = (currentPage + 1).toString();
   const hasNextPage = data.allMarkdownRemark.totalCount > postsPerPage;
 
@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
         ]}
       />
       <div className="index-main">
-        <div className="sidebar px-4 py-2">
+        <div className="sidebar">
           <Sidebar />
         </div>
         <div className="post-list-main">
@@ -59,17 +59,16 @@ const IndexPage = ({ data }) => {
             const tags = post.node.frontmatter.tags;
             return (
               <div key={post.node.id} className="container mt-5">
-                <Link to={post.node.fields.slug} className="text-dark">
-                  <h2 className="title">{post.node.frontmatter.title}</h2>
-                </Link>
-                <small className="d-block text-info">
-                  <i>Được đăng vào {post.node.frontmatter.date}</i>
+                <h2 className="title">
+                  <Link to={post.node.fields.slug} className="text-dark">{post.node.frontmatter.title}</Link>
+                </h2>
+                <small className="d-block text-muted reading-time">
+                  {post.node.frontmatter.date} <span className="dot">●</span> {post.node.fields.readingTime.text}
                 </small>
-                <p className="mt-3 d-inline">{post.node.excerpt}</p>
-                <Link to={post.node.fields.slug} className="text-primary">
-                  <small className="d-inline-block ml-3"> Đọc cả bài</small>
-                </Link>
-                <div className="d-block">{getTechTags(tags)}</div>
+
+                <div className="snippet mt-3 d-inline" dangerouslySetInnerHTML={{ __html: excerpt(post) }} />
+
+                <div className="list-tags">{getTechTags(tags)}</div>
               </div>
             );
           })}
@@ -102,7 +101,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 5
+      limit: 10
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { published: { eq: true } } }
     ) {
@@ -110,6 +109,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 200)
+          snippet
           html
           id
           frontmatter {
@@ -119,6 +119,9 @@ export const pageQuery = graphql`
           }
           fields {
             slug
+            readingTime {
+              text
+            }
           }
         }
       }

@@ -15,14 +15,14 @@ module.exports = async () => {
 
   const currentDate = () => {
     var d = new Date(date),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
 
     if (month.length < 2)
-        month = '0' + month;
+      month = '0' + month;
     if (day.length < 2)
-        day = '0' + day;
+      day = '0' + day;
 
     return [year, month, day].join('-');
   };
@@ -43,7 +43,10 @@ module.exports = async () => {
     `published: true\n` +
     `tags:\n` +
     `  - change_me\n` +
-    `---\n`;
+    `---\n\n` +
+    `[[snippet]]\n` +
+    `| Mô tả ở đây\n` +
+    `| Hoặc có thể viết trên nhiều dòng\n`;
 
   signale.pending(`Attempting to create post titled "${title}"...`);
 

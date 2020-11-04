@@ -1,10 +1,13 @@
 .head-main {
   width: 100%;
   position: sticky;
-  z-index: 1;
+  z-index: 15;
   top: 0;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #f0f0f2;
+  padding: 0 2.45rem;
+  background: white
 }
 .profile-img {
   width: auto;
@@ -25,7 +28,6 @@
   line-height: 3.4;
 }
 
-
 .bottom-bar {
   width: 100%;
   background: black;
@@ -38,13 +40,9 @@
   background: white;
   display: none;
 }
-.head-logo {
-  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.75rem;
-}
 
-small {
-    font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+.head-logo {
+  font-size: 1.75rem;
 }
 
 .mobile-bio-main {
@@ -52,8 +50,11 @@ small {
   display: none;
 }
 
-
-
+@media only screen and (min-width: 1000px) {
+  .profile-img {
+    margin-left: 25px;
+  }
+}
 @media only screen and (max-width: 850px) {
   .bottom-bar{display: flex;}
   .social-links{display: none;}

@@ -1,0 +1,44 @@
+.sidebar {
+  position: relative;
+  width: 90%;
+  padding: .5rem 1.45rem;
+  border-right: 1px solid #dee2e6 !important ;
+
+  &__inner {
+    position: fixed;
+    width: 26%;
+  }
+
+  &-social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    float: left;
+    margin: 1rem 0;
+    margin-left: -10px;
+  }
+
+  .tech-tags {
+    margin-top: 8rem;
+  }
+
+  .author-bio {
+    font-size: 1.5vw;
+    margin-left: -10px;
+
+    &+small {
+      font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+    }
+
+  }
+
+  .page-links {
+    margin-top: 3rem;
+    padding-top: 4rem;
+  }
+
+  .tech-topic h4 {
+    font-size: 1em;
+  }
+}

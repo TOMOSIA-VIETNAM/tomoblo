@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
-import "../pages/index.css";
+import "../stylesheets/application.scss";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Sidebar from "../components/sidebar/Sidebar";
 import TechTag from "../components/tags/TechTag";
+import { excerpt } from '../utils/common.js';
 
 const PostList = props => {
   const posts = props.data.allMarkdownRemark.edges;
@@ -14,8 +14,8 @@ const PostList = props => {
   const { currentPage, numPages } = props.pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString();
-  const nextPage = (currentPage + 1).toString();
+  const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`;
+  const nextPage = `/${currentPage + 1}`;
 
   const getTechTags = tags => {
     const techTags = [];
@@ -52,7 +52,7 @@ const PostList = props => {
         ]}
       />
       <div className="index-main">
-        <div className="sidebar px-4 py-2">
+        <div className="sidebar">
           <Sidebar />
         </div>
         <div className="post-list-main">
@@ -63,13 +63,13 @@ const PostList = props => {
                 <Link to={post.node.fields.slug} className="text-dark">
                   <h2 className="title">{post.node.frontmatter.title}</h2>
                 </Link>
-                <small className="d-block text-info">
-                  <i>Được đăng vào {post.node.frontmatter.date}</i>
+
+                <small className="d-block text-muted reading-time">
+                  {post.node.frontmatter.date} <span className="dot">●</span> {post.node.fields.readingTime.text}
                 </small>
-                <p className="mt-3 d-inline">{post.node.excerpt}</p>
-                <Link to={post.node.fields.slug} className="text-primary">
-                  <small className="d-inline-block ml-3"> Đọc cả bài</small>
-                </Link>
+
+                <div className="snippet mt-3 d-inline" dangerouslySetInnerHTML={{ __html: excerpt(post) }} />
+
                 <div className="d-block">{getTechTags(tags)}</div>
               </div>
             );
@@ -77,7 +77,7 @@ const PostList = props => {
           <div className="text-center mt-4">
             {!isFirst && (
               <Link to={prevPage} rel="prev" style={{ textDecoration: `none` }}>
-                <span className="text-dark">← Trang sau</span>
+                <span className="text-dark">← Trang trước</span>
               </Link>
             )}
             {!isLast && (
@@ -117,6 +117,7 @@ export const listQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 200)
+          snippet
           html
           id
           frontmatter {
@@ -126,6 +127,9 @@ export const listQuery = graphql`
           }
           fields {
             slug
+            readingTime {
+              text
+            }
           }
         }
       }

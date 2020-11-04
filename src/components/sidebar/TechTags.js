@@ -1,5 +1,4 @@
 import React from "react"
-
 import TechTag from "../tags/TechTag"
 
 const TechTags = (props) => {
@@ -40,12 +39,12 @@ const TechTags = (props) => {
 
 
     return (
-        <>
+        <div className="tech-topic">
             <h4>Tech Topics</h4>
-            <div className="d-block">
+            <div className="tech-item">
                 {getTechTags(tags)}
             </div>
-        </>
+        </div>
     )
 }
 

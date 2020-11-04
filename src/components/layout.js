@@ -8,9 +8,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
+import "../stylesheets/application.scss";
 import Header from "./header/header";
-import "./layout.css";
 
 const Layout = ({ children }) => {
   return (
@@ -41,25 +40,13 @@ const Layout = ({ children }) => {
             author={data.site.siteMetadata.author}
             contacts={data.site.siteMetadata.contacts}
           />
-          <div
-            style={{
-              margin: `0 auto`,
-              padding: `0px 1.0875rem 1.45rem`,
-              paddingTop: 0
-            }}
-          >
-            <main className="p-4">{children}</main>
+          <div>
+            <main className="main-page">{children}</main>
             <footer className="text-center">
               <hr />
               <p className="d-inline">
                 © {new Date().getFullYear()}{" "}
-                <a
-                  className="text-info"
-                  href="http://www.tomosia.com/index.html"
-                >
-                  TOMOSIA
-                </a>
-                , All Rights Reserved.
+                <a className="text-info" href="http://www.tomosia.com/index.html" > TOMOSIA </a> , All Rights Reserved.
               </p>
             </footer>
           </div>

@@ -1,15 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
-import "./index.css";
+import "../stylesheets/application.scss";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Sidebar from "../components/sidebar/Sidebar";
 import TechTag from "../components/tags/TechTag";
 
-const ArchivePage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
+const ArchivePage = props => {
+  const { data } = props
+  const allPosts = data.allMarkdownRemark.edges;
+
+  const emptyQuery = ""
+
+  const [state, setState] = useState({
+    filteredData: [],
+    query: emptyQuery,
+  })
+
+  const handleInputChange = event => {
+    console.log(event.target.value)
+    const query = event.target.value
+    const { data } = props
+    const posts = data.allMarkdownRemark.edges || []
+    const filteredData = posts.filter(post => {
+      const { title, tags } = post.node.frontmatter
+      return (
+        title.toLowerCase().includes(query.toLowerCase()) ||
+        (tags &&
+          tags
+            .join("")
+            .toLowerCase()
+            .includes(query.toLowerCase()))
+      )
+    })
+    setState({
+      query,
+      filteredData,
+    })
+  }
+  const { filteredData, query } = state
+  const hasSearchResults = filteredData && query !== emptyQuery
+  const posts = hasSearchResults ? filteredData : allPosts
+
   const labels = data.site.siteMetadata.labels;
 
   const getTechTags = tags => {
@@ -51,7 +84,14 @@ const ArchivePage = ({ data }) => {
           <Sidebar />
         </div>
         <div className="post-list-main">
-          <h2 className="heading mt-3">All Posts</h2>
+          <h2 className="title mt-3">All Posts</h2>
+          <input
+            className="searchInput"
+            type="text"
+            aria-label="Search"
+            placeholder="Type to filter posts..."
+            onChange={handleInputChange}
+            />
           {posts.map(post => {
             const tags = post.node.frontmatter.tags;
             return (
@@ -63,9 +103,6 @@ const ArchivePage = ({ data }) => {
                   <i>Được đăng vào {post.node.frontmatter.date}</i>
                 </small>
                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
-                <Link to={post.node.fields.slug} className="text-primary">
-                  <small className="d-inline-block ml-3"> Đọc cả bài</small>
-                </Link>
                 <div className="d-block">{getTechTags(tags)}</div>
               </div>
             );

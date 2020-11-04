@@ -1,4 +1,6 @@
 node_modules/
 .cache/
 public/
-.idea
+.DS_Store
+.DS_Store?
+.idea/

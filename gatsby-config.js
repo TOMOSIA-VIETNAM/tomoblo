@@ -1,7 +1,7 @@
 'use strict'
 
 const siteConfig = require("./config")
-
+const siteUrl = `https://blog.tomosia.com`
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -19,13 +19,102 @@ module.exports = {
       facebook: siteConfig.author.contacts.facebook
     },
     labels: siteConfig.labels,
-    siteUrl: 'http://blog.tomosia.com/',
+    siteUrl: siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-cname`,
+    {
+      "resolve": "gatsby-plugin-excerpts",
+      "options": {
+        "sources": {
+          "snippetBlocks": {
+            "type": "htmlQuery",
+            "sourceField": "html",
+            "excerptSelector": ".custom-block.snippet .custom-block-body",
+            "stripSelector": "a",
+            "elementReplacements": [
+              {
+                "selector": "h6",
+                "replaceWith": "strong"
+              },
+              {
+                "selector": "h5",
+                "replaceWith": "h6"
+              },
+              {
+                "selector": "h4",
+                "replaceWith": "h5"
+              },
+              {
+                "selector": "h3",
+                "replaceWith": "h4"
+              },
+              {
+                "selector": "h2",
+                "replaceWith": "h3"
+              },
+            ],
+          },
+          "default": {
+            "type": "htmlQuery",
+            "sourceField": "html",
+            "excerptSelector": "html > *",
+            "ignoreSelector": "img, .gatsby-highlight",
+            "stripSelector": "a",
+            "elementReplacements": [
+              {
+                "selector": "h6",
+                "replaceWith": "strong"
+              },
+              {
+                "selector": "h5",
+                "replaceWith": "h6"
+              },
+              {
+                "selector": "h4",
+                "replaceWith": "h5"
+              },
+              {
+                "selector": "h3",
+                "replaceWith": "h4"
+              },
+              {
+                "selector": "h2",
+                "replaceWith": "h3"
+              },
+            ],
+            "truncate": {
+              "length": 50, // unit: words
+              "byWords": true,
+              "ellipsis": "…"
+            },
+          }
+        },
+        "sourceSets": {
+          "markdownHtml": [
+            "snippetBlocks",
+            "default"
+          ]
+        },
+        "excerpts": {
+          "snippet": {
+            "type": "html",
+            "nodeTypeSourceSet": {
+              "MarkdownRemark": "markdownHtml"
+            }
+          }
+        }
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['stylesheets'],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,7 +143,25 @@ module.exports = {
               strict: `ignore`
             }
           },
-          'gatsby-remark-mermaid',
+          {
+            resolve: `gatsby-remark-custom-blocks`,
+            options: {
+              blocks: {
+                snippet: {
+                  classes: "snippet"
+                },
+                image_caption: {
+                  classes: "image-caption",
+                  title: "optional"
+                },
+                author: {
+                  classes: "author",
+                  title: "required"
+                }
+              },
+            },
+          },
+          `gatsby-remark-mermaid`,
           `gatsby-remark-reading-time`,
           {
             resolve: `gatsby-remark-prismjs`,
@@ -72,7 +179,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 200,
+              maxWidth: 700,
             },
           },
         ],
@@ -82,10 +189,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          'Lato',
-          'Helvetica Neue',
-          'Helvetica',
-          'sans-serif'
+          'Quicksand\:500,600,700',
         ]
       }
     },
@@ -105,8 +209,8 @@ module.exports = {
       resolve: `gatsby-plugin-gitalk`,
       options: {
         config: {
-          clientID: '69beba26a588a29737d6',
-          clientSecret: 'c96383537bf4c5ffd7a37b01b84739a6cd16473c',
+          clientID: siteConfig.gitalk.clientID,
+          clientSecret: siteConfig.gitalk.clientSecret,
           repo: 'tomoblo',
           owner: 'TOMOSIA-VIETNAM',
           admin: ['anhnguyen1tomosia'],
@@ -114,5 +218,38 @@ module.exports = {
         }
       }
     },
-  ],
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: siteUrl,
+        graphQLQuery: `
+          {
+            allMarkdownRemark(
+              limit: 10
+              sort: { fields: [frontmatter___date], order: DESC }
+            ) {
+              edges {
+                node {
+                  excerpt
+                  html
+                  fields { slug }
+                  frontmatter {
+                    title
+                    date(formatString: "YYYY.MM.DD")
+                  }
+                }
+              }
+            }
+          }
+        `,
+        serializeFeed: results => results.data.allMarkdownRemark.edges.map(({ node }) => ({
+          id: node.fields.slug,
+          url: siteUrl + node.fields.slug,
+          title: node.frontmatter.title,
+          date_published: node.frontmatter.date,
+          excerpt: node.excerpt
+        }))
+      }
+    }
+  ]
 }
