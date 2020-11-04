@@ -1,5 +1,5 @@
 ---
-title: "[Laravel] Create a simple laravel search by trait"
+title: "[Laravel] Create a simple laravel search with trait"
 
 date: "2020-11-04"
 
