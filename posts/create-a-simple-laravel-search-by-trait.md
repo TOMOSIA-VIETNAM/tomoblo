@@ -1,14 +1,11 @@
 ---
-title: "[Laravel] Create a simple laravel search with trait"
+title: "[Laravel] Create a simple laravel search by trait"
 
 date: "2020-11-04"
 
 published: true
 
 tags:
-
-- php
-
 - laravel
 ---
 
@@ -16,7 +13,7 @@ Chúng ta khi làm việc với Laravel ít nhất vài lần sẽ gặp một t
 
 Sau một thời gian copy và patse những câu lệnh where, tôi đã nghĩ ra cách để đơn giản hoá công việc tìm kiếm và có thể tái sử dụng nhiều lần. Chúng ta sẽ tìm hiểu ngay bên dưới.
 
-## 1.  Bắt đầu
+## I.  Bắt đầu
 
 #### 1. Khởi tạo trait
 - Tạo thư mục "App\Traits"
@@ -34,12 +31,21 @@ trait  SearchTrait
 #### 2. Định nghĩa những hàm để thực hiện việc tìm kiếm
 - Lấy điều kiện join khi search được define trong model và khởi tạo scope để join với những bảng liên quan:
 ```php
-    <?php
-
+	/**
+     * Get list tables with join conditions
+     *
+     * @return Array
+     */
     public function getJoins()
     {
       return  Arr::get($this->searchable, 'joins', []);
-    }
+	}
+	
+	/**
+     * Scope to join table with corresponding conditions from getJoins()
+     * @param \Illuminate\Database\Eloquent\Builder|static $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
     public function scopeMakeJoins(Builder $query)
     {
       foreach ($this->getJoins() as $table => $keys) {
@@ -52,7 +58,10 @@ trait  SearchTrait
 
 - Lấy những trường sẽ sẽ được tìm kiếm dựa vào định nghĩa ở model:
 ```php
-
+	/**
+     * Get all fields, which can be search in this tables and relation table
+     * @return Array
+     */
     public function getSearchFields()
     {
       $model = $this;
@@ -74,7 +83,12 @@ trait  SearchTrait
   
   1: Tìm kiếm trên bảng hiện tại và những bảng quan hệ:
   ```php
-
+		/**
+		* Scope models are used to search by $keyword for fields on the current table and relational tables
+		* @param \Illuminate\Database\Eloquent\Builder|static $query
+		* @param string $keyword
+		* @param boolean $matchAllFields
+		*/
         public function scopeSearch($query, $keyword, $matchAllFields = false)
         {
           if (empty($keyword)) {
@@ -99,7 +113,12 @@ trait  SearchTrait
   ```
   2: Chỉ tìm kiếm trên bảng hiện tại (No Relation):
   ```php
-
+		/**
+		* Scope models are used to search by $keyword for fields on the current table and relational tables
+		* @param \Illuminate\Database\Eloquent\Builder|static $query
+		* @param string $keyword
+		* @param boolean $matchAllFields
+		*/
         public function scopeSearchNoRelation($query, $keyword, $matchAllFields = false)
         {
           if (empty($keyword)) {
@@ -130,20 +149,34 @@ use  Arr;
 
 trait  SearchTrait
 {
-	public function getJoins()
-	{
-		return  Arr::get($this->searchable, 'joins', []);
-	}
-
-	public function scopeMakeJoins(Builder $query)
-	{
-		foreach ($this->getJoins() as $table => $keys) {
-			$query->leftJoin($table, function ($join) use ($keys) {
-				$join->on($keys[0], '=', $keys[1]);
-			});
-		}
+	/**
+     * Get list tables with join conditions
+     *
+     * @return Array
+     */
+    public function getJoins()
+    {
+      return  Arr::get($this->searchable, 'joins', []);
 	}
 	
+	/**
+     * Scope to join table with corresponding conditions from getJoins()
+     * @param \Illuminate\Database\Eloquent\Builder|static $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeMakeJoins(Builder $query)
+    {
+      foreach ($this->getJoins() as $table => $keys) {
+        $query->leftJoin($table, function ($join) use ($keys) {
+          $join->on($keys[0], '=', $keys[1]);
+        });
+      }
+    }
+	
+	/**
+     * Get all fields, which can be search in this tables and relation table
+     * @return Array
+     */
 	public function getSearchFields()
 	{
 		$model = $this;
@@ -161,10 +194,17 @@ trait  SearchTrait
 		return $fields;
 	}
 
+	/**
+	* Scope models are used to search by $keyword for fields on the current table and relational tables
+	* @param \Illuminate\Database\Eloquent\Builder|static $query
+	* @param string $keyword
+	* @param boolean $matchAllFields
+	* @return \Illuminate\Database\Eloquent\Builder
+	*/
 	public function scopeSearch($query, $keyword, $matchAllFields = false)
 	{
 		if (empty($keyword)) {
-			return  $query;
+			return $query;
 		}
 		$query = $query->makeJoins();
 		$query = $query->select($this->getTable() .  '.*')->distinct();
@@ -181,6 +221,13 @@ trait  SearchTrait
 		return $query;
 	}
 
+	/**
+	* Scope models are used to search by $keyword for fields on the current table
+	* @param \Illuminate\Database\Eloquent\Builder|static $query
+	* @param string $keyword
+	* @param boolean $matchAllFields
+	* @return \Illuminate\Database\Eloquent\Builder
+	*/
 	public function scopeSearchNoRelation($query, $keyword, $matchAllFields = false)
 	{
 		if (empty($keyword)) {
@@ -233,6 +280,11 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
+  	/**
+     * Get list products
+     * @param Request $request
+     * @return View
+     */
 	public function index(Request $request)
 	{
 		$keywork = $request->get('keywork');
