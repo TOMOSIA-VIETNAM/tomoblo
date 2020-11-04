@@ -299,4 +299,4 @@ class ProductController extends Controller
 ## III. Kết luận
 Như vậy, trong blog này chúng ta đã có một cách thực hiện công việc tìm kiếm một cách đơn giản và dễ tái sử dụng bằng cách sử dụng **Trait** trong Laravel. Mong là bài chia sẽ này sẽ giúp được mọi người trong công việc của mình.
 
-###### *<div style="text-align: right"> - by  Trần Văn Tuấn Anh </div>*
+[[author | Trần Văn Tuấn Anh ]]
