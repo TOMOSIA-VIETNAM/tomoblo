@@ -422,3 +422,5 @@ $q->orWhere(['b' => 2, 'c' => 3]);
 <br>
 
 Hi vọng với những mẹo này sẽ giúp các bạn nhiều hơn khi làm việc với dự án laravel 
+
+###### *<div style="text-align: right"> - Created by  Nam Tran </div>*
