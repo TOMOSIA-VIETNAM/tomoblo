@@ -8,7 +8,7 @@ tags:
 ---
 Xin chào các bạn! Hiện tại Laravel đã update version lên Laravel 8.x. Vậy nên mình muốn giới thiệu một thay đổi tuy cơ bản nhưng vô cùng đặc biệt tại phiên bản này. Đó là authentication basic, chúng ta cùng tìm hiểu xem nó khác gì so với các phiên bản trước nhé!
 
-# Bước 1. Cài đặt project Laravel 8.x
+# Bước 1: Cài đặt project Laravel 8.x
 - Chạy câu lệnh cài đặt project laravel:
 ```bash
 composer create-project laravel/laravel projectLaravel --prefer-dist
