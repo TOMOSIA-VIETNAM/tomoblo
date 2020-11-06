@@ -15,6 +15,11 @@ Cài đặt plugin với composer từ thư mục ROOT của Dự án CakePHP c�
 
 Tải plugin authentication bằng cách thêm câu lệnh sau vào dự án của bạn trong `src/Application.php`:
 
+    /**
+     * Bootstrap method.
+     *
+     * @return void
+     */
     public function bootstrap(): void
     {
         parent::bootstrap();
@@ -32,7 +37,7 @@ Plugin authentication được tích hợp trong dự án với vai trò như m�
         use Cake\Http\MiddlewareQueue;
         use Psr\Http\Message\ServerRequestInterface;
 
-Tiếp theo, thêm `AuthenticationProviderInterface`vào lớp `Application`:
+Tiếp theo, implements `AuthenticationProviderInterface`vào lớp `Application`:
 
 	 class Application extends BaseApplication implements AuthenticationServiceProviderInterface
 
@@ -41,6 +46,12 @@ Sau đó, thêm middleware `AuthenticationMiddleware`vào trong phương thức 
     $middleware->add(new AuthenticationMiddleware($this))
 Thêm phương thức `getAuthenticationService` vào `src / Application.php`.  Phương thức này sẽ cấu hình cơ bản các tác vụ xác thực của bạn với Authentication.
 
+    /**
+     * Get authenticationService.
+     *
+     * @param \Psr\Http\Message\ServerRequestInterface $request Request.
+     * @return \Authentication\AuthenticationServiceInterface
+     */
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
         $service = new AuthenticationService();
@@ -67,7 +78,12 @@ Thêm phương thức `getAuthenticationService` vào `src / Application.php`.  
 Đầu tiên, cấu hình những việc cần làm với người dùng khi họ chưa được xác thực bằng `setConfig()`. Tiếp theo, đính kèm `Session` và  `Form` vào authentication  xác định các cơ chế mà ứng dụng sẽ sử dụng để xác thực người dùng. `Session`cho phép xác định người dùng dựa trên dữ liệu trong phiên và xác định thời gian người dùng được giữ đăng nhập trong khi `Form`cho phép xử lý biểu mẫu đăng nhập tại `loginUrl`. Cuối cùng, hãy đính kèm một số `identifier` để chuyển đổi thông tin đăng nhập mà người dùng sẽ cung cấp cho thành một `identity` đại diện cho người dùng đã đăng nhập.
 Tiếp theo, tải authentication component trong `src/Controller/AppController`.
 
-    public function initialize()
+    /**
+     * Initialize method.
+     * 
+     * @return void
+     */
+    public function initialize(): void
     {
         parent::initialize();
         $this->loadComponent('Authentication.Authentication');
@@ -76,7 +92,7 @@ Theo mặc định, component sẽ yêu cầu một người dùng phải xác t
 
     $this->Authentication->allowUnauthenticated(['view', 'index']);
 
-Ví dụ trên sẽ giúp bỏ qua xác thực người dùng đối với các hành động `view` và `index`.
+Ví dụ trên sẽ giúp bỏ qua xác thực người dùng đối với các phương thức `view` và `index` trong controller.
 Theo mặc định authentication sẽ sử dụng model của bảng `Users` trong database để lấy dữ liệu và tiến hành xác thực. Tuy nhiên bạn cũng có thể lựa chọn một model khác để thực hiện việc này bằng cách sử dụng `userModel`.
 
     $service->loadIdentifier('Authentication.Password', [  
@@ -96,8 +112,13 @@ Khi đã áp dụng middleware authentication, người dùng sẽ cần phải 
 
     bin/cake bake model Users 
     bin/cake bake controller Users
-Sau đó, thêm một hành động đăng nhập cơ bản vào controller `UsersController`. Nó sẽ giống như:
+Sau đó, thêm một phương thức đăng nhập cơ bản vào controller `UsersController`. Nó sẽ giống như:
 
+    /**
+     * Login method.
+     *
+     * @return void
+     */
     public function login()
     {
         $result = $this->Authentication->getResult();
@@ -109,15 +130,20 @@ Sau đó, thêm một hành động đăng nhập cơ bản vào controller `Use
             $this->Flash->error('Invalid username or password');
         }
     }
-Đảm bảo rằng hành động `login`   đã được cho phép truy cập trong bất kì điều kiện nào để người dùng chưa được xác thực có thể truy cập nó.
+Đảm bảo rằng phương thức `login` đã được cho phép truy cập trong bất kì điều kiện nào để người dùng chưa được xác thực có thể truy cập nó.
 
-    public function beforeFilter(\Cake\Event\EventInterface $event)
+    /**
+     * Method beforeFilter.
+     *
+     * @return void
+     */
+    public function beforeFilter(\Cake\Event\EventInterface $event): void
     {
         parent::beforeFilter($event);
     
         $this->Authentication->allowUnauthenticated(['login']);
     }
-Bây giờ, chúng ta có thể tạo một template đăng nhập đơn giản để thử chức năng đăng nhập.
+Bây giờ, chúng ta có thể tạo một template đăng nhập đơn giản trong `templates\Users\login.php` để thử chức năng đăng nhập.
 
     <div class="users form content">
 	  <?= $this->Form->create() ?>
@@ -126,8 +152,16 @@ Bây giờ, chúng ta có thể tạo một template đăng nhập đơn giản 
       <?= $this->Form->button(__('Login')); ?>
       <?= $this->Form->end() ?>
     </div>
+    
+   ![images-2.png](authentication-cakephp-4/images-2.png)
+   
 Sau đó, thêm một hành động đăng xuất đơn giản để người dùng có thể đăng xuất ra khỏi ứng dụng trong `UsersController`:
 
+    /**
+     * Logout method.
+     *
+     * @return void
+     */
     public function logout()
     {
         $this->Authentication->logout();
@@ -139,16 +173,31 @@ Sau đó, thêm một hành động đăng xuất đơn giản để người d�
     
     class User extends Entity
     {
+        /**
+         * Set password.
+         *
+         * @param string $password Password.
+         * @return string
+         */
         protected function _setPassword(string $password)
         {
             $hasher = new DefaultPasswordHasher();
             return $hasher->hash($password);
         }
     }
-Giờ chỉ cần tạo một hành động đăng ký đơn giản và đăng ký một tài khoản là có thể thử nghiệm chức năng đăng nhập, đăng xuất với `Authentication` rồi. 
+Giờ chỉ cần tạo một phương thức đăng ký đơn giản và đăng ký một tài khoản là có thể thử nghiệm chức năng đăng nhập, đăng xuất với `Authentication` rồi. 
+Ví dụ template cho việc đăng kí trong `templates\User\sign_up.php`:
 
+    <?= $this->Form->create($user) ?>
+    <?= $this->Form->control('username') ?>
+    <?= $this->Form->control('email') ?>
+    <?= $this->Form->control('password') ?>
+    <?= $this->Form->button(__('Sign up')) ?>
+    <?= $this->Form->end() ?>
+    
+   ![images-3.png](authentication-cakephp-4/images-3.png)
 #IV. Kết luận
 
 Việc sử dụng Authentication để thực hiện các chức năng đăng nhập, đăng xuất là điều khá cơ bản và dễ dàng. CakePHP cũng hỗ trợ nhiều các phương thức đăng nhập nâng cao khác như xác thực với token, jwt, ...Chúng ta sẽ tìm hiểu về những phương thức này trong các blog sắp tới nhé!
 
-######                    *<div style="text-align: right"> - Viết bởi: Phu Thai </div>*
+######                    *<div style="text-align: right"> - [Phu Thai | Đồng Phú Thái] </div>*
