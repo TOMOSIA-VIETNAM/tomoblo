@@ -12,6 +12,9 @@ Chúng ta sẽ cần có Account Company, Account Shop, Account Employee, Accoun
 
 _Authentication basic Laravel_ : 
 [https://blog.tomosia.com/authentication-trong-laravel/](https://blog.tomosia.com/authentication-trong-laravel/)
+
+_Version Laravel: 5.x, 6.x, 7.x_
+
 # I. Chuẩn bị dữ liệu
 **_1. Database_**
 - Dùng migrations để tạo 4 bảng tương ứng với 4 authenticate user của hệ thống
@@ -341,3 +344,6 @@ class AdminAuth
 ## IV. Kết luận
 - **Multiple Authenticate** rất tiện lợi và dễ sử dụng, hơn nữa nó làm cho Framework Laravel trở nên ưu việt hơn khi có thể kết hợp được với nhiều thư viện authenticate khác để xây dựng hệ thống website đa dạng hơn hoặc 1 service API tuyệt vời.
 - Mong bài viết này sẽ phần nào giúp các bạn hiểu được cơ bản về **multiple authenticate Laravel** giúp các bạn có thể ứng dụng được khi làm project và yêu thích PHP & Laravel hơn để có thể tìm hiểu sâu và cùng nhau chia sẻ các kiến thức về lĩnh vực lập trình PHP & Laravel nhé!
+
+######                    *<div style="text-align: right"> - by Ngoc Quan </div>*
+

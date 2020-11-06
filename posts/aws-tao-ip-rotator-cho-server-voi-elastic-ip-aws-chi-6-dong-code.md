@@ -6,7 +6,7 @@ tags:
   - aws
 ---
 
-`Crawling` dữ liệu không phải là khái niệm quá xa lạ, nhưng để lấy dữ liệu từ một website đôi khi chúng ta cũng hay gặp tình trạng bị chặn IP dẫn đến server không thể tiếp lục dữ liệu.
+Crawling dữ liệu không phải là khái niệm quá xa lạ, nhưng để lấy dữ liệu từ một website đôi khi chúng ta cũng hay gặp tình trạng bị chặn IP dẫn đến server không thể tiếp lục dữ liệu.
 #### Ý tưởng.
 Ý tưởng để giải quyết vấn đề đấy là chúng ta sẽ tiến hành tạo một service IP rotator để renew lại IP khi website hoặc API chúng ta muốn lấy dữ liệu chặn IP.
 
@@ -30,7 +30,7 @@ flowchart TB
 #### Viết code để triển khai ý tưởng.
  Tôi tạo một file mới đặt tên `aws-ip-rotator.sh`. Ở đây mình dùng `shell script` và `aws-cli` để viết code, các dịch vụ của aws hầu như đều có thư viện cho hầu hết các ngôn ngữ lập trình hay dùng. Nên chúng ta hoàn toàn có thể triển khai ý tưởng bằng các ngôn ngữ khác như ruby, php, nodejs,...
 
-```sh
+```bash
 #!/usr/bin/env bash
 
 INSTANCE=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
