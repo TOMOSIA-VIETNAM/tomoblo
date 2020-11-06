@@ -14,6 +14,7 @@ _Authentication basic Laravel_ :
 [https://blog.tomosia.com/authentication-trong-laravel/](https://blog.tomosia.com/authentication-trong-laravel/)
 
 _Version Laravel: 5.x, 6.x, 7.x_
+
 # I. Chuẩn bị dữ liệu
 **_1. Database_**
 - Dùng migrations để tạo 4 bảng tương ứng với 4 authenticate user của hệ thống
