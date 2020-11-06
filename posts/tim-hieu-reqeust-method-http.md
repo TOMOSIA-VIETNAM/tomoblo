@@ -3,7 +3,7 @@ title: "Learn about HTTP request method "
 date: "2020-11-05"
 published: true
 tags:
-  - html
+  - technical
 ---
 # 1. Cùng tìm hiểu về HTTP request methods
 Đối với các lập trình viên web nói chung thì chúng ta không thể nào mà không nghe đến các từ như **get** hoặc **post**,  bởi vì nó thực sự rất phổ biển.
