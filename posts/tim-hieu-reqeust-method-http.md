@@ -5,7 +5,7 @@ published: true
 tags:
   - technical
 ---
-# 1. Cùng tìm hiểu về HTTP request methods
+1. Cùng tìm hiểu về HTTP request methods
 Đối với các lập trình viên web nói chung thì chúng ta không thể nào mà không nghe đến các từ như **get** hoặc **post**,  bởi vì nó thực sự rất phổ biển.
 
 Nhưng ngoài ra còn có nhiều method khác mà chúng ta ít sử dụng hơn nhưng sự tồn tại của chúng cũng là rất cần thiết.
