@@ -1,6 +1,6 @@
 ---
 title: "Authenticate Laravel 8.x basic (Register and Login)"
-date: "2020-10-07"
+date: "2020-11-06"
 published: true
 tags:
   - php
