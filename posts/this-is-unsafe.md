@@ -1,6 +1,6 @@
 ---
-title: "Tiêu đề bài viết"
-date: "2020-06-24"
+title: "This is unsafe!"
+date: "2020-11-10"
 published: true
 tags:
   - tips
