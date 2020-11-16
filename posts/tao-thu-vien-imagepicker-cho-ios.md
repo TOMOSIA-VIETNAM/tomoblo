@@ -134,4 +134,3 @@ tags:
 ## Đến đây chắc hẳn bạn đã tạo được cho mình một ImagePicker cho chình mình rồi nhỉ, Cảm ơn Bạn đã đọc bài viết của mình !
 
 [[author | Đặng Cao Trí ]]
-
