@@ -10,7 +10,7 @@ tags:
 [[snippet]]
 | Chắc hẳn nhiều bạn làm mobile đều từng nghe đến khái niệm Deep link, App link, Universal link, Dynamic link, URL Scheme. Những khái niệm cũng như cách gọi tên đôi lúc cũng khiến bạn bối rối khó hiểu nhầm lẫn. Bài viết này sẽ cung cấp đầy đủ cho bạn cái nhìn tổng quan về Deep link. 
 
-## 1.Deep link là gì
+## 1. Deep link là gì
 
 Giống như cấu trúc http và https để điều hướng user tới website thì deep link là cấu trúc để điều hướng user đi tới một ứng dụng nào đó trên điện thoại. Deep link bao gồm 3 dạng chính: 
 
@@ -25,7 +25,7 @@ Deep link dùng để làm gì:
 
 Dưới đấy mình sẽ đi vào chi tiết cách dùng cài đặt và chú ý khi sử dụng từng loại
 
-## 2.URL Scheme
+## 2. URL Scheme
 
 URL Scheme sẽ có dạng `yourSchemeApp://`. App sẽ được mở lên khi gõ và click đúng scheme này
 
@@ -34,9 +34,9 @@ URL Scheme sẽ có dạng `yourSchemeApp://`. App sẽ được mở lên khi g
 Cài đặt với iOS bạn cần cài đặt trong file `Infor.plist`
 ![cài đặt url scheme iOS](images/setup-ios-url-scheme.png)
 
-Bạn có thể thử click hoặc gõ trực tiếp từ Safari để mở thử iturn bằng link sau [imst://](imst://) hoặc mở AppStore từ link : [itms-apps://](itms-apps://)
+Bạn có thể thử click hoặc gõ trực tiếp từ Safari để mở thử iturn bằng link sau `imst://` hoặc mở AppStore từ link  `itms-apps://`
 
-Với Android URL Scheme chỉ thể dùng khi bạn click trực tiếp vào link. Bạn có thể thử click vào link sau để mở PlayStore tìm kiếm app gmail [market://search?q=gmail](market://search?q=gmail)
+Với Android URL Scheme chỉ thể dùng khi bạn click trực tiếp vào link. Bạn có thể thử click vào link sau để mở PlayStore tìm kiếm app gmail `market://search?q=gmail`
 
 ### Ưu điểm:
 
@@ -49,7 +49,7 @@ Với Android URL Scheme chỉ thể dùng khi bạn click trực tiếp vào li
 - Không thể điều hướng khi app chưa cài 
 - Với iOS trước khi wake app luôn có popup confirm (trừ những app của hệ thống)
 
-## 3.App link, Universal link
+## 3. App link, Universal link
 
 Khắc phục điểm yếu của của URL Scheme cả Apple và Google đã phát triển ra App link (Android 6.0) và Universal link (iOS 9.0) sử dụng địa chỉ domain web page làm Deep link wake app.
 
@@ -73,7 +73,7 @@ Cài đặt Associated domain trong phần **Singing & Capabillities**
 
 > Ngoài appID chứa team ID và bundleID phần path có thể config Deep link liên kết wake app hay không, chi tiết tham khảo [bài viết](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html) hướng dẫn của apple
 
-Sau khi cài đặt bạn có thể check tại địa chỉ [này](https://branch.io/resources/aasa-validator/). 
+Sau khi cài đặt bạn có thể check tại [branch.io](https://branch.io/resources/aasa-validator/). 
 
 ![reddit](images/reddit.png)
 
@@ -89,7 +89,7 @@ Sau khi cài đặt bạn có thể check tại địa chỉ [này](https://bran
 - phụ thuộc setup của sever (apple-app-site-association)
 - phụ thuộc vào sever, nếu sever die thì cũng không mở đc app
 
-## 4.Custom Deep link: Firebase Dynamic link
+## 4. Custom Deep link: Firebase Dynamic link
 
 Custom Deep link cũng tương tự như Deep link web page nhưng thường do bên thứ 3 cung cấp. Custom Deep link mang đầy đủ đặc điểm của Deep link web page (App link, Universal link) nhưng có thêm phần thu thập dữ liệu khi user click hoặc tải app
 
@@ -135,18 +135,18 @@ Nếu bạn dùng dùng mạng Viettel bạn sẽ thấy tin nhắn của MyViet
 
 ![my-viettel](images/my-viettel-2.png) 
 
-## 4.Tổng kết
+## 4. Tổng kết
 
 Tất cả các dạng Deep link này đều có thể custom thêm path và query để truyền thông tin thực hiện điều hướng các flow khác nhau. 
 
 > Với user chưa tải app bạn không thể vừa click tải app và mở app lần đầu lấy đc thông tin từ Deep link. Việc lấy thông tin từ Deep link chỉ thực hiện khi user đã tải app. Vậy nên hay tách ra là 2 link tải app và Deep link điều hướng các flow chức năng.
 
-Ví dụ bạn có thể tạo 1 Dynamic link (chi tiết tạo Dynamic link trực tiếp từ app bạn có thể xem tại [đây](https://firebase.google.com/docs/dynamic-links/ios/create?authuser=1)) từ user A mời user B vào room chat của mình. Thông tin truyền vào cần `room` và `user` . Dynamic link sẽ có dạng `yourApp.page.link/joinChat?room=ce98x74Dk&user=tHW94kd`
+Ví dụ bạn có thể tạo 1 Dynamic link (chi tiết tạo Dynamic link trực tiếp từ app bạn có thể xem tại [đây](https://firebase.google.com/docs/dynamic-links/ios/create?authuser=1)) từ user A mời user B vào room chat của mình. Thông tin truyền vào cần `room` và `user` . Dynamic link sẽ có dạng `yourDomain.page.link/joinChat?room=ce98x74Dk&user=tHW94kd`
 
 Bạn cần bóc tách lấy thông tin từ Deep link từng phần scheme, host, path và query để lấy thông tin điều hướng khi user B click vào link này. Với iOS bạn có thể xem cách chi tiết tại link này: [handle URL Scheme](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) và [handle Universal link](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
 
 Chú ý phần deep link này chứa thông tin nên để đảm bảo an toàn bạn cần mã hoá lại phần path vs query
-Bạn có thể dùng mã hoá AES. Link mã hoá sẽ có dạng `yourApp.page.link/VYlCFA1FhPEYjKcvfN7dkNpZoBmM73XBT0hyiF7kZ6`. Để test mã hoá và giải mã AES bạn có thể thử tại [đây](https://www.devglan.com/online-tools/aes-encryption-decryption ).
+Bạn có thể dùng mã hoá AES. Link mã hoá sẽ có dạng `yourDomain.page.link/VYlCFA1FhPEYjKcvfN7dkNpZoBmM73XBT0hyiF7kZ6`. Để test mã hoá và giải mã AES bạn có thể thử tại [đây](https://www.devglan.com/online-tools/aes-encryption-decryption ).
 
 ![encrypt-aes](images/encrypt-aes.png)
 
