@@ -8,7 +8,7 @@ tags:
 ---
 
 [[snippet]]
-| Chắc hẳn nhiều bạn làm mobile đều từng nghe đến khái niệm Deep link, App link, Universal link, Dynamic link, URL Scheme. Những khái niệm cũng như cách gọi tên đôi lúc cũng khiến bạn bối rối khó hiểu nhầm lẫn. Bài viết này sẽ cung cấp đầy đủ cho bạn cái nhìn tổng quan về Deep link cung như cách cài đặt và sử dụng từng loại. 
+| Chắc hẳn nhiều bạn làm mobile đều từng nghe đến khái niệm Deep link, App link, Universal link, Dynamic link, URL Scheme. Những khái niệm cũng như cách gọi tên đôi lúc cũng khiến bạn bối rối khó hiểu nhầm lẫn. Bài viết này sẽ cung cấp đầy đủ cho bạn cái nhìn tổng quan về Deep link. 
 
 ## 1.Deep link là gì
 
@@ -29,7 +29,7 @@ Dưới đấy mình sẽ đi vào chi tiết cách dùng cài đặt và chú �
 
 URL Scheme sẽ có dạng `yourSchemeApp://`. App sẽ được mở lên khi gõ và click đúng scheme này
 
-###Cài đặt
+### Cài đặt
 
 Cài đặt với iOS bạn cần cài đặt trong file `Infor.plist`
 ![cài đặt url scheme iOS](images/setup-ios-url-scheme.png)
@@ -38,12 +38,12 @@ Bạn có thể thử click hoặc gõ trực tiếp từ Safari để mở th�
 
 Với Android URL Scheme chỉ thể dùng khi bạn click trực tiếp vào link. Bạn có thể thử click vào link sau để mở PlayStore tìm kiếm app gmail `market://search?q=gmail`
 
-###Ưu điểm:
+### Ưu điểm:
 
 - dễ dàng cài đặt phía app
 - không cần cài đặt phía backend
 
-###Nhược điểm:
+### Nhược điểm:
 
 - URL Scheme có thể trùng lặp các app nếu đặt đơn giản
 - Không thể điều hướng khi app chưa cài 
@@ -55,7 +55,7 @@ Khắc phục điểm yếu của của URL Scheme cả Apple và Google đã ph
 
 Cơ chế của Deep link web page này sẽ check nếu trong các app đã cài đặt có config web page trùng với Deep link thì sẽ điều hướng mở app. Ngược lại sẽ mở web page như bình thường. Ở phần mở website này hoàn toàn phía sever có thể check device iOS, Android để điều hướng tới App Store hoặc Play Store và với các device khác thì điều hướng tới trang chủ. Đây là cách mọi người thường xử lý với Deep link web page.
 
-###Cài đặt
+### Cài đặt
 
 Cách cài đặt với Android bạn cần setup đủ phần scheme, host và cả path nếu cần.
 
@@ -77,13 +77,13 @@ Sau khi cài đặt bạn có thể check tại địa chỉ [này](https://bran
 
 ![reddit](images/reddit.png)
 
-###Ưu điểm:
+### Ưu điểm:
 
 - địa chỉ domain là duy nhất nên tránh trùng lặp với các app khác
 - ngoài wake app ra có thể điều hướng tới Store hoặc website khác phục vụ marketing 
 - với iOS không cần popup confirm khi click Deep link
 
-###Nhược điểm:
+### Nhược điểm:
 
 - cần domain https với iOS
 - phụ thuộc setup của sever (apple-app-site-association)
@@ -99,7 +99,7 @@ Chúng ta cùng tìm hiểu đại diện phổ biến dễ dùng và miễn ph�
 
 > Với các ứng dụng kinh phí thấp không cần tracking dữ liệu quá phức tạp, Dynacmic link tích hợp cùng dịch vụ Firebase là một lựa chọn tốt
 
-###Cài đặt
+### Cài đặt
 
 Dynamic link bạn có 2 lựa chọn dùng domain của bạn hoặc dùng domain free do Google cung cấp dạng `yourDomain.page.link`. Nếu dùng domain của bạn việc setup sẽ khó khăn hơn. Bạn cần dùng qua Firebase Hosting và xác thực DNS. Chi tiết sẽ hẹn 1 bài gần nhất khi mình setup được :D
 
@@ -123,7 +123,7 @@ Sau khi cài đặt thành công bạn có thể xem chi tiếp trong mục Link
 
 ![define-deep-link-map](images/define-deep-link-map.png)
 
-###Thống kê
+### Thống kê
 
 Ngoài những thống kê đơn giản liên quan đến việc tracking created, clicks, first open, re-open  bạn cần dùng [Analytics API](https://firebase.google.com/docs/reference/dynamic-links/analytics?authuser=1)  để lấy dữ liệu thô chi tiết hơn. 
 
