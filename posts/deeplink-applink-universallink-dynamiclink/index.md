@@ -10,13 +10,13 @@ tags:
 [[snippet]]
 | Chắc hẳn nhiều bạn làm mobile đều từng nghe đến khái niệm Deep link, App link, Universal link, Dynamic link, URL Scheme. Những khái niệm cũng như cách gọi tên đôi lúc cũng khiến bạn bối rối, khó hiểu, nhầm lẫn. Bài viết này sẽ cung cấp đầy đủ cho bạn cái nhìn tổng quan về Deep link. 
 
-## 1. Deep link là gì
+## 1. Deep link 
 
-Giống như cấu trúc http và https để điều hướng user tới website thì deep link là cấu trúc để điều hướng user đi tới một ứng dụng nào đó trên điện thoại. Deep link bao gồm 3 dạng chính: 
+Giống như cấu trúc `http` và `https` để điều hướng user tới website thì Deep link là cấu trúc để điều hướng user đi tới một ứng dụng nào đó trên điện thoại. Deep link bao gồm 3 dạng chính: 
 
 - URL Scheme: sử dụng url scheme để mở app 
 - App link(Android) và Universal link (iOS): sử dụng địa chỉ web page để mở app
-- Custom Deep link (Dynamic link, Repro, Adjust, branch.io): cũng sử dụng địa chỉ web page để mở app nhưng có thêm chức năng thu thập thống kê traffic từ link 
+- Custom Deep link (Dynamic link, Repro, Adjust, branch.io): cũng sử dụng địa chỉ web page để mở app nhưng có thêm chức năng thu thập thống kê traffic từ link (thường là dịch vụ bên thứ 3 cung cấp)
 
 Deep link dùng để làm gì:
 - Điều hướng qua lại giữa các app, từ website qua app
