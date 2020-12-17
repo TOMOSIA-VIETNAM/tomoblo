@@ -34,9 +34,9 @@ URL Scheme sẽ có dạng `yourSchemeApp://`. App sẽ được mở lên khi g
 Cài đặt với iOS bạn cần cài đặt trong file `Infor.plist`
 ![cài đặt url scheme iOS](images/setup-ios-url-scheme.png)
 
-Bạn có thể thử click hoặc gõ trực tiếp từ Safari để mở thử iturn bằng link sau `imst://` hoặc mở AppStore từ link : `itms-apps://`
+Bạn có thể thử click hoặc gõ trực tiếp từ Safari để mở thử iturn bằng link sau [imst://](imst://) hoặc mở AppStore từ link : [itms-apps://](itms-apps://)
 
-Với Android URL Scheme chỉ thể dùng khi bạn click trực tiếp vào link. Bạn có thể thử click vào link sau để mở PlayStore tìm kiếm app gmail `market://search?q=gmail`
+Với Android URL Scheme chỉ thể dùng khi bạn click trực tiếp vào link. Bạn có thể thử click vào link sau để mở PlayStore tìm kiếm app gmail [market://search?q=gmail](market://search?q=gmail)
 
 ### Ưu điểm:
 
@@ -62,10 +62,10 @@ Cách cài đặt với Android bạn cần setup đủ phần scheme, host và 
 Cài đặt với iOS có 2 phần
 - cài đặt trên app
 
-Setting Associated domain trong *Identifier*
+Setting Associated domain trong **Identifier**
 ![associated-domains-identifier](images/associated-domains-identifier.png)
 
-Cài đặt Associated domain trong phần *Singing & Capabillities*
+Cài đặt Associated domain trong phần **Singing & Capabillities**
 ![setup-ios-associated-domain](images/setup-ios-associated-domain.png)
 
 - cài đặt trên sever cần trả về dạng json với đường dẫn `yourUniversalLink.com/apple-app-site-association`
@@ -105,7 +105,7 @@ Dynamic link bạn có 2 lựa chọn dùng domain của bạn hoặc dùng doma
 
 ![domain-firebase](images/domain-firebase.png)
 
-Sau khi setup domain thành công bạn cần setup AppID và TeamID trong mục *Project Setting / General* đối với iOS app. Khi bạn setup xong thì có thể check config tại `yourDomain.page.link/apple-app-site-association` tương tự như Universal link bên iOS. 
+Sau khi setup domain thành công bạn cần setup AppID và TeamID trong mục **Project Setting / General** đối với iOS app. Khi bạn setup xong thì có thể check config tại `yourDomain.page.link/apple-app-site-association` tương tự như Universal link bên iOS. 
 
 Tiếp đến bạn cần tạo Dynamic link mới theo domain đã setup 
 
@@ -131,7 +131,7 @@ Biểu đồ thông kê nhanh trong Dynamic link chỉ dành cho nhưng link t�
 
 ![chart-dynamic-link](images/chart-dynamic-link.png) 
 
-Nếu bạn dùng dùng mạng Viettel bạn sẽ thấy tin nhắn của MyViettel cũng sử dụng Dynamic link dạng myvt.page.link. Dynamic link này link tới ứng dụng My Viettel.
+Nếu bạn dùng dùng mạng Viettel bạn sẽ thấy tin nhắn của MyViettel cũng sử dụng Dynamic link dạng [myvt.page.link](https://myvt.page.link). Dynamic link này link tới ứng dụng My Viettel.
 
 ![my-viettel](images/my-viettel-2.png) 
 
