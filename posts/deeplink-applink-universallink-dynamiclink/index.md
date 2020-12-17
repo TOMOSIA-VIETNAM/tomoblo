@@ -133,7 +133,7 @@ Biểu đồ thông kê nhanh trong Dynamic link chỉ dành cho nhưng link t�
 
 Nếu bạn dùng dùng mạng Viettel bạn sẽ thấy tin nhắn của MyViettel cũng sử dụng Dynamic link dạng myvt.page.link. Dynamic link này link tới ứng dụng My Viettel.
 
-![my-viettel](images/my-viettel.png) 
+![my-viettel](images/my-viettel-2.png) 
 
 ## 4.Tổng kết
 
