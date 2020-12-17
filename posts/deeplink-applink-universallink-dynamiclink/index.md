@@ -8,7 +8,7 @@ tags:
 ---
 
 [[snippet]]
-| Chắc hẳn nhiều bạn làm mobile đều từng nghe đến khái niệm Deep link, App link, Universal link, Dynamic link, URL Scheme. Những khái niệm cũng như cách gọi tên đôi lúc cũng khiến bạn bối rối khó hiểu nhầm lẫn. Bài viết này sẽ cung cấp đầy đủ cho bạn cái nhìn tổng quan về Deep link. 
+| Chắc hẳn nhiều bạn làm mobile đều từng nghe đến khái niệm Deep link, App link, Universal link, Dynamic link, URL Scheme. Những khái niệm cũng như cách gọi tên đôi lúc cũng khiến bạn bối rối, khó hiểu, nhầm lẫn. Bài viết này sẽ cung cấp đầy đủ cho bạn cái nhìn tổng quan về Deep link. 
 
 ## 1. Deep link là gì
 
@@ -16,7 +16,7 @@ Giống như cấu trúc http và https để điều hướng user tới websit
 
 - URL Scheme: sử dụng url scheme để mở app 
 - App link(Android) và Universal link (iOS): sử dụng địa chỉ web page để mở app
-- Custom Deep link (Dynamic link, Repro, Adjust, branch.io): cũng sử dụng địa chỉ web page để mở app nhưng có thêm chức năng thống kê traffic từ link (thường dịch vụ bên thứ 3 phát triển)
+- Custom Deep link (Dynamic link, Repro, Adjust, branch.io): cũng sử dụng địa chỉ web page để mở app nhưng có thêm chức năng thu thập thống kê traffic từ link 
 
 Deep link dùng để làm gì:
 - Điều hướng qua lại giữa các app, từ website qua app
@@ -68,12 +68,12 @@ Setting Associated domain trong **Identifier**
 Cài đặt Associated domain trong phần **Singing & Capabillities**
 ![setup-ios-associated-domain](images/setup-ios-associated-domain.png)
 
-- cài đặt trên sever cần trả về dạng json với đường dẫn `yourUniversalLink.com/apple-app-site-association`
+- cài đặt trên sever cần trả về dạng json với đường dẫn `yourDomain.com/apple-app-site-association`
 ![AAAA-json](images/AAAA-json.png)
 
 > Ngoài appID chứa team ID và bundleID phần path có thể config Deep link liên kết wake app hay không, chi tiết tham khảo [bài viết](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html) hướng dẫn của apple
 
-Sau khi cài đặt bạn có thể check tại [branch.io](https://branch.io/resources/aasa-validator/). 
+Sau khi cài đặt bạn có thể check validate apple-app-site-association tại [branch.io](https://branch.io/resources/aasa-validator/). 
 
 ![reddit](images/reddit.png)
 
@@ -119,7 +119,7 @@ Setup wake app và tuỳ chọn điều hướng khi app chưa cài với iOS v�
 
 ![define-deep-link-ios](images/define-deep-link-ios.png)
 
-Sau khi cài đặt thành công bạn có thể xem chi tiếp trong mục Link preview (debug) 
+Sau khi cài đặt thành công bạn có thể xem chi tiết trong mục Link preview (debug) 
 
 ![dynamic-link-map](images/dynamic-link-map.png)
 
@@ -146,7 +146,7 @@ Ví dụ bạn có thể tạo 1 Dynamic link (chi tiết tạo Dynamic link tr�
 Bạn cần bóc tách lấy thông tin từ Deep link từng phần scheme, host, path và query để lấy thông tin điều hướng khi user B click vào link này. Với iOS bạn có thể xem cách chi tiết tại link này: [handle URL Scheme](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) và [handle Universal link](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
 
 Chú ý phần deep link này chứa thông tin nên để đảm bảo an toàn bạn cần mã hoá lại phần path vs query
-Bạn có thể dùng mã hoá AES. Link mã hoá sẽ có dạng `yourDomain.page.link/VYlCFA1FhPEYjKcvfN7dkNpZoBmM73XBT0hyiF7kZ6`. Để test mã hoá và giải mã AES bạn có thể thử tại [đây](https://www.devglan.com/online-tools/aes-encryption-decryption ).
+Bạn có thể dùng mã hoá AES. Link mã hoá sẽ có dạng `yourDomain.page.link/VYlCFA1FhPEYjKcvfN7dkNpZoBmM73XBT0hyiF7kZ6`. Để test mã hoá và giải mã AES bạn có thể thử tại [www.devglan.com](https://www.devglan.com/online-tools/aes-encryption-decryption ).
 
 ![encrypt-aes](images/encrypt-aes.png)
 
