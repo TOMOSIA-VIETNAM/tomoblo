@@ -121,7 +121,7 @@ Setup wake app và tuỳ chọn điều hướng khi app chưa cài với iOS v�
 
 Sau khi cài đặt thành công bạn có thể xem chi tiếp trong mục Link preview (debug) 
 
-![define-deep-link-map](images/define-deep-link-map.png)
+![dynamic-link-map](images/dynamic-link-map.png)
 
 ### Thống kê
 
