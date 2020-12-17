@@ -57,7 +57,7 @@ Cơ chế của Deep link web page này sẽ check nếu trong các app đã cà
 
 ### Cài đặt
 
-Cách cài đặt với Android bạn cần setup đủ phần scheme, host và cả path nếu cần.
+Cách cài đặt với Android bạn cần setup đủ phần scheme, host và cả path nếu cần. Tham khảo tại [link](https://developer.android.com/training/app-links/deep-linking)
 
 Cài đặt với iOS có 2 phần
 - cài đặt trên app
@@ -143,7 +143,7 @@ Tất cả các dạng Deep link này đều có thể custom thêm path và que
 
 Ví dụ bạn có thể tạo 1 Dynamic link (chi tiết tạo Dynamic link trực tiếp từ app bạn có thể xem tại [đây](https://firebase.google.com/docs/dynamic-links/ios/create?authuser=1)) từ user A mời user B vào room chat của mình. Thông tin truyền vào cần `room` và `user` . Dynamic link sẽ có dạng `yourDomain.page.link/joinChat?room=ce98x74Dk&user=tHW94kd`
 
-Bạn cần bóc tách lấy thông tin từ Deep link từng phần scheme, host, path và query để lấy thông tin điều hướng khi user B click vào link này. Với iOS bạn có thể xem cách chi tiết tại link này: [handle URL Scheme](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) và [handle Universal link](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
+Bạn cần bóc tách lấy thông tin từ Deep link từng phần scheme, host, path và query để lấy thông tin điều hướng khi user B click vào link này. Với iOS bạn có thể xem cách chi tiết tại link này: [handle URL Scheme](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) và [handle Universal link](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app). Với Android bạn có thể tham khảo tại [handle App link](https://developer.android.com/training/app-links#add-app-links)
 
 Chú ý phần deep link này chứa thông tin nên để đảm bảo an toàn bạn cần mã hoá lại phần path vs query
 Bạn có thể dùng mã hoá AES. Link mã hoá sẽ có dạng `yourDomain.page.link/VYlCFA1FhPEYjKcvfN7dkNpZoBmM73XBT0hyiF7kZ6`. Để test mã hoá và giải mã AES bạn có thể thử tại [www.devglan.com](https://www.devglan.com/online-tools/aes-encryption-decryption ).
