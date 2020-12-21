@@ -31,17 +31,17 @@ URL Scheme sẽ có dạng `yourSchemeApp://`. App sẽ được mở lên khi g
 
 ### Cài đặt
 
-Cài đặt với iOS bạn cần cài đặt trong file `Infor.plist`
+Cài đặt với iOS bạn cần cài đặt trong file `Info.plist`
 ![cài đặt url scheme iOS](images/setup-ios-url-scheme.png)
 
-Bạn có thể thử click hoặc gõ trực tiếp từ Safari để mở thử iturn bằng link sau `imst://` hoặc mở AppStore từ link  `itms-apps://`
+Bạn có thể thử click hoặc gõ trực tiếp từ Safari để mở thử itunes bằng link sau `imst://` hoặc mở AppStore từ link  `itms-apps://`
 
 Với Android URL Scheme chỉ thể dùng khi bạn click trực tiếp vào link. Bạn có thể thử click vào link sau để mở PlayStore tìm kiếm app gmail `market://search?q=gmail`
 
 ### Ưu điểm:
 
-- dễ dàng cài đặt phía app
-- không cần cài đặt phía backend
+- Dễ dàng cài đặt phía app
+- Không cần cài đặt phía backend
 
 ### Nhược điểm:
 
@@ -60,7 +60,7 @@ Cơ chế của Deep link web page này sẽ check nếu trong các app đã cà
 Cách cài đặt với Android bạn cần setup đủ phần scheme, host và cả path nếu cần. Tham khảo tại [link](https://developer.android.com/training/app-links/deep-linking)
 
 Cài đặt với iOS có 2 phần
-- cài đặt trên app
+- Cài đặt trên app
 
 Setting Associated domain trong **Identifier**
 ![associated-domains-identifier](images/associated-domains-identifier.png)
@@ -79,15 +79,15 @@ Sau khi cài đặt bạn có thể check validate apple-app-site-association t�
 
 ### Ưu điểm:
 
-- địa chỉ domain là duy nhất nên tránh trùng lặp với các app khác
-- ngoài wake app ra có thể điều hướng tới Store hoặc website khác phục vụ marketing 
-- với iOS không cần popup confirm khi click Deep link
+- Địa chỉ domain là duy nhất nên tránh trùng lặp với các app khác
+- Ngoài wake app ra có thể điều hướng tới Store hoặc website khác phục vụ marketing 
+- Với iOS không cần popup confirm khi click Deep link
 
 ### Nhược điểm:
 
-- cần domain https với iOS
-- phụ thuộc setup của sever (apple-app-site-association)
-- phụ thuộc vào sever, nếu sever die thì cũng không mở đc app
+- Cần domain https với iOS
+- Phụ thuộc setup của sever (apple-app-site-association)
+- Phụ thuộc vào sever, nếu sever die thì cũng không mở đc app
 
 ## 4. Custom Deep link: Firebase Dynamic link
 
