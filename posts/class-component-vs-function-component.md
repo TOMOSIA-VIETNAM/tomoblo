@@ -4,6 +4,7 @@ date: "2021-02-05"
 published: true
 tags:
   - React
+  - Javascript
 ---
 
 Chúng ta khi làm việc với React thì đôi khi cũng sẽ có sử dụng cả **Class Components** vs **Function Components** trong cùng một dự án. Nhưng giữa chúng có điều gì khác nhau khiến chúng ta phải cân nhắc để sử dụng loại component nào cho hợp lý thì tôi nghĩ mọi người đôi khi không để ý đến điểm này.
@@ -25,6 +26,7 @@ function Example() {
   return ( <h1>I'm a functional component!</h1> );
 };
 ```
+
 Hoặc như ES6 arrow function:
 ```js
 const Example = () => {
