@@ -100,7 +100,7 @@ tags:
                 }
 
 
-        3. Xử lý hình ảnh thì khi ta có image rồi thì mọi việc dể dàng hơn chỉ cần gọi func dưới:
+    3. Xử lý hình ảnh thì khi ta có image rồi thì mọi việc dể dàng hơn chỉ cần gọi func dưới:
 
                 public func jpegData(compressionQuality: CGFloat) -> Data? // return image as JPEG. May return nil if image has no CGImageRef or invalid bitmap format. compression is 0(most)..1(least)
 
