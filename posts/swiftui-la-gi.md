@@ -97,7 +97,7 @@ tags:
 3. Nhược Điểm: 
     - Đi kèm với phiên bản hổ trợ là **iOS13** trở lên nên nó sẽ không hỗ trợ được cho các phiên bản **iOS** thấp hơn, điều này thì nếu xem các bảng thông kê sử dụng của **Apple** thì hiện tại bắt đầu làm quen cũng không phải quá sớm, vì hiện nay lượng người sử dụng **iOS 13** trở lên chiếm trên 80% vào tháng 6/2020 thì hiện tại không còn phải lo ngại về vấn đề này. 
     - Cùng với sự mới mẻ của **SwiftUI** thì chắc chắn nó chưa được nhiều sự trợ giúp từ các trang nổi tiếng như **StackOverFlow** về các vấn đề phức tạp. Hay là một số vấn đề mà **Framework** này chưa hổ trợ. Hoặc bạn có thể tự giải quyết vấn đề của mình và chia sẽ lên để góp phần xây dựng cộng đồng **SwiftUI** ngày một lớn mạnh.
-    - không cho phép xem kiểm tra phân cấp **ContentView_Previews**.
+    - Không cho phép xem kiểm tra phân cấp **ContentView_Previews**.
     
 4. Đến với ví dụ một UI của một dự án dùng **Framework** **SwiftUI** hoặc **UIKit**:
 
@@ -114,8 +114,8 @@ tags:
     b. **SwiftUI**:
     - Bắt đầu với một màn hình như sau:
     ![](https://i.ibb.co/0rthy8v/Screenshot-2021-02-05-at-17-16-02.png)
-    - Sau đó chúng ta Code điều chỉnh giao diện bên trong body và kết quả của giao diện được cập nhật trực tiếp ở **Preview** bên cạnh. 
-    - Không có gì phải rườm rà khi điều chỉnh chỉ cần tiếp tục Code, và cập nhật không phải lo lắng vấn đề quên kéo **IBOutlet** hay **AutoLayout**.
+    - Sau đó chúng ta viết Code điều chỉnh giao diện bên trong body và kết quả của giao diện được cập nhật trực tiếp ở **Preview** bên cạnh, mà không không phải lo lắng vấn đề quên kéo **IBOutlet** hay **AutoLayout**, chỉ cần viết Code và cân chỉnh vị trí cho các **Scene**.
+    - So với cách làm trước đây **UIKit** thì thực là một bước ngoặc lớn về sự đơn giản và tốc độ làm việc.
 
 ## III. Tổng Kết.
 - Bài viết này giới thiệu về **SwiftUI**.
