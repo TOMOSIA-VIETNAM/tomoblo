@@ -21,7 +21,9 @@ Nếu bạn chưa có VPC thì bạn cần tạo 1 cái.
 ![create-vpc-image.png](https://blog.theodo.com/static/12dddc4cf6be0009fc21ad56da5414af/50383/create-vpc-image.png)
 > 172.30.0.0/16 chúng ta gọi là network mask. Có nghĩa là tất cả IP sẽ bắt đầu từ 172.30.0.0 đến 172.30.255.255
 ![infra-step-1-image.png](https://blog.theodo.com/static/49d09eacdd40b1b6616f6b32af3fa0ad/50383/infra-step-1-image.png)
+
 ## 2 - Create private and public subnets in your VPC
+
 >Subnet đơn giản là 1 dải địa chỉ IP trong VPC. Subnet có thể được coi là phân chia các mạng lớn thành các mạng nhỏ hơn. Về việc chia các mạng nhỏ hơn sẽ giúp ta dễ dàng bảo trì, bảo mật tốt hơn.
 
 Để dùng lambda, bạn cần tạo 1 private subnet bên trong VPC.
@@ -35,8 +37,11 @@ Click on Subnets bên trái menu VPC service và sau đó click Create Subnet:
 Lặp lại bước trên, ta sẽ tạo public subnets, ví dụ `my-wonderfull-vpc-public` subnet với 1 dải IP con là 172.30.2.0/24.
 Bạn sẽ thiết lập public subnet và private subnet ở bước thứ 4.
 ![infra-step-2-image.png](https://blog.theodo.com/static/08e12c442dc676f731fb65be57f54f49/50383/infra-step-2-image.png)
+
 ## 3 - Create an Internet Gateway and a NAT Gateway in the VPC
+
 > Internet Gateway (IGW) là 1 kết nối logical giữa VPC và Internet. Nó không phải là 1 thiết bị vật lý. Nếu VPC không có IGW thì các resources trong VPC không thể truy cập Internet.
+
 > A Network Address Translation (NAT) giúp các instance trong private subnet có thể kết nối đến Internet, nhưng sẽ tránh Internet kết nối trực tiếp đến các instance bên trong VPC. Đề làm được điều này, NAT sẽ ánh xạ tất cả các địa chỉ IP private đã được chỉ định cho các Instance thành một địa chỉ IPv4 public được gọi là địa chỉ Elastic IP (EIP).
 
 Để truy cập Internet, bạn sẽ cần gắn IGW đến VPC.
@@ -54,6 +59,7 @@ Bây giờ, Infra của bạn sẽ trông như thế này:
 ![infra-step-3-image.png](https://blog.theodo.com/static/803d02f074409334a01dae329754468b/50383/infra-step-3-image.png)
 
 ## 4 - Associate the right route tables to the subnets
+
 > Route table là một tập hợp các quy tắc routes, nó sẽ định tuyến đường đi cho traffic. Bạn có thể tạo ra nhiều Route table trong VPC nếu bạn muốn. Route table có thể liên kết đến một hoặc nhiều subnets.
 > Remarks:
 > - Mặc dù nếu bạn không tạo route table, thì mặc định sẽ có một main route table default và tất cả các subnets trong VPC sẽ liên kết đến main route table này.
@@ -91,6 +97,7 @@ Với cách làm này, bạn đã điều hướng tất cả traffic của priv
 ![infra-step-4-image.png](https://blog.theodo.com/static/f031e446d606674453849748d76df61c/50383/infra-step-4-image.png)
 
 ## 5 - Create the lambda function and configure it
+
 Phần khó nhất đã xong
 Nếu bạn chưa tạo Lambda thì đi đến tab Lambda service, sau đó click button Create function:
 - Chọn tên Lambda, ví dụ `my-wonderful-lambda`
@@ -105,6 +112,7 @@ Click vào function lambda vừa tạo, nó sẽ mở ra 1 trang thiết lập. 
 ![configure-lambda-vpc-image.png](https://blog.theodo.com/static/b2e31ea61377158c21380d99bb121885/50383/configure-lambda-vpc-image.png)
 
 ### 🔥🔥 Congrats, that's all, your AWS lambda function has access to Internet! 🔥🔥
+
 ![infra-step-5-image.png](https://blog.theodo.com/static/ed3e678879d7cd543ba42ce4566b8c9e/50383/infra-step-5-image.png)
 
 *Nguồn: https://blog.theodo.com/2020/01/internet-access-to-lambda-in-vpc/*
