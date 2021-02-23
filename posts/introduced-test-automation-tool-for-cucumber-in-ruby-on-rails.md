@@ -1,5 +1,5 @@
 ---
-title: "Introduced test automation tool for cucumber in ruby on rails"
+title: "Introduced test automation tool for cucumber in Ruby on Rails"
 date: "2021-02-23"
 published: true
 tags:
