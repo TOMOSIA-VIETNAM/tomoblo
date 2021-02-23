@@ -1,15 +1,12 @@
 ---
-title: "Introduced-test-automation-tool-for-cucumber-in-ruby-on-rails"
+title: "Introduced test automation tool for cucumber in ruby on rails"
 date: "2021-02-23"
 published: true
 tags:
   - ruby
 ---
 [[snippet]]
-| Automation Testing đóng một vai trò quan trọng trong việc kiểm thử sản phẩm. 
-| Hiện nay có rất nhiều công cụ hỗ trợ việc này nhưng **Cucumber** là một công cụ dễ | dàng tiếp cận. Vì cú pháp là dạng văn bản được mã hoá.
-| Qua bài này chúng ta sẽ có cái nhìn tổng quan nhất về Automation Testing và 
-| Cucumber.
+| Automation Testing đóng một vai trò quan trọng trong việc kiểm thử sản phẩm. Hiện nay có rất nhiều công cụ hỗ trợ việc này nhưng **Cucumber** là một công cụ dễ dàng tiếp cận. Vì cú pháp là dạng văn bản được mã hoá. Qua bài này chúng ta sẽ có cái nhìn tổng quan nhất về Automation Testing và Cucumber.
 
 ### 1. Giới thiệu
 
@@ -115,8 +112,6 @@ tags:
   ```
 
 ### 5. Demo
-
-Input
 
 ![image](https://user-images.githubusercontent.com/79431148/108801662-e02ebb00-75c8-11eb-8b10-057fe8dfedcd.png)
 
