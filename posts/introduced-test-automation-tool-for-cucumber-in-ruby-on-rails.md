@@ -1,6 +1,6 @@
 ---
 title: "Introduced-test-automation-tool-for-cucumber-in-ruby-on-rails"
-date: "2021-02-05"
+date: "2021-02-23"
 published: true
 tags:
   - ruby
