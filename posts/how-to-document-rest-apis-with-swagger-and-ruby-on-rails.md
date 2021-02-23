@@ -1,6 +1,6 @@
 ---
 title: "Write Beautiful REST Documentation with Swagger"
-date: "2021-02-06"
+date: "2021-02-23"
 published: true
 tags:
   - swagger
