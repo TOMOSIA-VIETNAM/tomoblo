@@ -7,7 +7,6 @@ tags:
 ---
 
 [[snippet]]
-| # Giới thiệu
 | Swagger là một tool hỗ trợ trong việc thiết kế Api một cách dễ dàng. Swagger cho phép | bạn miêu tả cấu trúc Api của bạn, nó sẽ giúp cho cấu trúc Api của bạn được xây dựng 1 | cách đẹp trực quan và có thể tương tác với tài liệu API.
 
 ## Demo:
