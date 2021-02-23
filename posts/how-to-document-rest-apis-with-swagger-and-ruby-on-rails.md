@@ -1,5 +1,5 @@
 ---
-title: "How to document REST APIs with Swagger and Ruby on Rails"
+title: "Write Beautiful REST Documentation with Swagger"
 date: "2021-02-06"
 published: true
 tags:
@@ -171,6 +171,6 @@ Chạy lệnh sau để rails tự động generate controller:
 
 
 [[image_caption | swagger ]]
-| https://ibb.co/k312DBk
+| ![Compare](https://user-images.githubusercontent.com/67262392/108799296-8b884180-75c2-11eb-913c-b10f26445e4e.png)
 
 [[author | Nhật Huy ]]
