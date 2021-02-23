@@ -1,16 +1,15 @@
 ---
-title: "Tìm hiểu synchronous và asynchronous trong javascript"
-date: "2021-02-03"
+title: "Learn synchronous and asynchronous in javascript"
+date: "2021-02-22"
 published: true
 tags:
   - javascript
 ---
 [[snippet]]
-
-JavaScript là ngôn ngữ lập trình Single-thread (đơn luồng), có nghĩa là tại 1 thời điểm chỉ có thể xử lý 1 lệnh.
-Giờ thì bạn hãy tưởng tượng client gửi request lấy dữ liệu từ một API. Ở đây có thể xảy trường hợp server có thể mất thời gian để xử lý request (tệ hơn là server không trả về kết quả) nếu ở đây đợi đến khi server trả về kết quả mới chạy tiếp thì nó sẽ khiến trang web không phản hồi.
-Vậy Javascript mới tạo ra Asynchronous để giúp chúng ta làm việc này (như callbacks, Promises, async/await) giúp luồng chạy của web không bị chặn lại khi đợi request.
-Sau đây chúng ta cùng tìm hiểu về  sync, callback(ES5), promise(ES6) và async/await(ES7) trong javascript.
+| JavaScript là ngôn ngữ lập trình Single-thread (đơn luồng), có nghĩa là tại 1 thời điểm chỉ có thể xử lý 1 lệnh.
+| Giờ thì bạn hãy tưởng tượng client gửi request lấy dữ liệu từ một API. Ở đây có thể xảy trường hợp server có thể mất thời gian để xử lý request (tệ hơn là server không trả về kết quả) nếu ở đây đợi đến khi server trả về kết quả mới chạy tiếp thì nó sẽ khiến trang web không phản hồi.
+| Vậy Javascript mới tạo ra Asynchronous để giúp chúng ta làm việc này (như callbacks, Promises, async/await) giúp luồng chạy của web không bị chặn lại khi đợi request.
+| Sau đây chúng ta cùng tìm hiểu về  sync, callback(ES5), promise(ES6) và async/await(ES7) trong javascript.
 
 ## I. Đồng bộ và bất đồng bộ:
 
