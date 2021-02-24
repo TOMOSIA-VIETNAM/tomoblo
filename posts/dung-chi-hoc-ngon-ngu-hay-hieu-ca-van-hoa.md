@@ -39,4 +39,6 @@ Học nhiều hơn một ngôn ngữ sẽ giúp bạn hiểu sâu hơn về các
 ---
 Trích dịch từ cuốn  "* プログラマが知るべき97のことプログラマが知るべき97のこと*"
 27. 言語だけでなく文化も学ぶ
-Translate by Mahi
+
+######                    *<div style="text-align: right">Translated by Mahi</div>*
+
