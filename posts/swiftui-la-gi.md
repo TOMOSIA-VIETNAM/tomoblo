@@ -1,18 +1,15 @@
 ---
 title: "What is SwiftUI ?"
-date: "2021-02-05"
+date: "2021-02-23"
 published: true
 tags:
-  - iOS
-  - SwiftUI
+- ios
+- swift
 ---
 
-[[snippet]]
-
-**SwiftUI** là một UI **Framework** mới được phát triển bởi **Apple**. Nó cung cấp một API mới cho phép người dùng có thể viết Code mà nó có thể làm việc được trên tất cả các **Apple** platforms: **iOS, iPadOS, watchOS** và **tvOS**!
-
 # **SwiftUI** Là Gì ?
-
+[[snippet]]
+|    **SwiftUI** là một UI **Framework** mới được phát triển bởi **Apple**. Nó cung cấp một API mới cho phép người dùng có thể viết Code mà nó có thể làm việc được trên tất cả các **Apple** platforms: **iOS, iPadOS, watchOS** và **tvOS**!
 
 ## I. Giới Thiệu:
 1. Mở Đầu
