@@ -41,4 +41,7 @@ Ví dụ: Nếu có một công việc đề ra trong vòng 2 tuần thì ngư�
 Mỗi nước có một văn hoá riêng có ưu điểm và nhược điểm khác nhau. Chúng ta cùng học hỏi điểm tốt khắc phục những điểm hạn chế để cùng nhau phát triển.
 ​
 
-Trên đây là những so sánh mang tính cá nhân của bản thân bằng kinh nghiệm ít ỏi sống ở Nhật rất mong nhận được sự góp ý của mọi người
+Trên đây là những so sánh mang tính cá nhân của bản thân bằng kinh nghiệm ít ỏi sống ở Nhật rất mong nhận được sự góp ý của mọi người.
+
+---
+######                    *<div style="text-align: right">Viết bởi: Quyên Đỗ</div>*
