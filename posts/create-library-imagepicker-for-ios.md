@@ -1,10 +1,13 @@
 ---
 title: "Create library ImagePicker for IOS"
+
 date: "2021-02-24"
+
 published: true
+
 tags:
-  - ios
-  - swift
+- ios
+- swift
 ---
 
 ## Chào cả nhà!
