@@ -8,7 +8,7 @@ tags:
 ---
 
 [[snippet]]
-Trong giới lập trình di động, thì mình thấy giao diện của iOS vẫn có gì đó đẹp và ổn hơn của Android. Trong đó có Thanh trạng thái (Status bar) và Thanh điều hướng (Navigation bar) là hai thứ mà người dùng Android vẫn luôn thấy nhà Apple làm đẹp và hoàn chỉnh hơn nhà Google.
+| Trong giới lập trình di động, thì mình thấy giao diện của iOS vẫn có gì đó đẹp và ổn hơn của Android. Trong đó có Thanh trạng thái (Status bar) và Thanh điều hướng (Navigation bar) là hai thứ mà người dùng Android vẫn luôn thấy nhà Apple làm đẹp và hoàn chỉnh hơn nhà Google.
 
 ## 1. Status bar
 Thanh trạng thái ở iOS đã có hiệu ứng trong suốt từ những phiên bản iOS đầu tiên. Nhưng với Android thì  ... mãi đến Android 4.4 thì Google mới cho phép lập trình viên thay đổi màu sắc của nó nhưng chỉ là những màu đơn sắc, thậm chí ở phiên bản Android trước đó nó chỉ có màu đen (xấu kinh).
