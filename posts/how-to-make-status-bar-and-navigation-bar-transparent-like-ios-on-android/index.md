@@ -16,7 +16,7 @@ Thanh trạng thái ở iOS đã có hiệu ứng trong suốt từ những phi�
 ## 2. Navigation bar
 Với thanh điều hướng thì Google đi tiên phong so với Apple, khi trên Android đã có nó từ Android 4.0 gần 10 năm trước.
 
-[[image_caption | Giao diện màn hình chính của Android 4.4 ]]
+[[image_caption | Giao diện màn hình chính của Android 4.4]]
 | ![Android 4.4 Home Screen](images/android_4_4_home_screen.jpg)
 
 Nhưng nó ra đời khi cằm của điện thoại còn rất dày vẫn chưa mỏng như hiện nay cho nên những chiếc điện thoại thời đó nếu có thanh điều hướng thì vừa có cằm dày và màn hình lại tốn một khoảng cho thanh điều hướng, không những thế thanh điều hướng này cũng không trong suốt nó chỉ có màu đen hoặc trắng, nó xấu đến nỗi hầu hết các hãng làm điện thoại Android không dám đưa nó lên sản phẩm của mình. Phải đợi đến khi Apple "định nghĩa" lại thanh điều hướng trên iPhone X, thì Google mới cho sửa sang lại 3 phím điều hướng ảo của Android.
@@ -26,7 +26,7 @@ Mặc dù những phiên bản Android gần đây, thanh trạng thái thậm c
 Chính vì thế mình sẽ hướng dẫn các bạn làm cho ứng dụng của bạn trở nên đẹp hơn 69 lần với thanh trạng thái và điều hướng trong suốt.
 
 [[image_caption | Khi chưa làm trong suốt]]
-| ![Compare](images/default.png)
+| ![Default UI](images/default.png)
 
 Ứng dụng demo của mình sẽ có RecyclerView, mặc định thì sẽ trông như hình trên, ứng dụng được vẽ ở trong SystemUI (gồm thanh trạng thái, thanh điều hướng) để có hiệu ứng trong suốt thì bạn làm như sau:
 
@@ -55,7 +55,7 @@ Lưu ý: nếu bạn chuyển màu thanh điều hướng thành trong suốt th
 Tada ta có như hình phía dưới:
 
 [[image_caption | Chưa có Padding]]
-| ![Without Padding ](images/without_padding.png)
+| ![Without Padding](images/without_padding.png)
 
 Tuy nhiên, bạn có thể thấy item đầu tiên và dưới cùng của RecyclerView thì nó lại bị nằm phía dưới của thanh trạng thái và thanh điều hướng. Do đó, bạn phải set padding để cách hai thanh này bằng cách sau:
 
@@ -75,7 +75,7 @@ Cơ bản thì đoạn code trên sẽ lắng nghe các số đo của điện t
 Và đây là kết quả:
 
 [[image_caption | Thành quả nè]]
-| ![With Padding ](images/with_padding.png)
+| ![With Padding](images/with_padding.png)
 
 Thế là giao diện ứng dụng của bạn đã đẹp hơn 69 lần rồi đấy. Các bạn cứ làm như hướng dẫn là được. 
 
