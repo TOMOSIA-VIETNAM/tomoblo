@@ -6,7 +6,7 @@ tags:
   - ios
 ---
 
-Đối với công việc lâp trình phần mềm thì Unit Test và UI Test là những việc vô cùng quan trọng trong việc bảo đảm 1 phần mềm đạt chất lượng tốt. Bài viết này, mình chỉ tập trung chủ yếu vào UI Test. Với lập trình viện iOS thì việc viết UI Test đã có sự support từ Apple với XCTest framework.
+Đối với công việc lâp trình phần mềm thì Unit Test và UI Test là những việc vô cùng quan trọng trong việc bảo đảm 1 phần mềm đạt chất lượng tốt. Bài viết này, mình chỉ tập trung chủ yếu vào UI Test. Với lập trình viên iOS thì việc viết UI Test đã có sự support từ Apple với XCTest framework.
 Nhưng sau khi làm thử với XCTest framework thì thấy nó khó cho việc viết UITest cho chúng ta. Nên mình đã tìm hiểu được 1 framework cho việc viết UITest là  [**KIF framewok**](https://github.com/kif-framework/KIF)
 # 1.Cài đặt KIF
 Điều đầu tiên, để sử dụng được KIF thì chúng ta cần tạo target cho việc test của chúng ta. Ở đây, KIF không sử dụng **iOS UI Testing Bundle** mà sử dụng **iOS Unit Testing Bundle**.Nên trong trường hợp bạn nào đã có unit test ở trong project thì cần chọn 1 trong 2 target để chạy test.
@@ -32,7 +32,7 @@ Sau khi chạy `pod install `  thì công việc tiếp theo là làm theo **C�
 Để cài đặt KIF, bạn cần liên kết static library libKIF trực tiếp vào ứng dụng của bạn. Tải xuống nguồn từ  [KIF](https://github.com/kif-framework/KIF) và làm theo hướng dẫn dưới đây. 
 
 Chúng tôi sẽ sử dụng một dự án đơn giản làm ví dụ và bạn có thể tìm thấy nó trong Documentation/Examples/Testable Swift trong reposity của KIF. 
-![](/9eca4dad-fa29-4526-a06e-27332230fbf3.png)
+![9eca4dad-fa29-4526-a06e-27332230fbf3.png](/9eca4dad-fa29-4526-a06e-27332230fbf3.png)
 ### 1. Thêm KIF vào dự án
 
 Bước đầu tiên là thêm dự án KIF vào thư mục con của ./Frameworks/KIF của dự án. Nếu dự án của bạn sử dụng Git để kiểm soát phiên bản, bạn có thể sử dụng submodules để cập nhật trong tương lai dễ dàng hơn:
@@ -59,3 +59,5 @@ KIF được viết bằng Objective C nên các bạn cần thêm `-ObjC` vào 
 ![f5711a2b-6afb-44a9-a834-d0101ff2fe4c.png](/f5711a2b-6afb-44a9-a834-d0101ff2fe4c.png)
 
 Ở phần này mình chỉ giới thiệu về việc thêm KIF framework vào dự án của chúng. Ở phần sau mình sẽ demo về KIF framework
+
+[[author | Phương Võ ]]
