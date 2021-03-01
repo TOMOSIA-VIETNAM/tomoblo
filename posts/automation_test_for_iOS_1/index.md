@@ -45,17 +45,17 @@ Nếu bạn không sử dụng Git, chỉ cần tải về mã nguồn và sao c
 
 ### 2. Thêm KIF vào Workspace
 Hãy để dự án của bạn biết về KIF bằng cách thêm dự án KIF vào không gian làm việc cùng với dự án chính của bạn. Tìm KIF.xcodeproj trong Finder và kéo nó vào Project Navigator (⌘1).
-![](/758ee1d5-4d3e-4c9d-b477-e44c4c51a874.png)
+![758ee1d5-4d3e-4c9d-b477-e44c4c51a874.png](/758ee1d5-4d3e-4c9d-b477-e44c4c51a874.png)
 
 ## 3. Cấu hình Test Target
 Bây giờ, bạn đã có test target cho việc viết UI Test của bạn. Tiếp theo là thêm các thư viện cần thiết cho dự án, chúng ta chọn trong **Project Navigator** và vào Test Target mà bạn đã tạo ra, chọn tab **"Build Phases"**. Trong phần **"Link Binary With Libraries"**, hãy nhấn nút "+". Trong bảng xuất hiện, chọn "libKIF.a" và nhấp vào **"Add"**. Lặp lại quá trình cho **CoreGraphics.framework** và **QuartzCore.framework**
 .
 KIF yêu cầu IOKit.framework, nhưng nó không nằm trong các khuôn khổ hệ thống. Để liên kết đến nó, thêm "-framework IOKit" vào **"Other Linker Flags"**.
-![](/4221ceba-9604-497b-a1d0-142ffae2dd12.png)
+![4221ceba-9604-497b-a1d0-142ffae2dd12.png](/4221ceba-9604-497b-a1d0-142ffae2dd12.png)
 
-![](/4e69f5f5-626b-4bf7-a5b2-73056022a340.png)
+![4e69f5f5-626b-4bf7-a5b2-73056022a340.png](/4e69f5f5-626b-4bf7-a5b2-73056022a340.png)
 
 KIF được viết bằng Objective C nên các bạn cần thêm `-ObjC` vào **"Other Linker Flags"** trong Build Settings của Test Target 
-![](/f5711a2b-6afb-44a9-a834-d0101ff2fe4c.png)
+![f5711a2b-6afb-44a9-a834-d0101ff2fe4c.png](/f5711a2b-6afb-44a9-a834-d0101ff2fe4c.png)
 
 Ở phần này mình chỉ giới thiệu về việc thêm KIF framework vào dự án của chúng. Ở phần sau mình sẽ demo về KIF framework
