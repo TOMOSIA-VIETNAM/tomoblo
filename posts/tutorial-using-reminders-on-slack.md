@@ -74,8 +74,8 @@ Ngày Và Giờ
     Type "after" rồi sử dụng các từ như “tuần”, “tháng” hoặc “năm”
     Type "on" hoặc “during” và sử dụng các từ khoá cụ thể chỉ ngày hoặc phạm vi thời gian, chẳng hạn như “Yesterday”, “July” hoặc “2021”
 
-Ở trên mình đã giới thiệu cơ bản về Slack, nếu có thắc mắc gì bạn có thể pm mình để trao đổi thêm nhé.
-Cảm ơn bạn đã dành thời gian đọc bài.
+Ở trên mình đã giới thiệu cơ bản về Slack, và cách thiết lập Reminder, nếu có thắc mắc gì bạn có thể pm mình để trao đổi thêm nhé.
+Cảm ơn bạn đã dành thời gian đọc bài :D
 Còn đây là địa chỉ USDT của mình, nếu bạn thấy hay thì có thể donate cho mình nhé: 0x9d8fce9ac29c686b54b9ea0430c10d3919279a43
 
 [[author | Chien Le ]]
