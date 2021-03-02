@@ -11,12 +11,12 @@ Slack là một ứng dụng chat nhóm hỗ trợ trao đổi thông tin với 
 
 Slack là một sản phẩm của hãng TinySpeck với đồng sáng lập là Stewart Butterfield – trước đây từng là đồng sáng lập dịch vụ chia sẻ ảnh nổi tiếng Flickr của Yahoo. Stewart rời Yahoo hồi tháng 7/2008 và thành lập TinySpeck một năm sau đó. Theo Stewart: “Slack giải phóng con người ta khỏi mớ email lộn xộn. Tại sao phải dùng email để vừa đính kèm file vừa trao đổi công việc, nó phức tạp, mất thời gian lại quá rắc rối. Trong khi một dịch vụ chat như Slack có thể cho người ta chat nhóm theo thời gian thực lại vừa truy cập được toàn bộ file được lưu trữ trên các dịch vụ khác”.
 
-## Những lợi ích sử dụng SLack:
+## Những lợi ích sử dụng Slack:
 - Người dùng có thể trao đổi với nhau từ bất kỳ nền tảng nào như Windows, Linux, MacOS, Android, iOS,…
 - Liên kết với các ứng dụng lưu trữ của bên thứ 3 như Google Drive, Dropbox, Google Calendar, Github, Task Reminder, Trello… thậm chí là cả các dịch vụ thanh toán.
 - Miễn phí dung lượng lưu trữ lên đến 10K tin nhắn, 5GB dung lượng lưu trữ và kết nối đến 5 dịch vụ hãng khác. Tuy nhiên các gói trả phí sẽ có nhiều tính năng cao cấp hơn và khả năng kết nối là vô hạn.
 
-## Giới thiệu về reminder
+## Giới thiệu về Reminder
 ### Reminder Là gì?
  - Reminder là một ứng dụng nho nhỏ giúp bạn nhắc nhở các công việc cần làm, nó được tích hợp sẵn trong ứng dụng SLack. 
  - Reminder có thể đặt lời nhắc cho bản thân hoặc các thành viên khác trong workspace của bạn.
@@ -56,11 +56,11 @@ Slack là một sản phẩm của hãng TinySpeck với đồng sáng lập là
 - Các khối mã: Để hiển thị một phần dưới dạng văn bản nội tuyến có chiều rộng cố định, hãy sử dụng dấu backtick (`) quanh khu vực được chọn. Để tạo một khối văn bản có định dạng sẵn, có chiều rộng cố định, hãy sử dụng dấu backtick ba lần.
 
 ## Tìm kiếm người dùng, tin nhắn hay tập tin:
-Các Kênh Và Tin Nhắn Trực Tiếp
+Các kênh và tin nhắn trực tiếp
     Type "in:tên kênh" – để tìm kiếm các tin nhắn và / hoặc tập tin trong một kênh cụ thể
     Type "in:tên" – để tìm kiếm các tin nhắn trực tiếp của bạn với một người dùng cụ thể
 
-Tin Nhắn Hoặc Tệp Tin Từ Một Người Cụ Thể
+Tin nhắn hoặc tệp tin từ một người cụ thể
     Type "from:tên người dùng" – để giới hạn tìm kiếm của bạn với các tin nhắn từ một người gửi cụ thể, tìm kiếm này sẽ rà soát tất cả các kênh và mọi tin nhắn trực tiếp
     Type "from:me" – để tìm kiếm các tin nhắn mà bạn đã gửi, ở bất cứ đâu trong Slack
 
@@ -69,7 +69,7 @@ Các Liên Kết, Mục Có Gắn Dấu Sao Và Emoji
     Type "has: star"- để tìm những thư mà bạn đã gắn dấu sao
     Type "has::tên emoji" – để tìm kiếm những thư có chứa một biểu tượng cảm xúc cụ thể
 
-Ngày Và Giờ
+Ngày và giờ
     Type "before" rồi sử dụng những từ chỉ thời gian như “hôm qua”, “hôm nay”
     Type "after" rồi sử dụng các từ như “tuần”, “tháng” hoặc “năm”
     Type "on" hoặc “during” và sử dụng các từ khoá cụ thể chỉ ngày hoặc phạm vi thời gian, chẳng hạn như “Yesterday”, “July” hoặc “2021”
