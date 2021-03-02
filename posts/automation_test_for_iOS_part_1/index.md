@@ -5,9 +5,8 @@ published: true
 tags:
   - ios
 ---
-
-Đối với công việc lâp trình phần mềm thì Unit Test và UI Test là những việc vô cùng quan trọng trong việc bảo đảm 1 phần mềm đạt chất lượng tốt. Bài viết này, mình chỉ tập trung chủ yếu vào UI Test. Với lập trình viên iOS thì việc viết UI Test đã có sự support từ Apple với XCTest framework.
-Nhưng sau khi làm thử với XCTest framework thì thấy nó khó cho việc viết UITest cho chúng ta. Nên mình đã tìm hiểu được 1 framework cho việc viết UITest là  [**KIF framewok**](https://github.com/kif-framework/KIF)
+[[snippet]]
+| Đối với công việc lâp trình phần mềm thì Unit Test và UI Test là những việc vô cùng quan trọng trong việc bảo đảm 1 phần mềm đạt chất lượng tốt. Bài viết này, mình chỉ tập trung chủ yếu vào UI Test. Với lập trình viên iOS thì việc viết UI Test đã có sự support từ Apple với XCTest framework. Nhưng sau khi làm thử với XCTest framework thì thấy nó khó cho việc viết UITest cho chúng ta. Nên mình đã tìm hiểu được 1 framework cho việc viết UITest là  [**KIF framewok**](https://github.com/kif-framework/KIF)
 # 1.Cài đặt KIF
 Điều đầu tiên, để sử dụng được KIF thì chúng ta cần tạo target cho việc test của chúng ta. Ở đây, KIF không sử dụng **iOS UI Testing Bundle** mà sử dụng **iOS Unit Testing Bundle**.Nên trong trường hợp bạn nào đã có unit test ở trong project thì cần chọn 1 trong 2 target để chạy test.
 
