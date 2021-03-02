@@ -105,4 +105,4 @@ Chúng ta không nhất thiết phải áp dụng cứng nhắc nguyên tắc 80
 À nhỏ thêm một cái, thử nghĩ một chút về việc làm thế nào để bản thân mình sẽ trở thành **20% quan trọng** của ai đó, của tập thể nào đó, cũng thú vị mà, phải không?
 
 ---
-######                    *<div style="text-align: right">Viết bởi: Hà Lê</div>*
+[[author | Hà Lê ]]
