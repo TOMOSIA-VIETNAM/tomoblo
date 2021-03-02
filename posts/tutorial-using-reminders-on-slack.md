@@ -27,7 +27,7 @@ Slack là một sản phẩm của hãng TinySpeck với đồng sáng lập là
 - Cách tạo nhắc nhở:
     /remind [@someone or #channel] [what] [when]
     /remind @here " Nội dung thông báo " Thời gian
-    
+```
     ví dụ tạo nhắc nhở hàng ngày trong tuần:
     /remind @here "Mọi người báo cáo công việc ngày nhé" at every weekday at 4pm
     
@@ -42,7 +42,7 @@ Slack là một sản phẩm của hãng TinySpeck với đồng sáng lập là
     
     ví dụ tạo nhắc nhở vào ngày 01 đầu tháng sau:
     /remind @here "Anh em team PHP nhớ viết bài blog nhé" at 10am next month
-
+```
 - List các remind hiện có:
     /remind list
 - Xoá remind hiện có:
