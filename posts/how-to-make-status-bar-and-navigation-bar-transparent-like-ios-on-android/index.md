@@ -82,4 +82,4 @@ Thế là giao diện ứng dụng của bạn đã đẹp hơn 69 lần rồi �
 ## 4. One more thing: 
 Nếu bạn nào ngại viết mấy dòng code lắng nghe rồi set padding thì có thư viện đây [Insetter](https://github.com/chrisbanes/insetter) của [Chris Banes](https://medium.com/androiddevelopers/windowinsets-listeners-to-layouts-8f9ccc8fa4d1), thay vì viết vào code thì bạn chỉ cần set trực tiếp vào .xml (cơ bản thì anh ấy sử dụng Data Binding để set padding vào view).
 
-[[author | Vũ Tiến Thành]]
+[[author | Vũ Tiến Thành ]]
