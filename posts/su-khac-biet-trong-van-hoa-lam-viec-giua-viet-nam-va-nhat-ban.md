@@ -44,4 +44,4 @@ Mỗi nước có một văn hoá riêng có ưu điểm và nhược điểm kh
 Trên đây là những so sánh mang tính cá nhân của bản thân bằng kinh nghiệm ít ỏi sống ở Nhật rất mong nhận được sự góp ý của mọi người.
 
 ---
-######                    *<div style="text-align: right">Viết bởi: Quyên Đỗ</div>*
+[[author | Quyên Đỗ ]]
