@@ -682,6 +682,7 @@ Có rất nhiều yếu tố về style hay practice khác được cố tình b
   
 Những recommendations sau này có thể xem xét lại và mở rộng hướng dẫn này để đề cập đến những yếu tố về style hay practice  
 ở trên hay hoàn toàn khác.
+
 ------------ END ------------
 
-[[author | Diep Do ]]
+[[author | diep-tomosia ]]
