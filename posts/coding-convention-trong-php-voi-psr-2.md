@@ -1,20 +1,14 @@
 ---
-title: "Coding convention trong PHP với PSR-2"
+title: "PHP Coding convention with PSR-1, PSR-2"
 date: "2021-03-03"
 published: true
 tags:
   - PHP
 ---
-
-Hướng dẫn về Coding Style - Coding Style Guide  
-==================  
-  
-Phần này mở rộng từ [PSR-1], basic coding standard  
   
 Bộ quy tắc này được tạo ra nhằm giảm bới những khó khăn trong việc đọc code  
 của người khác. Nó thực hiện điều đó bằng cách đặt ra những quy định hay gợi  
-ý về việc format PHP code.    
-  
+ý về việc format PHP code.  
   
 # 1. Khái quát chung  
   
@@ -54,9 +48,22 @@ use FooInterface;
 use BarClass as Bar;  
 use OtherVendor\OtherPackage\BazClass;  
   
+/**
+ * Class Foo.
+ *
+ * @package App\Controller
+ */
 class Foo extends Bar implements FooInterface
 {
-    public function sampleFunction($a, $b = null)
+    /**
+     * Comment sample function.
+     * 
+     * @param int      $a A comment.
+     * @param int|null $b B comment.
+     *                    
+     * @return void
+     */
+    public function sampleFunction(int $a, $b = null): void 
     {
         if ($a === $b) {
             bar();
@@ -67,7 +74,12 @@ class Foo extends Bar implements FooInterface
         }
     }
 
-    final public static function bar()
+    /**
+     * Method bar.
+     * 
+     * @return void
+     */
+    final public static function bar(): void 
     {
         // method body
     }
@@ -156,6 +168,11 @@ use FooClass;
 use BarClass as Bar;  
 use OtherVendor\OtherPackage\BazClass;  
   
+/**
+ * Class ClassName.
+ *
+ * @package App\Controller.
+ */
 class ClassName extends ParentClass implements \ArrayAccess, \Countable
 {
     // constants, properties, methods
@@ -172,9 +189,14 @@ use FooClass;
 use BarClass as Bar;  
 use OtherVendor\OtherPackage\BazClass;  
   
-class ClassName extends ParentClass implements \ArrayAccess, \Countable, \Serializable  
-{  
-  // constants, properties, methods  
+/**
+ * Class ClassName.
+ *
+ * @package App\Controller
+ */
+class ClassName extends ParentClass implements \ArrayAccess, \Countable, \Serializable
+{
+    // constants, properties, methods
 }
 ```  
   
@@ -193,10 +215,20 @@ Khai báo property giống như sau.
 ```php    
 namespace Vendor\Package;  
   
+/**
+ * Class ClassName.
+ *
+ * @package App\Controller
+ */
 class ClassName
 {
+    /**
+     * Comment foo.
+     *
+     * @var null
+     */
     public $foo = null;
-}  
+}
 ```  
   
 ### 4.3. Methods  
@@ -215,13 +247,27 @@ Khai báo một hàm giống như sau. Chú ý đến vị trí của dấu ng�
 ```php    
 namespace Vendor\Package;  
   
+/**
+ * Class ClassName.
+ *
+ * @package App\Controller
+ */
 class ClassName
 {
-    public function fooBarBaz($arg1, &$arg2, $arg3 = [])
+    /**
+     * Method foo bar baz.
+     *
+     * @param array $arg1 Comment type arg1.
+     * @param array $arg2 Comment type arg2.
+     * @param array $arg3 Comment type arg1.
+     *                    
+     * @return void
+     */
+    public function fooBarBaz(array $arg1, array &$arg2, array $arg3 = []): void
     {
         // method body
     }
-}  
+}
 ```  
   
 ### 4.4. Method Arguments  
@@ -234,13 +280,27 @@ Những arguments của Method mà có giá trị mặc định phải được 
 ```php    
 namespace Vendor\Package;  
   
+/**
+ * Class ClassName.
+ *
+ * @package App\Controller
+ */
 class ClassName
 {
-    public function foo($arg1, &$arg2, $arg3 = [])
+    /**
+     * Method foo bar baz.
+     *
+     * @param array $arg1 Comment type arg1.
+     * @param array $arg2 Comment type arg2.
+     * @param array $arg3 Comment type arg1.
+     *                    
+     * @return void
+     */
+    public function fooBarBaz(array $arg1, array &$arg2, array $arg3 = []): void
     {
-        //method body
+        // method body
     }
-} 
+}
 ```  
   
 Danh sách argument có thể được tách thành nhiều dòng, trong đó mỗi dòng theo sau được indent một lần.  
@@ -252,9 +312,23 @@ trên một dòng, với một khoảng trắng ở giữa.
 ```php  
 namespace Vendor\Package;  
   
+/**
+ * Class ClassName.
+ *
+ * @package App\Controller
+ */
 class ClassName
 {
-    public function aVeryLongMethodName(ClassTypeHint $arg1, &$arg2, array $arg3 = [])
+    /**
+     * Method aVeryLongMethodName.
+     * 
+     * @param ClassTypeHint $arg1 Comment classTypeHint arg1.
+     * @param array         $arg2 Comment type arg1.
+     * @param array         $arg3 Comment type arg1.
+     *                            
+     * @return void
+     */
+    public function aVeryLongMethodName(ClassTypeHint $arg1, array &$arg2, array $arg3 = []): void 
     {
         //method body 
     }
@@ -270,17 +344,37 @@ Khi được sử dụng, `static` phải được đặt sau phần khai báo v
 ```php   
 namespace Vendor\Package;  
   
+/**
+ * Class ClassName.
+ *
+ * @package App\Controller
+ */
 abstract class ClassName
 {
+    /**
+     * Comment foo.
+     *
+     * @var string
+     */
     protected static $foo;
 
+    /**
+     * Comment zim.
+     *
+     * @return mixed
+     */
     abstract protected function zim();
 
-    final public static function bar()
+    /**
+     * Method bar.
+     *
+     * @return void
+     */
+    final public static function bar(): void
     {
-        //method body 
+        //method body
     }
-}  
+}
 ```  
   
 ### 4.6. Gọi Method và Function  
@@ -439,13 +533,29 @@ A closure declaration looks like the following.
 Hãy chú ý vào vị trí của dấu ngoặc tròn, dấu phẩy, khoảng trắng và dấu ngoặc nhọn.  
   
 ```php  
-$closureWithArgs = function ($arg1, $arg2) {
+/**
+ * Method closureWithArgs.
+ *
+ * @param string $arg1 Comment type arg1.
+ * @param string $arg2 Comment type arg2.
+ *
+ * @return void.
+ */
+$closureWithArgs = function (string $arg1, string $arg2): void {
     // body
 };
 
-$closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
+/**
+ * Method closureWithArgsAndVars.
+ *
+ * @param string $arg1 Comment type arg1.
+ * @param string $arg2 Comment type arg2.
+ *
+ * @return void.
+ */
+$closureWithArgsAndVars = function (string $arg1, string $arg2) use ($var1, $var2): void {
     // body
-};  
+}; 
 ```  
   
 Danh sách argument và danh sách variable có thể được tách ra làm nhiều dòng, trong đó mỗi dòng theo sau được indent  
@@ -458,22 +568,45 @@ thì dấu đóng ngoặc tròn và dấu mở ngoặc nhọn phải được đ
 Dưới đây là những ví dụ về các closures có và không có danh sách argument hay variable được chia thành nhiều dòng.  
   
 ```php    
+/**
+ * Method longArgs noVars.
+ *
+ * @param string $longArgument       Comment type longArgument.
+ * @param string $longerArgument     Comment type longerArgument.
+ * @param string $muchLongerArgument Comment type muchLongArgument.
+ *
+ * @return void
+ */
 $longArgs_noVars = function (
-    $longArgument,
-    $longerArgument,
-    $muchLongerArgument
-) {
+    string $longArgument,
+    string $longerArgument,
+    string $muchLongerArgument
+): void {
     // body
 };
 
+/**
+ * Method noArgs longVars.
+ *
+ * @return void
+ */
 $noArgs_longVars = function () use (
     $longVar1,
     $longerVar2,
     $muchLongerVar3
-) {
+): void {
     // body
 };
 
+/**
+ * Method longArgs longVars.
+ *
+ * @param string $longArgument       Comment type longArgument.
+ * @param string $longerArgument     Comment type longerArgument.
+ * @param string $muchLongerArgument Comment type muchLongArgument.
+ *
+ * @return void
+ */
 $longArgs_longVars = function (
     $longArgument,
     $longerArgument,
@@ -482,23 +615,39 @@ $longArgs_longVars = function (
     $longVar1,
     $longerVar2,
     $muchLongerVar3
-) {
+): void {
     // body
 };
 
+/**
+ * Method longArgs shortVars.
+ *
+ * @param string $longArgument       Comment type longArgument.
+ * @param string $longerArgument     Comment type longerArgument.
+ * @param string $muchLongerArgument Comment type muchLongArgument.
+ *
+ * @return void
+ */
 $longArgs_shortVars = function (
     $longArgument,
     $longerArgument,
     $muchLongerArgument
-) use ($var1) {
+) use ($var1): void {
     // body
 };
 
-$shortArgs_longVars = function ($arg) use (
+/**
+ * Method shortArgs longVars.
+ *
+ * @param string $arg Comment type arg.
+ *
+ * @return void
+ */
+$shortArgs_longVars = function (string $arg) use (
     $longVar1,
     $longerVar2,
     $muchLongerVar3
-) {
+): void {
     // body
 };  
 ```  
@@ -533,7 +682,6 @@ Có rất nhiều yếu tố về style hay practice khác được cố tình b
   
 Những recommendations sau này có thể xem xét lại và mở rộng hướng dẫn này để đề cập đến những yếu tố về style hay practice  
 ở trên hay hoàn toàn khác.
-
 ------------ END ------------
 
 [[author | Diep Do ]]
