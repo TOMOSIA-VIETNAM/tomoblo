@@ -5,7 +5,6 @@ published: true
 tags:
   - PHP
 ---
-  
 Bộ quy tắc này được tạo ra nhằm giảm bới những khó khăn trong việc đọc code  
 của người khác. Nó thực hiện điều đó bằng cách đặt ra những quy định hay gợi  
 ý về việc format PHP code.  
@@ -20,11 +19,9 @@ của người khác. Nó thực hiện điều đó bằng cách đặt ra nh�
 - Cần phải có một dòng trống ở sau phần khai báo `namespace`. Ngoài ra cũng cần có  
   một dòng trống phía sau phần khai báo `use`.  
   
-- Dấu mở ngặc nhọn dùng khi khai báo class phải được viết ở dòng mới (không viết cùng dòng với phần khai báo tên class),  
-  và dấu đóng ngoặc nhọn của một class phải được viết ở dòng mới sau khi kết thúc body của class.  
+- Dấu mở ngặc nhọn dùng khi khai báo class phải được viết ở dòng mới (không viết cùng dòng với phần khai báo tên class),  và dấu đóng ngoặc nhọn của một class phải được viết ở dòng mới sau khi kết thúc body của class.  
   
-- Dấu mở ngặc nhọn dùng khi khai báo method phải được viết ở dòng mới (không viết cùng dòng với phần khai báo tên method),  
-   và dấu đóng ngoặc nhọn của một method phải được viết ở dòng mới sau khi kết thúc body của method.  
+- Dấu mở ngặc nhọn dùng khi khai báo method phải được viết ở dòng mới (không viết cùng dòng với phần khai báo tên method),  và dấu đóng ngoặc nhọn của một method phải được viết ở dòng mới sau khi kết thúc body của method.  
   
 - Phải luôn khai báo tính visibility (`public`, `protected` hay là `private`) của properties cũng như methods.  
  `abstract` và `final` phải được khai báo phía trước tính visibility và `static` phải được khai báo sau tính visibility.  
@@ -102,11 +99,11 @@ Trong một file chỉ bao gồm code PHP thì không được viết tag đóng
   
 Không có hard limit về độ dài của một dòng.  
   
-Soft limit của độ dài một dòng phải là 120 chữ. Chương trình check style tự động phải báo warning nhưng không được báo  
-error khi vượt quá soft limit.  
+Soft limit của độ dài một dòng phải là 120 chữ. 
+
+Chương trình check style tự động phải báo warning nhưng không được báo error khi vượt quá soft limit.  
   
-Một dòng nên có không quá 80 chữ. Dòng mà dài quá 80 chữ thì nên chia nhỏ ra thành nhiều dòng với độ dài mỗi dòng  
-không quá 80 chữ.  
+Một dòng nên có không quá 80 chữ. Dòng mà dài quá 80 chữ thì nên chia nhỏ ra thành nhiều dòng với độ dài mỗi dòng không quá 80 chữ.  
   
 Một dòng không trống không được phép có trailing whitespace (dấu cách ở cuối dòng)  
   
@@ -180,6 +177,7 @@ class ClassName extends ParentClass implements \ArrayAccess, \Countable
 ```  
   
 Danh sách những interface được `implements` có thể được viết trên nhiều dòng, trong đó mỗi dòng theo sau được indent 1 lần.  
+
 Khi thực hiện việc đó thì tên interface đầu tiên phải được đặt trên 1 dòng mới, và mỗi dòng chỉ được phép chứa tên 1 interface.  
   
 ```php    
@@ -238,8 +236,9 @@ Tính Visibility phải được khao báo ở mọi
 Tên Method không nên được prefix bởi dấu gạch dưới `_` để biểu thị tính protected hay private.  
   
 Khi khai báo tên method thì không được để một khoảng trắng ở phía sau tên method.  
-Dấu mở ngoặc nhọn phải được nằm trên một dòng riêng, và dấu đóng ngoặc phải được nằm trên dòng ngay sau phần thân của  
-method.  
+
+Dấu mở ngoặc nhọn phải được nằm trên một dòng riêng, và dấu đóng ngoặc phải được nằm trên dòng ngay sau phần thân của method.  
+
 Không được có khoảng trắng sau dấu mở ngoặc tròn, và không được có khoảng trắng phía trước dấu đóng ngoặc tròn.  
   
 Khai báo một hàm giống như sau. Chú ý đến vị trí của dấu ngặc đơn, dấu phẩy, khoảng trắng và dấu ngoặc nhọn.  
@@ -272,8 +271,7 @@ class ClassName
   
 ### 4.4. Method Arguments  
   
-Trong danh sách argument (đối số) thì không được có khoảng trắng trước mỗi dấu phẩy, và phải có một khoảng trắng  
-sau mỗi dấu phẩy.  
+Trong danh sách argument (đối số) thì không được có khoảng trắng trước mỗi dấu phẩy, và phải có một khoảng trắng sau mỗi dấu phẩy.  
   
 Những arguments của Method mà có giá trị mặc định phải được đặt ở cuối của danh sách argument.  
   
@@ -306,8 +304,7 @@ class ClassName
 Danh sách argument có thể được tách thành nhiều dòng, trong đó mỗi dòng theo sau được indent một lần.  
 Khi làm vậy thì argument đầu tiên trong danh sách phải được đặt ở trên một dòng mới, và mỗi dòng chỉ được phép có một argument.  
   
-Khi mà danh sách argument được chia làm nhiều dòng, thì dấu đóng ngoặc tròn và dấu mở ngoặc nhọn phải được đặt cùng nhau  
-trên một dòng, với một khoảng trắng ở giữa.  
+Khi mà danh sách argument được chia làm nhiều dòng, thì dấu đóng ngoặc tròn và dấu mở ngoặc nhọn phải được đặt cùng nhau trên một dòng, với một khoảng trắng ở giữa.  
   
 ```php  
 namespace Vendor\Package;  
@@ -380,10 +377,12 @@ abstract class ClassName
 ### 4.6. Gọi Method và Function  
   
 Khi gọi một method hay một function, không được phép có khoảng trắng giữa tên của method hay function và dấu mở ngoặc tròn.  
+
 Không được phép có khoảng trắng sau dấu mở ngoặc tròn.  
+
 Và không được phép có khoảng trắng trước dấu đóng ngoặc tròn.  
-Trong danh sách argument, không được phép có khoảng trắng trước mỗi dấu phẩy,  
-và phải có một khoảng trắng sau mỗi dấu phẩy.  
+
+Trong danh sách argument, không được phép có khoảng trắng trước mỗi dấu phẩy,  và phải có một khoảng trắng sau mỗi dấu phẩy.  
   
 ```php   
 bar();  
@@ -409,14 +408,12 @@ Những quy tắc chung khi viết Control Structures bao gồm:
 - Phần thân của structure phải được indent một lần  
 - Dấu đóng ngoặc nhọn phỉa được đặt trên một dòng mới sau phần thân  
   
-Phần thân của mỗi structure phải được đặt trong dấu đóng mở ngoặc kép. Điều này sẽ làm tiêu chuẩn hoá cách viết structures,  
-và làm giảm thiểu việc phát sinh ra lỗi khi mà có những dòng mới được thêm vào phần thân.  
+Phần thân của mỗi structure phải được đặt trong dấu đóng mở ngoặc kép. Điều này sẽ làm tiêu chuẩn hoá cách viết structures,  và làm giảm thiểu việc phát sinh ra lỗi khi mà có những dòng mới được thêm vào phần thân.  
   
 ### 5.1. `if`, `elseif`, `else`  
   
 Một `if` structure được viết như sau.  
-Hãy chú ý đến vị trí của dấu ngoặc tròn, khoảng trắng, dấu ngoặc nhọn. `else` và `elseif` được đặt trên cùng một dòng  
-với dấu đóng ngoặc nhọn của phần body phía trước.  
+Hãy chú ý đến vị trí của dấu ngoặc tròn, khoảng trắng, dấu ngoặc nhọn. `else` và `elseif` được đặt trên cùng một dòng  với dấu đóng ngoặc nhọn của phần body phía trước.  
   
 ```php  
 if ($expr1) {
@@ -432,10 +429,12 @@ Từ khoá `elseif` nên được dùng thay cho `else if`, để mọi control 
   
 ### 5.2. `switch`, `case`  
   
-Một `switch` structure được viết như sau.  
+Một `switch` structure được viết như sau.
+
 Hãy chú ý đến vị trí của dấu ngoặc tròn, khoảng trắng và dấu ngoặc nhọn.  
-Phần `case` phải được indent một lần so với `switch`, và `break` keyword (hay các keyword ngắt khác) phải được indent giống  
-với phần thân của `case`.  
+
+Phần `case` phải được indent một lần so với `switch`, và `break` keyword (hay các keyword ngắt khác) phải được indent giống với phần thân của `case`.  
+
 Phải có một comment kiểu như `// no break` nếu phần thân của `case` không trống, và được cố tình cho qua (không có break)  
   
 ```php   
@@ -514,16 +513,13 @@ try {
   
 # 6. Closures  
   
-Closures phải được định nghĩa mới một khoảng trắng phía sau keywork `function`, và một khoảng trắng ở phía trước cũng  
-như phía sau của keywork `use`.  
+Closures phải được định nghĩa mới một khoảng trắng phía sau keywork `function`, và một khoảng trắng ở phía trước cũng như phía sau của keywork `use`.  
   
 Dấu mở ngoặc ngọn phải được đặt ở cùng dòng, và dấu đóng ngoặc nhọn phải được đặt ở một dòng mời phía sau phần thân.  
   
-Không được phép có một khoảng trắng ở phía sau dấu mở ngoặc tròn của phần khai báo danh sách argument hay variable,  
-và không được phép có một khoảng trắng ở phía trước dấu đóng ngoặc tròn của phần khai báo danh sách argument hay variable.  
+Không được phép có một khoảng trắng ở phía sau dấu mở ngoặc tròn của phần khai báo danh sách argument hay variable,  và không được phép có một khoảng trắng ở phía trước dấu đóng ngoặc tròn của phần khai báo danh sách argument hay variable.  
   
-Trong danh sách arugment hay variable, không được phép có khoảng trắng trước mỗi dấu phẩy, và phải có một khoảng trắng  
-phía sau mỗi dấu phẩy.  
+Trong danh sách arugment hay variable, không được phép có khoảng trắng trước mỗi dấu phẩy, và phải có một khoảng trắng phía sau mỗi dấu phẩy.  
   
 Arguments của Closure mà có giá trị mặc định thì phải được đặt ở cuối của danh sách argument.  
   
@@ -558,9 +554,7 @@ $closureWithArgsAndVars = function (string $arg1, string $arg2) use ($var1, $var
 }; 
 ```  
   
-Danh sách argument và danh sách variable có thể được tách ra làm nhiều dòng, trong đó mỗi dòng theo sau được indent  
-một lần. Khi làm như vậy thì argument hay variable đầu tiên phải được đặt ở trên một dòng mới, và mỗi dòng chỉ được phép  
-chứa một argument hay một variable.  
+Danh sách argument và danh sách variable có thể được tách ra làm nhiều dòng, trong đó mỗi dòng theo sau được indent một lần. Khi làm như vậy thì argument hay variable đầu tiên phải được đặt ở trên một dòng mới, và mỗi dòng chỉ được phép chứa một argument hay một variable.  
   
 Khi mà kết thúc của danh sách (kể cả arguments hay variables) được chia thành nhiều dòng,  
 thì dấu đóng ngoặc tròn và dấu mở ngoặc nhọn phải được đặt cùng nhau trên một dòng, với một khoảng trắng ở giữa.  
@@ -652,8 +646,7 @@ $shortArgs_longVars = function (string $arg) use (
 };  
 ```  
   
-Chú ý rằng những quy tắc trên còn được áp dụng khi một closure được sử dụng trục tiếp như một argument trong một lời gọi  
-hàm hay method.  
+Chú ý rằng những quy tắc trên còn được áp dụng khi một closure được sử dụng trục tiếp như một argument trong một lời gọi hàm hay method.  
   
 ```php  
 $foo->bar($arg1, function ($arg2) use ($var1) {
@@ -680,9 +673,7 @@ Có rất nhiều yếu tố về style hay practice khác được cố tình b
   
 - Best practices  
   
-Những recommendations sau này có thể xem xét lại và mở rộng hướng dẫn này để đề cập đến những yếu tố về style hay practice  
-ở trên hay hoàn toàn khác.
+Những recommendations sau này có thể xem xét lại và mở rộng hướng dẫn này để đề cập đến những yếu tố về style hay practice  ở trên hay hoàn toàn khác.
 
------------- END ------------
-
-[[author | diep-tomosia ]]
+---
+[[author | Diep Do ]]
