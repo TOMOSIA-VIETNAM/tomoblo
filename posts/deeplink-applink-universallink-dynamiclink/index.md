@@ -3,8 +3,8 @@ title: "Deep link, App link, Universal link, Dynamic link, URL Scheme"
 date: "2020-12-17"
 published: true
 tags:
-  - iOS
-  - Android
+  - ios
+  - android
 ---
 
 [[snippet]]
