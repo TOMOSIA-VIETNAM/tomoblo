@@ -9,7 +9,7 @@ tags:
 
 # MessageKit Là Gì ?
 [[snippet]]
-|    **MessageKit** là một thư viện mã nguồn mở dùng để tạo ra màn hình chat với chuẩn về UX UI.
+|    **MessageKit** là một thư viện mã nguồn mở dùng để tạo ra màn hình chat với chuẩn về UI/UX.
 
 Github: [MessageKit](https://github.com/MessageKit/MessageKit)
 
@@ -435,4 +435,4 @@ Xong xuôi, app của mình hiện giờ đã có thể gửi text và gửi ả
 ![Kết quả](result.webp)
 Trên đây là một số hiểu biết của mình về MessageKit, mọi người nếu có ý kiến gì có thể comment ở phía dưới. Cảm ơn và hẹn gặp lại.
 Happy Reading!!!
-by Nguyen Manh Hung from TOMOSIA Viet Nam.
+[[author | Manh Hung Nguyen. ]]
