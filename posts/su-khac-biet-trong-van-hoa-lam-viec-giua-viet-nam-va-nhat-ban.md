@@ -1,6 +1,6 @@
 ---
 title: "Sự khác biệt trong văn hoá làm việc giữa Việt Nam và Nhật Bản"
-date: "2021-02-24"
+date: "2021-03-12"
 published: true
 tags:
   - comtor
