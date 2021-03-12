@@ -1,7 +1,6 @@
 ---
-title: "Đừng chỉ học ngôn ngữ, hãy hiểu cả văn hóa
-"
-date: "2021-02-24"
+title: "Đừng chỉ học ngôn ngữ, hãy hiểu cả văn hóa"
+date: "2021-03-12"
 published: true
 tags:
   - comtor
