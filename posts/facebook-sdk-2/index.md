@@ -43,6 +43,8 @@ Sau khi đã đăng ký app thành công như trên, chúng ta tiến hành lấ
 
   Trong đó:
   - `17841437428736936`: Là instagram user id của mình liên kết với trang Facebook ở phần 1.
+  - `manchesterunited`: Ở đây là username của Instagrammer.
+  - `followers_count, media_count,...`: Đây là các fields dùng để lấy thông tin của Instagrammers.
 
   ![images-3.png](/images-3.png)<br>
 
