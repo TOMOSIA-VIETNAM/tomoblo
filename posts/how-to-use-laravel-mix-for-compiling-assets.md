@@ -135,4 +135,4 @@ Cũng giống như composer sử dụng file composer.json để quản lý các
 Trong bài viết này, chúng ta đã tìm hiểu cách làm việc với Laravel Mix trong các ứng dụng để giúp cho việc biên dịch css, js,.. trở nên dễ dàng. Bài viết này chỉ là phần giới thiệu cơ bản, để tìm hiểu thêm về Laravel Mix bạn hãy truy cập [trang tài liệu](https://laravel.com/docs/8.x/mix) chính thức của Laravel hoặc truy cập [trang web](https://laravel-mix.com/docs/3.0/installation) Laravel Mix.\
 Hy vọng sau bài viết này, mọi người có thể áp dụng được Laravel Mix vào các dự án của mình. Mong nhận được nhiều đóng góp từ mọi người để các bài viết sau có thể hoàn thiện hơn ạ.
 
-######                    *<div style="text-align: right"> - [Phu Thai | Đồng Phú Thái] </div>*
+[[author | Phu Thai ]]
