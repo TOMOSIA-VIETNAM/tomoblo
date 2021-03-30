@@ -1,5 +1,5 @@
 ---
-title: "Crawl một trang web phức tạp với puppeteer"
+title: "Crawl a complex site with puppeteer"
 date: "2021-02-28"
 published: true
 tags:
