@@ -3,13 +3,10 @@ title: "Tôi đến với lập trình là vì đam mê"
 date: "2021-04-01"
 published: true
 tags:
-  - ruby
+  - other
 ---
 
-[[snippet]]
-| Trong thời kỳ công nghiệp 4.0 như hiện nay, lập trình như một ngành HOT được mọi người nhắm đến.
-| Mọi người đến với lập trình với nhiều mục đích khác nhau.
-| Nhưng... với tôi "Lập trình là thứ tôi đam mê nhất , nên tôi sẽ theo đuổi nó !"
+Trong thời kỳ công nghiệp 4.0 như hiện nay, lập trình như một ngành HOT được mọi người nhắm đến. Mọi người đến với lập trình với nhiều mục đích khác nhau. Nhưng... với tôi "Lập trình là thứ tôi đam mê nhất , nên tôi sẽ theo đuổi nó !"
 
 ### Giới thiệu
 
