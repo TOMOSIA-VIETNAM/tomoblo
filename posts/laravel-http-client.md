@@ -80,7 +80,7 @@ $response = Http::patch('http://example.com/users/1', [
 $response = Http::delete('http://example.com/users/1');
 ```
 
-### 5. Add header to http request
+### 5. Add header to http request
 ```php
 $response = Http::withHeaders([
     'X-First' => 'foo',
@@ -131,7 +131,7 @@ $response->body() : string;
 $response->json() : array|mixed;
 // Convert response from http request to collection
 $response->collect() : Illuminate\Support\Collection;
-// Status code of response
+// Status code of response
 $response->status() : int;
 // Http code of response = 200
 $response->ok() : bool;
