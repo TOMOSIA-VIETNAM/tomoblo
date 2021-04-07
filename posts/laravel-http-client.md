@@ -125,27 +125,27 @@ return Http::dd()->get('http://example.com');
 
 ### 10. Http response
 ```php
-// Convert response from http request to string
+//Convert response from http request to string
 $response->body() : string;
-// Convert response from http request to array
+//Convert response from http request to array
 $response->json() : array|mixed;
-// Convert response from http request to collection
+//Convert response from http request to collection
 $response->collect() : Illuminate\Support\Collection;
-// Status code of response
+//Status code of response
 $response->status() : int;
-// Http code of response = 200
+//Http code of response = 200
 $response->ok() : bool;
-// Status code of response >=200 and < 300
+//Status code of response >=200 and < 300
 $response->successful() : bool;
-// Status code of response >=400
+//Status code of response >=400
 $response->failed() : bool;
-// Http code of response >=500
+//Http code of response >=500
 $response->serverError() : bool;
-// Status code of response >=400 and < 500
+//Status code of response >=400 and < 500
 $response->clientError() : bool;
-// The header from the response
+//The header from the response
 $response->header($header) : string;
-// The headers from the response
+//The headers from the response
 $response->headers() : array;
 ```
 
