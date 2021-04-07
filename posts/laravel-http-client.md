@@ -133,7 +133,7 @@ $response->json() : array|mixed;
 $response->collect() : Illuminate\Support\Collection;
 // Status code of response
 $response->status() : int;
-// Status code of response = 200
+// Status code of response = 200
 $response->ok() : bool;
 // Status code of response >=200 and < 300
 $response->successful() : bool;
