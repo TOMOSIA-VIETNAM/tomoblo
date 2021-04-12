@@ -36,7 +36,7 @@ Chắc hẳn mọi người đọc example hay tutorial cũng đều thấy axio
 ###2. Tạo file **repository/repository.js** để làm nhiệm vụ kết nối tới các resources.
 Cái này mọi người đặt tên gì cũng được, Service hay là API, cá nhân mình thì nghĩ trong trường hợp này Repository sẽ là 1 cái tên hợp lý 
 ![](/repository.png)
-###3. Tiếp theo chúng ta sẽ đi định nghĩa cho từng Entity của project. Ở đây mình ví là **repository/entity/authRepository.js**:
+###3. Tiếp theo chúng ta sẽ đi định nghĩa cho từng Entity của project. Ở đây mình ví dụ là **repository/entity/authRepository.js**:
 ![](/entity.png)
 ###4. Tiếp theo chúng ta sẽ đi định nghĩa **Factory** để đăng ký và gọi repository ở **repository/factory.js**:
 ![](/factory.png)
