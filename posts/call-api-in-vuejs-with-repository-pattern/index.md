@@ -53,4 +53,4 @@ Nhìn vào chúng ta thấy khá là dễ hiểu phải không nào? Vì phần 
 ##IV. Kết luận:
 Hiện tại pattern này mình đang áp dụng vào dự án thấy có thể control và scale ổn. Nhưng điều đó cũng không có nghĩa là nó phù hợp với dự án của bạn được. Nên các bạn cần đánh giá về độ phức tạp của dự án trước để đưa ra một giải pháp phù hợp. Cảm ơn mọi người đã đọc bài viết.
 
-Ví dụ: `[[author | Tran Van Tuan Anh ]]`
+`[[author | Tran Van Tuan Anh ]]`
