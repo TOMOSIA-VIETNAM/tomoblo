@@ -3,6 +3,7 @@ title: "Dynamic relationships in Laravel using subqueries"
 date: "2021-04-12"
 published: true
 tags:
+  - php
   - laravel
 ---
 
@@ -21,7 +22,7 @@ Name            | Email                       | Last Login
 -----------------------------------------------------------------------
 Jonathan        | jonathan@reinink.com        | Jun 2, 2018 at 5:30am
 Adam Wathan     | admawathan@reinink.com      | Nov 2, 2018 at 8:30am
-Taylor Otwell   | taylo.otwell@laravel.com	  | Never
+Taylor Otwell   | taylo.otwell@laravel.com    | Never
 Adam Campbell   | adam.campbell@laravel.com   | Nov 10, 2018 at 12:01pm
 ```
 Thông tin login của user sẽ dươch lưu trong bảng ```logins```, dưới đây là bảng cơ sở dữ liệu:
@@ -42,16 +43,32 @@ Schema::create('logins', function (Blueprint $table) {
 ```
 Và đây là model tương ứng và relations:
 ```php
+/**
+ * Model User.
+ */
 class User extends Model
 {
+    /**
+     * Relationship logins.
+     *
+     * @return HasMany
+     */
     public function logins()
     {
         return $this->hasMany(Login::class);
     }
 }
 
+/**
+ * Model Login.
+ */
 class Login extends Model
 {
+    /**
+     * Relationship user.
+     *
+     * @return BelongsTo
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -187,8 +204,17 @@ $users = User::addSubSelect('last_login_at', Login::select('created_at')
 ### 3.4. Scopes
 Thêm một bước nữa là đóng gói subquery trong User model scope để đơn giản hóa controller và có thể tái sử dụng:
 ```php
+/**
+ * Model User.
+ */
 class User extends Model
 {
+    /**
+     * Create scope.
+     * @param $query query
+     *
+     * @return query
+     */
     public function scopeWithLastLoginDate($query)
     {
         $query->addSubSelect('last_login_at', Login::select('created_at')
@@ -216,13 +242,27 @@ $users = User::withLastLogin()->get();
 ```
 Chúng ta sẽ bắt đầu định nghĩa một relationship mới lastLogin belongs to relationship. Thông thường để khai báo relationship, table cần có 1 khóa ngoại, ví dụ ở đây là last_login_id như trong solution sử dụng cache ở trên. Nhưng ở đây, chúng ta không sử dụng cache, thay vào đó sẽ sử dụng subquery.
 ```php
+/**
+ * Model User.
+ */
 class User extends Model
 {
+    /**
+     * Relationship lastLogin.
+     *
+     * @return BelongsTo
+     */
     public function lastLogin()
     {
         return $this->belongsTo(Login::class);
     }
 
+    /**
+     * Create scope.
+     * @param $query query
+     *
+     * @return query
+     */
     public function scopeWithLastLogin($query)
     {
         $query->addSubSelect('last_login_id', Login::select('id')
@@ -281,6 +321,9 @@ $lastLogin = User::first()->lastLogin; // will return null
 ```
 Nếu bạn muốn sử dụng lazy loading thì bạn vẫn có thể sử global model scope:
 ```php
+/**
+ * Model User.
+ */
 class User extends Model
 {
     protected static function boot()
@@ -301,4 +344,4 @@ Link tham khảo: [https://reinink.ca/articles/dynamic-relationships-in-laravel-
 
 --- Cảm ơn mọi người đã đọc bài viết của mình. Chúc một ngày vui vẻ!!! ---
 
-######                    *<div style="text-align: right"> - by Anh Lee </div>*
+[[author | AnhLee ]]
