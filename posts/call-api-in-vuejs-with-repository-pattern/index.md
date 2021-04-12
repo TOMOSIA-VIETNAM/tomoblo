@@ -25,7 +25,6 @@ Chắc hẳn mọi người đọc example hay tutorial cũng đều thấy axio
 - Điều gì sẽ xảy ra nếu chúng ta muốn tái sử dụng việc call api?
 - Điều gì xảy ra nếu endpoint thay đổi?
 - Điều gì xảy ra nếu muốn tái sử dụng việc call api cho dự án khác?
-- Điều gì xảy ra nếu muốn refactor 1 vài lời gọi hàm hoặc muốn di chuyển nó đến Vuex actions?
 - Mình có nhiều hơn 1 cái resource, thế bây giờ phải định nghĩa tận 4 cái endpoint?
 - Làm thế nào có thể dùng 1 cái mock api cho việc test?
 
