@@ -13,7 +13,7 @@ tags:
 | Trong bài này mình sẽ hướng dẫn cụ thể và cơ bản nhất về việc sử dụng capybara để scraping trong Rails. </br>
 | Let's go!
 
-# **I. Lời nói đầu**
+# **I. Preface**
 Thời gian vừa qua, mình có làm một dự án liên quan đến việc scraping data 
 và được Team Leader suggest sử dụng capybara. Sau một thời gian research trên google thì mình thấy có rất nhiều bài hướng dẫn về việc này nhưng lượng thông tin khá lớn và chưa được tổng hợp đầy đủ. Do đó, trong bài viết này, mình sẽ tổng hợp mọi thứ cần thiết và cơ bản nhất để giúp các bạn thực hiện việc này một cách nhanh chóng nhất có thể.
 
